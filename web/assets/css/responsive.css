@@ -1,0 +1,3801 @@
+@charset "UTF-8";
+
+/*
+	Project: Jwebi
+	Developer: 
+*/
+
+@media (max-width: 1700px) {
+
+    .SliderShowTwo, .SliderShowOne {
+        padding: 0;
+    }
+
+    /*
+    .BGskewX:before {
+        background-size: 150px auto;
+        width: 150px;
+        left: -42px;
+        bottom: -36px;
+    }
+    */
+
+}
+
+@media (max-width: 1500px) {
+
+    /*
+    .BGskewX:before {
+        bottom: -19px;
+    }*/
+
+}
+
+@media (max-width: 1400px) {
+
+    .SliderShowTwo .BGskewX {
+        background-position: 100% center;
+    }
+
+    /*
+        .BGskewX:before {
+            bottom: 0;
+        }*/
+    .tabs-content2 .secondeNav {
+        width: 320px;
+    }
+
+    .tabs-content2 .asideContent {
+        margin: 0 0 0 340px;
+    }
+
+}
+
+@media (max-width: 1320px) {
+    .SliderShowTwo .BGskewX {
+        /*height: 33vh;*/
+    }
+
+    /*
+        .BGskewX:before {
+            bottom: 0px;
+        }*/
+    .StyleBlockTwo .desc span, .StyleBlockOne .desc span {
+        line-height: 26px;
+    }
+
+    .StyleBlockOne .desc, .StyleBlockTwo .desc {
+        top: 50px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .headerContent .FindTravelers .btn.yellowStyle {
+        line-height: 20px;
+        padding: 2px 12px;
+    }
+
+    #header .headerContent {
+        padding: 10px 10px 2px 0;
+    }
+
+    .CommentairesBlock #messagorie .grid .cell2,
+    .CommentairesBlock #messagorie .grid .cell3 {
+        width: 50%;
+    }
+
+    .CommentairesBlock #messagorie .grid .cell7 {
+        width: 100%;
+    }
+
+    .puBBlockOne .btn {
+        width: 140px;
+        font-size: 12px;
+    }
+
+    .CommentairesBlock #messagorie .grid .excerpt {
+        white-space: initial;
+    }
+
+    .blockNotifTwo .grid.expanded.e12 {
+        margin: 0 12px;
+    }
+
+    .blockNotifTwo .grid .cell4 {
+        padding: 0 12px !important;
+    }
+
+    .footerRow {
+        padding: 40px 15px;
+    }
+
+    .countryBlock .cell3,
+    .countryBlock .cell6 {
+        width: 33.3333%;
+    }
+
+    .ContactBlock .btn {
+        width: 140px;
+        font-size: 12px;
+        padding: 16px 10px;
+        min-height: 38px;
+    }
+
+    .trueOrFalseList p {
+        background-size: 20px auto;
+        padding: 0 0 0 25px;
+        font-size: 12px;
+    }
+
+    .footerRow .userNumber {
+        font-size: 12px;
+    }
+
+    .footerRow .userNumber span {
+        font-size: 30px;
+    }
+
+    .sliderSearch .carrouselPub {
+        padding: 15px;
+    }
+
+    .sliderSearch {
+        margin: 0;
+    }
+
+    /**/
+    .BGskewX {
+        background-image: url('../img/BlocEnvoyerImgMoble%402x.png');
+        position: relative;
+    }
+
+    .SliderShowTwo .BGskewX {
+        background-image: url('../img/bgFourMobile%402x.png');
+    }
+
+    .SliderShowTwo {
+        border: 0;
+    }
+
+    .SliderShowTwo .SubSliderShowOne .BGskewX {
+        transform: none;
+    }
+
+    .SliderShowTwo .Swiper-SliderShowTwo,
+    .SliderShowOne .Swiper-SliderShowOne {
+        width: 100%;
+        max-width: 100%;
+        padding: 50px 0 25px 20px;
+        position: relative;
+    }
+
+    .swiper-pagination {
+        bottom: 25px !important;
+    }
+
+    /*
+    .SliderShowTwo .BGskewX:before,
+    .BGskewX:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -1px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0px;
+        height: 0px;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-top: 30px solid #fff;
+        background: transparent;
+    }*/
+    .BGskewX .monkey {
+        display: none;
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 8px;
+    }
+
+    .SliderShowTwo .swiper-slide,
+    .SliderShowOne .swiper-slide {
+        width: 100% !important;
+    }
+
+    .TheNextDepartures h3 {
+        margin: 0 auto 30px;
+        width: 370px;
+    }
+
+    .TheNextDepartures .cell3 {
+        margin: 0 0 25px;
+    }
+
+    .SliderShowTwo .Swiper-SliderShowTwo {
+        float: none;
+    }
+
+    .SubSliderShowOne,
+    .SubSliderShowTwo {
+        position: static !important;
+        width: 100% !important;
+        height: 350px !important;
+    }
+
+    .SliderShowTwo .SubSliderShowOne {
+        transform: none;
+    }
+
+    .CommentJwebiSmallBlock:after {
+        right: 35px;
+    }
+
+    .starsGroup {
+        margin: 0 35px 0 0;
+    }
+
+    .TopTrajetsBlock h3 {
+        text-align: center;
+        display: block;
+        background-image: none;
+        padding: 25px 0;
+    }
+
+    .countryBlock {
+        padding: 0 15px;
+    }
+
+    .countryBlock .StyleBlockTwo,
+    .countryBlock .StyleBlockOne {
+        margin: 0 auto 25px;
+        width: 233px;
+        height: 219px;
+    }
+
+    .countryBlock .grid:nth-child(1) {
+        margin: 0;
+    }
+
+    .blockNotifTwo .cell4 {
+        padding: 0 !important;
+    }
+
+    .blockNotifTwo .notifTwoBox {
+        margin: 0 0 20px;
+    }
+
+    .CommunityItemTitle {
+        padding: 140px 30px 20px;
+        background-position: top center;
+    }
+
+    .CommunityItemTitle h5 {
+        margin: 0 150px 15px 0;
+    }
+
+    .CommunityItemTitle p {
+        position: relative;
+    }
+
+    .CommunityItemTitle .Nb {
+        position: absolute;
+        right: 0;
+        top: -75px;
+    }
+
+    .blockNotifThree .notifTwoBox p {
+        display: none;
+    }
+
+    .blockNotifThree .cell3 {
+        float: left !important;
+        width: 50% !important;
+        margin: 0 0 50px;
+    }
+
+    .HowItWorksList .cell4 {
+        margin: 0 0 60px;
+    }
+
+    .TheNextDepartures .grid .cell3:nth-child(1):after,
+    .TheNextDepartures .grid .cell3:nth-child(2):after,
+    .TheNextDepartures .grid .cell3:nth-child(3):after {
+        display: none;
+    }
+
+    .HowItWorksCont .videoBlock {
+        width: 300px;
+    }
+
+    #header .headerContent {
+        margin-left: 147px;
+    }
+
+    .searchBarre {
+        margin: 0 10px;
+    }
+
+    .sliderSearch {
+        height: 660px;
+    }
+
+    .assuranceBlock {
+        text-align: center;
+    }
+
+    .assuranceLink {
+        margin: 7px auto;
+        display: block;
+        position: static;
+    }
+
+    .sliderSearch .NotifSliderSearch {
+        margin: 10px 0px 0px 0px;
+        text-align: center;
+        display: block
+    }
+
+    .FooterList .cell4:nth-of-type(1):after,
+    .FooterList .cell3:after,
+    .FooterList .cell2:after {
+        display: none;
+    }
+
+    /*.yellowStyle:hover {
+        background-color: #ffca00;
+        color: #0f233b;
+    }*/
+    .SliderShowTwo,
+    .SliderShowOne {
+        padding: 25px 0 0;
+    }
+
+    /**/
+    #profileNav ul li a {
+        padding: 0 10px;
+    }
+
+    .distination {
+        padding: 10px 0 10px 35px;
+        background-size: 20px auto !important;
+        font-size: 14px;
+    }
+
+    .FinalDestination {
+        padding: 5px 0 5px 30px;
+        font-size: 14px;
+    }
+
+    .voyagesEnCours .boxedList > [class^=cell] {
+        width: 20%;
+    }
+
+    .puBBlockTwo .paragGroup p:nth-child(1) {
+        font-size: 18px;
+    }
+
+    /*------------------------------------*\
+        $Comment ça Marche
+    \*------------------------------------*/
+    .tabs-content2 .secondeNav {
+        width: 280px;
+    }
+
+    .tabs-content2 .secondeNav a {
+        font-size: 20px;
+        padding: 22.5px 17px;
+    }
+
+    .tabs-content2 .secondeNav a.active-tab-menu:after {
+        height: 71px;
+        background-size: 20px auto;
+        right: -21px;
+    }
+
+    .tabs-content2 .asideContent {
+        margin: 0 0 0 285px;
+    }
+
+    .HowItWorks .BigNav a {
+        width: 250px;
+        font-size: 15px;
+    }
+
+    .HowItWorks .BigNav a:nth-child(1),
+    .HowItWorks .BigNav a:nth-child(3) {
+        background-size: 37px auto;
+    }
+
+    .HowItWorks .BigNav a:nth-child(2) {
+        background-size: 30px auto;
+    }
+
+    .HowItWorks .BigNav a {
+        background-position: 12px center;
+    }
+
+    .paddH {
+        padding-bottom: 27px;
+    }
+
+    /**/
+    .CommentBox {
+        padding: 20px 8px;
+    }
+
+    .CommentUserAnswerTwo .user-Img {
+        right: 0;
+    }
+
+    .CommentBox .commentUser .user-Img {
+        left: 0;
+    }
+
+    .Messagerie {
+        padding: 20px 10px !important;
+    }
+
+    .Messagerie .CommentBox .commentUser {
+        margin: 0 0 35px;
+    }
+
+    .Messagerie .CommentaireBlock .commentUser .userDesc {
+        margin: 0 0 0 85px;
+    }
+
+    .Messagerie .CommentUserAnswerTwo .userDesc {
+        margin: 0 85px 0 0 !important;
+    }
+
+    .MsgExpediteurAchat {
+        font-size: 16px;
+    }
+
+    .Messagerie .custom-file-input::before {
+        width: 100%;
+    }
+
+    .MsgExpediteurCount .CarrouselBox .cell4,
+    .MsgExpediteurCount .CarrouselBox .cell8 {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    .MsgExpediteurCount .CarrouselBox .cell4 {
+        margin: 0 0 20px;
+    }
+
+    .Messagerie .CommissionItem .PrixCounter {
+
+    }
+
+    .Messagerie .CommissionItem .PrixCounter:before,
+    .Messagerie .CommissionItem .PrixCounter:after {
+        content: " ";
+        display: table;
+    }
+
+    .Messagerie .CommissionItem .PrixCounter:after {
+        clear: both;
+    }
+
+    #content.darkBg {
+        padding: 15px;
+    }
+
+    .emptySearch .tab2 .PrixCounter .cell6 {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    .emptySearch .tab2 .PrixCounter .cell6:first-child {
+        margin: 0 0 20px;
+    }
+
+    .emptySearch .ServiceTypeHeader .customRadio label {
+        display: block;
+    }
+
+    .emptySearch .ServiceTypeHeader .customRadio .active-tab-menu {
+        background: url("../404-not-found.html") no-repeat left 5px !important;
+    }
+
+    .cgu {
+        padding: 25px 15px !important;
+    }
+
+    .ParngBgGrey {
+        padding: 35px 15px 15px;
+    }
+
+    /*  */
+    .ModalEnregistrement {
+        width: 950px;
+    }
+
+    .Paiements .content-left .Paiement-level {
+        padding: 20px 30px 30px;
+    }
+
+    #content {
+        padding: 20px 15px;
+    }
+
+    .topWork {
+        padding: 45px 20px;
+    }
+
+    #Jobs .blockContact {
+        padding: 45px 20px 25px;
+    }
+
+    #Jobs .blockContact .btn {
+        top: 45px;
+        right: 20px;
+    }
+
+    /* ########## */
+    .monkey {
+        display: none;
+    }
+
+    .SliderShowOne .SubSliderShowOne .BGskewX,
+    .SliderShowOne .SubSliderShowOne {
+        -webkit-transform: skewX(0deg);
+        -moz-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+        -o-transform: skewX(0deg);
+        transform: skewX(0deg);
+    }
+
+    .BGskewX:before,
+    .BGskewX:after {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1170px) {
+    .blueBack .colisEnv {
+        display: block;
+        position: static;
+    }
+}
+
+@media (max-width: 992px) {
+
+    #header .headerContent {
+        padding: 10px 0;
+    }
+
+    .topRightSide {
+        margin-left: 0;
+    }
+
+    .HowItWorksList .inscView:after,
+    .HowItWorksList .ContactView:after {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        bottom: -40px;
+        top: initial;
+        -ms-transform: rotate(7deg);
+        -webkit-transform: rotate(7deg);
+        transform: rotate(90deg);
+        background-size: 24px auto;
+    }
+
+    .notifTwoBox h4 {
+        font-size: 22px;
+    }
+
+    .notifTwoBox p {
+        font-size: 16px;
+        height: 105px;
+    }
+
+    .FindTravelers .yellowStyle {
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .FindTravelers {
+        padding: 75px 15px 0;
+        position: relative;
+    }
+
+    .FindTravelers .cell3 {
+        margin: 0 0 20px;
+    }
+
+    .FindTravelers .cell3:nth-of-type(4) {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .UtilsateurJwebiImg {
+        display: none;
+    }
+
+    /* ## Mon Compte */
+    .MonCompte .asideProfil {
+        width: 200px;
+    }
+
+    .MonCompte .ProfilContent {
+        margin: 0 0 0 200px;
+    }
+
+    .MonCompte .asideProfil .userProfilImg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .CameraIcon {
+        bottom: 65px;
+        right: 15px;
+    }
+
+    .userProfilImg.avatarCustom {
+        font-size: 30px;
+        line-height: 120px;
+    }
+
+    .MonCompte .asideProfil nav {
+        padding: 0;
+    }
+
+    .MonCompte .asideProfil nav a {
+        font-size: 16px;
+    }
+
+    .progressItem .progressBarInfo2 {
+        width: 100%;
+    }
+
+    .MonCompte .ProfilContent .progressItem .cell4,
+    .MonCompte .ProfilContent .progressItem .cell8 {
+        width: 100%;
+    }
+
+    .badgetStatut {
+        width: 100%;
+        margin: 0 0 25px;
+        background-size: 32px auto;
+        padding: 10px 0 10px 50px;
+    }
+
+    .questionItem {
+        margin: 0 50px 0 0;
+    }
+
+    .questionItem .questionTitle {
+        font-size: 18px;
+        margin: 0 45px 20px 0;
+    }
+
+    .formFour + .formThree .cell6,
+    .formThree > .cell6,
+    .formFour .cell6 {
+        width: 100%;
+    }
+
+    .formThree .badgetBox {
+        margin: 0 0 15px;
+    }
+
+    .formFour label {
+        text-align: left;
+        margin: 0 0 15px;
+    }
+
+    .infoBlock {
+        margin: 0 0 10px;
+    }
+
+    .formFive {
+        margin: 135px 4px 30px !important;
+    }
+
+    .formSeven .questionTitle .badgetNotif,
+    .formSix .questionTitle .badgetNotif {
+        right: -40px;
+    }
+
+    .MonCompteTitle {
+        font-size: 20px;
+        margin: 0 0 10px;
+    }
+
+    /* ## Comment ça Marche */
+    .tabs-content2 .secondeNav {
+        float: none;
+        width: 100%;
+        margin: 0 0 25px;
+    }
+
+    .tabs-content2 .secondeNav a {
+        display: inline-block;
+        width: 24%;
+        box-sizing: border-box;
+        padding: 16px 8px;
+    }
+
+    .tabs-content2 .secondeNav a:nth-child(1),
+    .tabs-content2 .secondeNav a:nth-child(2) {
+        width: 33%;
+    }
+
+    .tabs-content2 .secondeNav a:nth-child(3),
+    .tabs-content2 .secondeNav a:nth-child(4) {
+        width: 15%;
+    }
+
+    .tabs-content2 .secondeNav a span {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tabs-content2 .secondeNav a.active-tab-menu:after {
+        background-image: url('../img/Triangle2%402x.png');
+        height: 16px;
+        width: 100px;
+        background-size: 60px auto;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        bottom: -16px;
+        top: inherit;
+        background-position: top center;
+    }
+
+    .tabs-content2 .asideContent {
+        margin: 0;
+    }
+
+    .ConfianceSecurite {
+        padding: 0 25px;
+    }
+
+    .barreSubNav {
+        margin: 0 0 20px;
+    }
+
+    .commentCaMarche {
+        padding: 30px 0 0 25px;
+    }
+
+    .commentCaMarche .BlockItem:after {
+        background-size: 110px auto;
+        width: 125px;
+        height: 100px;
+        right: -215px;
+    }
+
+    .commentCaMarche .BlockItem.mapTrajet:after {
+        background-size: 88px auto;
+    }
+
+    .commentCaMarche .BlockItem:after
+    .commentCaMarche .BlockItem.ConfiezColis:after,
+    .commentCaMarche .BlockItem.contactez:after {
+        background-size: 110px auto;
+    }
+
+    .commentCaMarche .BlockItem.people:after {
+        background-size: 85px auto;
+    }
+
+    .Paiements .content-left .Paiement-level {
+        height: auto !important;
+    }
+
+    .Paiement-level3 a.BlackStyle {
+        width: 100%;
+    }
+
+    .SelectPaymentMethod .Method {
+        font-size: 14px;
+        padding: 20px 6px 20px 58px;
+    }
+
+    .SelectPaymentMethod .Method.Method-1, .SelectPaymentMethod .Method.Method-2 {
+        background-position: 12px center;
+    }
+
+    /**/
+    .Messagerie .aside {
+        max-width: 210px;
+    }
+
+    .Messagerie .section {
+        margin: 0 230px 0 0;
+    }
+
+    .Messagerie .ServiceTypeCont {
+        padding: 20px 10px 30px;
+    }
+
+    .Messagerie .MsgExpediteurAchat,
+    .Messagerie .ReportThisAd {
+        float: none;
+        display: block;
+    }
+
+    .Messagerie .MsgExpediteurAchat {
+        margin: 0 0 4px;
+    }
+
+    .Messagerie .ServiceTypeCont textarea + .grid .cell6 {
+        float: none !important;
+        width: 100% !important;
+    }
+
+    .Messagerie .ServiceTypeCont textarea + .grid .cell6:first-child {
+        margin: 0 0 25px;
+    }
+
+    .Messagerie .answerByComment .btn.BlackStyle,
+    .Messagerie .answerByComment .fileInput {
+        margin: 0 auto;
+        width: 320px;
+    }
+
+    /**/
+    .PgConditions {
+        padding: 0 15px;
+    }
+
+    .ParainnageMailingList {
+        padding: 35px 15px;
+    }
+
+    .ReviveLink {
+        text-align: center;
+    }
+
+    .ModalEnregistrement {
+        width: 900px;
+    }
+
+    .Messagerie .ServiceTypeHeader {
+        height: 85px;
+    }
+
+    .ReportThisAdTwo .ModelItem {
+        right: inherit;
+        left: -7px;
+        top: 15px;
+    }
+
+    .ReportThisAdTwo .ModelContent .ModelItem:after {
+        left: 55px;
+        right: inherit;
+    }
+
+    /**/
+    .btnUpContent .ModelContent .ModelItem {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+    .btnUpContent .ModelContent .ModelItem:after {
+        left: 50px;
+        right: inherit;
+    }
+
+    .btnUpContent .ModelContent h3 {
+        margin: 0 0 25px;
+    }
+
+    .ModelContent p {
+        font-size: 14px;
+        margin: 0 0 15px;
+    }
+
+    .Level-group .LevelItem {
+        background-size: 30px auto;
+        padding: 0 0 0 45px;
+        background-position: 5px top;
+        width: 100%;
+    }
+
+    .btnUpContent .Level-group .LevelItem p {
+        font-size: 14px;
+    }
+
+    /**/
+    .Paiement-level2 h3 {
+        margin: 0 0 15px;
+    }
+
+    .From-paiement-group .iconCards > .cell6:nth-child(1),
+    .From-paiement-group .From-paiement > .cell6:nth-child(1) {
+        width: 30%;
+        padding: 0;
+    }
+
+    .From-paiement-group .iconCards > .cell6:nth-child(2),
+    .From-paiement-group .From-paiement > .cell6:nth-child(2) {
+        width: 70%;
+    }
+
+    .Paiements {
+        padding: 20px !important;
+    }
+
+    .bottomConnect.whiteBack,
+    .topConnect {
+        padding: 30px 25px 35px;
+    }
+
+    .ModalInscri {
+        width: 760px;
+    }
+
+    .rightSide {
+        padding: 0px 0px 0px 24px;
+    }
+
+    .ou {
+        overflow: hidden;
+    }
+
+    .ou:before {
+        left: -5px;
+    }
+
+    .ou:after {
+        right: -5px;
+    }
+
+    .Popin_CGU {
+        width: 760px;
+        padding: 25px;
+    }
+
+    .commentCaMarche .BlockItem.securePayment:after {
+        background-size: 100px auto;
+    }
+
+    .Messagerie .ReportThisAdTwo .ModelItem {
+        top: 10px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .ModalEnregistrement {
+        width: 767px;
+    }
+
+    .ModalEnregistrement .mTransort {
+        padding-left: 225px;
+    }
+
+    .ModalEnregistrement .alertMessages p {
+        font-size: 12px;
+    }
+
+    .ModalEnregistrement .alertMessages p:nth-of-type(1) {
+        margin: 0 0 10px;
+    }
+
+    .ModalEnregistrement .alertMessages {
+        padding: 10px 20px 10px 10px;
+    }
+
+    .StyleBlockOne .desc, .StyleBlockTwo .desc, .BGskewX .SubBGskewX {
+        left: 0;
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .SubSliderShowOne .BGskewX .SubBGskewX {
+        width: 320px;
+    }
+
+    .BGskewX .SubBGskewX p {
+        width: 320px
+    }
+
+}
+
+@media (max-width: 768px) {
+    .HelpBlock {
+        display: none
+    }
+
+    .HelpBlock.hideHelp {
+        display: block;
+    }
+
+    .customGrid .tableGrid {
+        display: block;
+    }
+
+    .bgVoyageIcon {
+        background-image: none;
+    }
+
+    .mesVoyages .bgDashBlocks {
+        padding: 4px 0px 4px 0px;
+    }
+
+    .cellTable {
+        font-size: 14px;
+    }
+
+    .bgAvion {
+        background-image: none;
+    }
+
+    .StyleBlockOne .desc, .StyleBlockTwo .desc, .BGskewX .SubBGskewX {
+        left: 0;
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .SubSliderShowOne .BGskewX .SubBGskewX {
+        width: 320px;
+    }
+
+    .blockItemProfile {
+        position: absolute;
+        right: 10px;
+        top: 30px;
+    }
+
+    .BGskewX .SubBGskewX p {
+        width: 320px
+    }
+
+    a:active,
+    a:focus,
+    a.active {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+        tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .desktopOnly {
+        display: none;
+    }
+
+    .mobileOnly {
+        display: block !important;
+    }
+
+    header .btnRentabilisez {
+        max-width: 213px;
+        position: absolute;
+        float: none;
+        bottom: 20px;
+        background-color: #fff;
+        border: 0;
+        width: 100%;
+        padding: 7px 0 7px 53px;
+        margin: 0;
+        background-image: url('../img/Shape3.png');
+        color: #1a3350;
+        background-size: 26px auto;
+        background-position: 16px center;
+    }
+
+    header .btnRentabilisez span {
+        display: none;
+    }
+
+    header nav {
+        padding: 0 15px 15px;
+        margin-right: 10px;
+        margin: 0 0 30px;
+        float: none;
+        text-align: left;
+        width: 100%;
+    }
+
+    header nav a {
+        padding: 17px 7px;
+        font-size: 12px;
+        -ms-text-align-last: auto;
+        text-align: left;
+        padding: 8px 0 8px 40px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin: 0 0 10px;
+        color: #1a3350;
+    }
+
+    header nav.mainNav a:hover {
+        border: none;
+    }
+
+    header nav.mainNav a {
+        border: none;
+    }
+
+    header nav a.Sinscrire {
+        background-image: url('../img/addIcon.png');
+        background-size: 27px auto;
+    }
+
+    header nav a.TableauBord {
+        background-image: url('../img/tb%402x.png');
+        background-size: 27px auto;
+    }
+
+    header nav a.messagerie {
+        background-image: url('../img/Messagerie%402x.png');
+        background-size: 25px auto;
+    }
+
+    header nav a.ParrainezAmis {
+        background-image: url('../img/parainnage%402x.png');
+        background-size: 25px auto;
+    }
+
+    header nav a.EnregistrerVoyage {
+        background-image: url('../img/Fusee%402x.png');
+        background-size: 27px auto;
+    }
+
+    header nav a.SeDeconnecter {
+        background-image: url('../img/deconnexion2%402x.png');
+        background-size: 20px auto;
+        background-position: 5px center;
+    }
+
+    header nav a.MonCompte,
+    header nav a.SeConnecter {
+        background-image: url('../img/userIconNav.png');
+        background-size: 27px auto;
+    }
+
+    header nav a.CommentCaMarche {
+        background-image: url('../img/question.png');
+        background-size: 14px auto;
+        background-position: 5px center;
+    }
+
+    header nav a {
+        display: block;
+        margin: 0;
+    }
+
+    /* header nav a:hover {
+        border: 0;
+    }*/
+    #content {
+        padding: 0;
+    }
+
+    /**/
+    .asideProfil {
+        float: none;
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    .ProfilContent {
+        margin: 0;
+    }
+
+    .ProfilContent .blockTwo,
+    .ProfilContent .blockOne {
+        padding: 20px;
+    }
+
+    .puBBlockOne .paragGroup {
+        background-size: 88px auto;
+        padding: 0px 3px 10px 100px;
+    }
+
+    .asideProfil .userProfilItem {
+        margin: 0 0 30px;
+    }
+
+    /* >>> Grid view ################################# */
+    .grid > [class^=cell] {
+        float: none !important;
+        width: auto;
+    }
+
+    .tableGrid > [class^=cell] {
+        float: none !important;
+        width: auto;
+    }
+
+    .grid.expanded, .tableGrid.expanded {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .grid.expanded, .mobileGrid.expanded, .tableGrid.expanded {
+        margin: 0px;
+    }
+
+    .grid.expanded > [class^=cell] {
+        padding: 0px
+    }
+
+    /* >>> Grid view ################################# */
+    .selectGroup [class^=cell] {
+        margin-bottom: 10px;
+    }
+
+    .blockNotifThree .cell3 {
+        float: left !important;
+        width: 50% !important;
+        margin: 0 0 50px;
+    }
+
+    header .container {
+        position: relative;
+    }
+
+    header .LogoHeader {
+        width: 125px;
+        height: 65px;
+        margin: 0 0 0 10px;
+    }
+
+    #header .headerContent {
+        position: absolute;
+        top: 74px;
+        margin: 0;
+        background-color: #fff;
+        width: 100%;
+        border-bottom: 1px solid #000;
+        display: none;
+        margin: 0;
+        z-index: 100;
+    }
+
+    .iconHamburger {
+        background-image: url('../img/menu-hamburger.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px auto;
+        width: 30px;
+        height: 30px;
+        display: block;
+        float: right;
+        padding: 20px;
+        margin: 15px;
+    }
+
+    header nav .btnRentabilisez {
+        margin: 0;
+    }
+
+    .FooterList .cell4:nth-child(1),
+    .FooterList .cell3,
+    .FooterList .cell2 {
+        display: none;
+    }
+
+    .FooterList .cell4 {
+        width: 100%;
+    }
+
+    .ContactBlock {
+        margin: 0 0 75px;
+    }
+
+    .ContactBlock .btn {
+        width: 200px;
+        line-height: initial;
+        text-align: center;
+    }
+
+    .PartageBlock p {
+        display: none;
+    }
+
+    .PartageBlock nav {
+        width: 312px;
+        margin: 0 auto;
+    }
+
+    .footerRow {
+        padding: 30px 15px;
+    }
+
+    .searchBarre .grid .cell3:nth-child(1) {
+        border-radius: 10px;
+    }
+
+    .searchBarre .grid .cell3,
+    .searchBarre .grid .cell4 {
+        background-color: transparent;
+    }
+
+    /* Home */
+    .sliderSearch {
+        padding: 70px 0 0;
+    }
+
+    .carrouselPub .carrouselCont {
+        margin: 0;
+    }
+
+    .sliderSearch .carrouselPub {
+        background-color: #fff;
+        position: static;
+    }
+
+    .sliderSearch .carrouselPub p {
+        float: none;
+        margin: 0 0 15px;
+        text-align: center;
+    }
+
+    #copyright {
+        padding: 22px 10px;
+        text-align: center;
+    }
+
+    .carrouselPub .carrouselCont .swiper-slide a.femina,
+    .carrouselPub .carrouselCont .swiper-slide a.figaro {
+        padding: 0;
+    }
+
+    /**/
+    .notifGroup .notifTitle {
+        font-size: 30px;
+        padding: 0 15px;
+    }
+
+    .notifGroup p {
+        padding: 0 40px;
+        font-size: 20px;
+    }
+
+    .searchBarre {
+        background-color: #1a3350;
+        border-radius: 0;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .searchBarreTitle {
+        color: #fff;
+        margin: 0 0 10px;
+    }
+
+    .searchBarre [class^=cell] {
+        float: none;
+        width: 100%;
+    }
+
+    .searchBarre .inputStyle {
+        padding: 15px;
+        background-color: #fff;
+        margin: 0 0 15px;
+        border-radius: 10px;
+    }
+
+    .searchBarre button {
+        border-radius: 10px;
+    }
+
+    .searchBarre .grid .cell3:nth-child(2),
+    .searchBarre .grid .cell4 {
+        padding: 0;
+    }
+
+    .searchBarre .inputStyle .inputBlock {
+        margin: 0 0 0 20px;
+    }
+
+    .sliderSearch {
+        height: auto
+    }
+
+    .HowItWorks h3 {
+        width: auto;
+    }
+
+    .HowItWorks .HowItWorksTitle {
+        padding: 23px 20px 23px;
+    }
+
+    .navbar-toggle {
+        background-image: url(../img/close.png);
+        background-size: 18px auto;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    /**/
+    .mainSearch .tableGrid .cell, .mainSearch .tableGrid .cell3 {
+        display: block;
+    }
+
+    .searchBar .alertLink {
+        display: none;
+    }
+
+    .searchBar .container {
+        padding-right: 0;
+    }
+
+    /**Login**/
+    #modal {
+        z-index: 999 !important;
+    }
+
+    #modalBox {
+        transform: none;
+        -webkit-transform: none;
+        border-radius: 0px;
+        overflow: auto;
+        max-height: 100%;
+        position: static;
+        position: initial;
+    }
+
+    #modalBox.fullHeight {
+        transform: translate(0%, 0%);
+        -webkit-transform: translate(0%, 0%);
+        margin: 0;
+    }
+
+    .topConnect {
+        padding: 35px 16px 35px;
+    }
+
+    .bottomConnect {
+        padding: 35px 16px 48px;
+    }
+
+    .paddH {
+        padding-bottom: 34px;
+        font-size: 16px;
+    }
+
+    /** Inscription **/
+    .ModalInscri {
+        width: auto;
+    }
+
+    .rightSide {
+        padding: 0px
+    }
+
+    .rightBorder {
+        border-right: none;
+    }
+
+    .myCell5 {
+        position: static;
+        position: initial;
+        width: 100%;
+        padding: 0px 33px;
+    }
+
+    .myCell7 {
+        padding-left: 0px
+    }
+
+    .TimeInscri {
+        text-align: center;
+    }
+
+    .ModalInscri .jwebiLogin {
+        display: none;
+    }
+
+    .itemsB {
+        padding: 0px 5px 20px 45px;
+        font-size: 15px;
+    }
+
+    .ModalInscri .bottomConnect {
+        padding: 30px 16px 35px;
+    }
+
+    .ModalInscri .leftSide {
+        padding-bottom: 35px;
+    }
+
+    /** Jobs **/
+    #Jobs .blockContact .btn {
+        position: static;
+        position: initial;
+        margin: 0 auto;
+    }
+
+    #Jobs .container {
+        padding: 0px 16px;
+    }
+
+    .topWork h3 {
+        padding: 0px 0px 25px;
+    }
+
+    .textContact {
+        padding-bottom: 15px;
+    }
+
+    .blockContact {
+        padding: 20px 0px 25px;
+    }
+
+    .jobsBg {
+        height: 189px;
+    }
+
+    #Jobs h1 {
+        font-size: 30px;
+    }
+
+    #Jobs .work {
+        font-size: 20px;
+    }
+
+    .topWork .workImg {
+        height: 170px;
+        width: 100%;
+    }
+
+    .topWork {
+        padding: 45px 0px 25px;
+    }
+
+    .blockContact h4 {
+        padding-bottom: 20px;
+    }
+
+    /** Mentions Legales **/
+    .topLegale.padd {
+        padding: 0px 16px
+    }
+
+    .padd {
+        padding: 0px;
+    }
+
+    .mentionsLegales .container {
+        border: none;
+    }
+
+    .mentionsLegales .grid.expanded > [class^=cell] {
+        padding: 0px;
+    }
+
+    /** Qui sommes nous **/
+    #sPages .work {
+        font-size: 20px;
+    }
+
+    #sPages h1 {
+        font-size: 30px;
+    }
+
+    .topWhoWeAre {
+        padding: 40px 16px 30px;
+    }
+
+    .team {
+        padding-top: 128px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .admin {
+        right: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        top: 66px;
+        left: 50%;
+    }
+
+    .borderImg {
+        margin-bottom: 20px;
+    }
+
+    .quiSommesNous h3 {
+        padding-bottom: 30px;
+    }
+
+    #sPages .yellowBlock {
+        padding: 50px 0px 50px;
+    }
+
+    #sPages .yellowBlock h4 {
+        padding-bottom: 20px
+    }
+
+    .newsletter .container {
+        padding: 0px 30px;
+    }
+
+    .newsletter {
+        padding: 35px 0px;
+    }
+
+    .quiSommesNous h3 {
+        padding-bottom: 15px;
+    }
+
+    #sPages .TopBg {
+        background-image: url('../img/mobileBg.png');
+    }
+
+    /**## Press **/
+    .downloads, .contacts {
+        position: static;
+        position: initial;
+        max-width: 100%;
+        padding: 25px 14px;
+    }
+
+    .release, .pressSays {
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .pressLayout {
+        padding: 30px 16px 0px;
+    }
+
+    .release h3 {
+        padding-top: 0px;
+        padding-bottom: 25px;
+    }
+
+    .release p {
+        padding-bottom: 25px;
+    }
+
+    a.downloadfiles {
+        max-width: 100%;
+    }
+
+    .downloads {
+        margin-bottom: 20px;
+    }
+
+    .pressSays h3 {
+        margin-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .femina, .cosmo, .maymag, .businessnews, .afrique, .figaro, .expansion {
+        background-position: top left;
+    }
+
+    .femina {
+        padding: 60px 0px 35px
+    }
+
+    .cosmo {
+        padding: 46px 0px 35px
+    }
+
+    .maymag {
+        padding: 90px 0px 35px
+    }
+
+    .businessnews {
+        padding: 80px 0px 35px
+    }
+
+    .afrique {
+        padding: 60px 0px 35px
+    }
+
+    .figaro {
+        padding: 60px 0px 35px
+    }
+
+    .expansion {
+        padding: 50px 0px 35px
+    }
+
+    .maymag {
+        background-image: url('../img/maymag1.png');
+    }
+
+    .sliderSearch .carrouselCont .figaro {
+        padding: 0;
+    }
+
+    /*### Contacts **/
+    .contact {
+        padding: 35px 16px;
+    }
+
+    .contact .leftSide {
+        padding-right: 0px;
+    }
+
+    .contact .rightSide {
+        padding-left: 0px;
+    }
+
+    /**### Enregistrer mon voyage **/
+    .mTransort {
+        padding-left: 0px
+    }
+
+    .ModalEnregistrement {
+        width: auto;
+        padding-bottom: 20px;
+    }
+
+    .bottomEnr .logoEnr img {
+        display: none;
+    }
+
+    .radioVoyage {
+        padding-left: 0px;
+        padding-top: 30px
+    }
+
+    .inlineOptions.radioVoyage .optionItem {
+        padding: 73px 7px 0px;
+        border-right: none;
+    }
+
+    .mTransort h3 {
+        position: static;
+        position: initial;
+        text-align: center;
+    }
+
+    .enrVoyage {
+        background-image: none;
+        background-color: #f7f7f7;
+    }
+
+    .ModalEnregistrement .blueBack ul {
+        text-align: center;
+    }
+
+    .blueBack .grid.expanded > [class^=cell] {
+        padding-bottom: 10px;
+    }
+
+    .btnLink.customLink {
+        margin-top: 10px;
+    }
+
+    .bottomEnr .actionsRow {
+        margin-top: 35px;
+    }
+
+    .formField.radioVoyage .optionItem {
+        display: inline-block;
+    }
+
+    .blueBack .formField.radioVoyage .optionItem:last-child {
+        margin-left: 25px;
+    }
+
+    .ModalEnregistrement .blueBack {
+        padding: 25px 25px 25 pxpx;
+    }
+
+    .grid > [class^=cell].customCell {
+        width: 50% !important;
+        float: left !important;
+        padding-bottom: 20px !important;
+    }
+
+    .grid > [class^=cell].padd {
+        padding-right: 6px;
+    }
+
+    .ModalEnregistrement .grid > [class^=cell].cell {
+        width: 100%;
+    }
+
+    /**### Resultat Recherche Voyage **/
+    .searchMobile .leftSidebar.desktopOnly {
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+        display: none;
+
+    }
+
+    .searchMobile .leftSidebar {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .absSidebar {
+        position: static;
+        width: auto;
+    }
+
+    .searchMobile .mainSection.widthLeftSide, .widthLeftSide {
+        margin-left: 0 !important;
+    }
+
+    .grid > [class^=cell].cellTransMobile {
+        float: left !important;
+        width: 25%;
+    }
+
+    .grid > [class^=cell].cellFromToMobile {
+        float: left !important;
+        width: 60%;
+        text-align: center;
+    }
+
+    .from-to {
+        background: url(../img/arrowV.png) no-repeat center center;
+        line-height: 45px;
+    }
+
+    .from-to .from, .from-to .to {
+        display: block;
+        width: auto;
+        float: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    #topBar.searchBar {
+        padding: 0;
+    }
+
+    #topBar .searchForm {
+        padding: 16px;
+    }
+
+    .searchData .resultM {
+        display: block;
+    }
+
+    .searchData .searchForm {
+        display: none;
+    }
+
+    .transportPlane {
+        margin-top: 17px;
+    }
+
+    .transportTrain {
+        margin-top: 17px;
+    }
+
+    .transportBateau {
+        margin-top: 17px;
+    }
+
+    #content.searchMobile {
+        padding: 0px;
+    }
+
+    .pubJwebi {
+        text-align: center;
+    }
+
+    .darkBox {
+        padding: 20px 20px 0px;
+        background-image: none;
+    }
+
+    .bottomPub {
+        padding-left: 0px;
+    }
+
+    .bottomPub .customPub {
+        margin-bottom: 10px;
+    }
+
+    .sizeBlock {
+        padding: 0px 60px;
+    }
+
+    .userContactItmes {
+        padding: 0px;
+    }
+
+    .fbIcon {
+        margin-top: 0px;
+    }
+
+    .infoMobile {
+        position: absolute;
+        top: 3px;
+        left: 135px;
+    }
+
+    .searchResult .userData .userName {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .userData .btnLink {
+        overflow: hidden;
+        margin-top: 12px;
+    }
+
+    .grid > [class^=cell].mobileContact {
+        display: inline-block;
+    }
+
+    .grid > [class^=cell].fbMobile {
+        display: inline-block;
+        float: left !important;
+    }
+
+    .onlyDesktop {
+        display: none;
+    }
+
+    .rechercheMobile {
+        display: block
+    }
+
+    .leftSidebar {
+        float: none;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .collapsibleGroup {
+        padding: 15px 30px;
+    }
+
+    .sideBarHead {
+        background-image: url('../img/show.png');
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    .visibilityBlock .sideBarHead {
+        background-image: url('../img/hide.png');
+    }
+
+    .bottomBtnSearch .btnLink.alertLink {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .sideBarBox {
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .searchSideBar .sideBarBox, .searchSideBar .sideBarHead {
+        display: none;
+    }
+
+    .searchSideBar.searchData .sideBarHead {
+        display: block;
+    }
+
+    .searchSideBar.visibilityBlock .sideBarBox {
+        display: block;
+    }
+
+    .bottomBtnSearch .btnLink {
+        text-transform: uppercase;
+    }
+
+    .bottomBtnSearch {
+        display: block;
+    }
+
+    .searchForm .formControl input[type=text] {
+        margin-bottom: 10px;
+    }
+
+    .darkBg .mainBox {
+        padding: 0;
+    }
+
+    .colisEnv {
+        left: 215px;
+    }
+
+    .blueBack .rightBorder {
+        border-right: none;
+    }
+
+    .customPub {
+        margin-bottom: 27px;
+    }
+
+    .mainBox .blueBack {
+        margin-bottom: 0px;
+        padding: 15px 16px;
+        display: none
+    }
+
+    .searchResult {
+        padding-bottom: 0px;
+    }
+
+    .searchResult .userData {
+        padding: 5px 20px 25px 20px;
+        position: relative;
+    }
+
+    .tripDate {
+        text-align: center;
+    }
+
+    .carrouselCont a {
+        padding: 0;
+    }
+
+    .countryBlock .cell3,
+    .countryBlock .cell6 {
+        float: left !important;
+        width: 33.3333% !important;
+    }
+
+    .Paiements .content-left {
+        margin: 0;
+    }
+
+    .Paiements .content-right {
+        float: none;
+    }
+
+    .CloseGroupLink.ShowLink {
+        display: block;
+    }
+
+    .blockHide {
+        display: none;
+    }
+
+    .Paiements .content-right {
+        width: 100%;
+    }
+
+    .Paiements .content-right .retailTravel {
+        border-radius: 0px;
+    }
+
+    .Paiement-level1 .box {
+        width: 350px;
+        margin: 0 auto 35px !important;
+        height: 100%;
+    }
+
+    .Paiement-level1 .box .cell4 {
+        margin: 0 0 12px;
+    }
+
+    .timelinePai {
+        margin: 15px 0 50px;
+    }
+
+    .TimeLinePaiement {
+        padding: 0 25px;
+    }
+
+    .timelinePai li span {
+        right: -15px;
+        font-size: 12px;
+    }
+
+    /* Messagerie */
+    .Messagerie .section {
+        margin: 0;
+    }
+
+    .Messagerie .aside {
+        float: none;
+        margin: 0 0 20px;
+        max-width: 100%;
+    }
+
+    .Messagerie .MsgExpediteurCount .Carrousel {
+        padding: 0 20px;
+    }
+
+    .Messagerie .ServiceTypeHeader {
+        padding: 15px;
+        height: 100px;
+    }
+
+    .ServiceTypeHeader > label {
+        display: block;
+        width: 100%;
+        padding-bottom: 10px;
+        float: none;
+    }
+
+    .Messagerie .CarrouselBox .Carrousel .swiper-button-next {
+        right: -7px;
+    }
+
+    .Messagerie .CarrouselBox .Carrousel .swiper-button-prev {
+        left: -7px;
+    }
+
+    .Messagerie .MsgExpediteurCount .CommissionItem {
+        padding: 10px;
+    }
+
+    .Messagerie .answerByComment .btn.BlackStyle,
+    .Messagerie .answerByComment .fileInput {
+        width: 270px;
+    }
+
+    .Messagerie .SommeTotale {
+        width: 100%;
+    }
+
+    .Messagerie .SommeTotale .SommPrixTotale {
+        margin: 0;
+    }
+
+    .PaperClip li a,
+    .DescBlock > p,
+    .CommentBox p {
+        font-size: 12px;
+    }
+
+    .DescBlock .lienInfo a {
+        font-size: 12px;
+        display: block;
+        margin: 0;
+    }
+
+    .SommeTotale .PrixTotale {
+        float: none;
+        text-align: center;
+        margin: 0;
+    }
+
+    .Messagerie .CommissionBlock .numbers-rowGroup {
+        float: right;
+        margin: 0;
+    }
+
+    .Messagerie .SommeTotale label {
+        margin: 0 0 35px;
+    }
+
+    /* Pagination */
+    .pagination {
+        text-align: center;
+    }
+
+    .searchMobile .resultM .from-to {
+        background-position: 52% center;
+    }
+
+    .pagination {
+        margin: 0 0 25px;
+    }
+
+    .SubSliderShowOne,
+    .SubSliderShowTwo {
+        height: 265px !important;
+    }
+
+    .msgNonLu {
+        border: 0;
+        padding: 50px 15px 25px;
+        margin: 0;
+    }
+
+    .mesVoyages .ajoutV {
+        border-bottom: 1px solid #d5ab00;
+    }
+
+    .msgNonLu .btnLink.customLink {
+        margin: 12px auto 0;
+        float: none;
+    }
+
+    #tableauDeBord .mainSection h3 {
+        border: 0;
+        text-align: center;
+    }
+
+    .bgMsg {
+        padding-right: 0;
+    }
+
+    .bgMsg.lastBorder {
+        border: 0;
+    }
+
+    .transactions {
+        border: 0;
+        padding: 18px 15px;
+        background-color: #0f233a;
+        color: #FFF;
+    }
+
+    #tableauDeBord .mainSection .transactions h3 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding-bottom: 8px;
+    }
+
+    .transactions .tableGrid > [class^=cell] {
+        display: block;
+    }
+
+    .transactions .btnLink {
+        background-color: transparent;
+        border: 0;
+        text-decoration: underline;
+    }
+
+    .bgDashBlocks .cellTable {
+        color: #0f233b;
+    }
+
+    .transactions .blocksDash {
+        padding: 12px 0;
+    }
+
+    .iconElms {
+        display: none;
+    }
+
+    .wTripInfo .from-to {
+        line-height: 26px;
+        text-align: left;
+        background-position: left 88%;
+        min-width: 110px;
+    }
+
+    .transactions .wTripInfo .from-to {
+        background-image: url('../img/arrow-to-right.png');
+    }
+
+    .wTripInfo .from-to .from {
+        text-align: left;
+    }
+
+    .wTripInfo .from-to .to {
+        margin-left: 30px;
+        text-align: left;
+    }
+
+    .wTripDate {
+        font-family: 'Roboto-Light';
+        font-size: 16px;
+        margin-left: 12px;
+    }
+
+    .customDash, .btnLink.customDash {
+        background-color: transparent;
+        border: 0;
+        padding: 4px 4px;
+        text-decoration: underline;
+        float: none;
+        margin-left: auto;
+        min-height: 22px;
+        color: #FFF;
+        text-align: right;
+    }
+
+    .dTripStatus, .dTripPrice {
+        line-height: 26px;
+    }
+
+    .transactions .seeAllTransac {
+        float: none !important;
+        max-width: 700px !important;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: normal !important;
+        color: #FFF;
+        border: 1px solid #FFF;
+        display: block;
+        text-align: center;
+    }
+
+    .puBBlockTwo {
+        display: none;
+    }
+
+    .addTrip {
+        text-align: center;
+    }
+
+    .mesVoyages {
+        background-color: #ffca00;
+        margin: 0;
+        position: relative;
+    }
+
+    .mesVoyages .blocksDash {
+        padding: 16px 19px 16px 33px;
+        border-bottom: 1px solid #d5ab00;
+    }
+
+    .mesVoyages .delete {
+        position: absolute;
+        left: 0;
+        top: 40px
+    }
+
+    .editVoyage {
+        position: absolute;
+        right: 0;
+        top: 40px;
+    }
+
+    .mesVoyages .dTripEdit {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -16px;
+    }
+
+    .mesVoyages .seeAll {
+        border: 1px solid #0f233b;
+        padding: 14px 6px;
+        border-radius: 2px;
+        text-transform: none;
+        letter-spacing: 1px;
+    }
+
+    .progressBarProfil {
+        display: none;
+    }
+
+    .dashboardView {
+        padding-top: 160px;
+    }
+
+    .absSidebar .infoProfile .topInfos {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #eef3fa;
+        padding: 18px 5px;
+
+    }
+
+    .absSidebar .infoProfile .topInfos .userNameProfil {
+        padding: 0;
+    }
+
+    .absSidebar .infoProfile .topInfos .stars {
+        position: absolute;
+        top: 76px;
+        left: 182px;
+    }
+
+    .absSidebar .infoProfile .topInfos .badge.maxi {
+        text-align: left;
+        background: url(../img/___badge-maxi.png) no-repeat 0 center;
+        margin: 0 12px;
+    }
+
+    #profileNav {
+        overflow-x: auto;
+    }
+
+    #profileNav ul {
+        width: 772px;
+    }
+
+    /**/
+    .ParainnageMailingList .container > p {
+        margin: 0 0 25px;
+    }
+
+    .Level-group .cell6:nth-of-type(1) {
+        margin: 0 0 15px;
+        border: 0;
+    }
+
+    .MonCompte .ProfilContent .progressItem {
+        max-height: initial;
+    }
+
+    .formThree .cell6 {
+        float: none;
+        width: 100%;
+    }
+
+    .questionItem .formFive {
+        margin: 25px 4px 30px !important;
+    }
+
+    .SelectPaymentMethod .Method {
+        font-size: 13px;
+        padding: 20px 58px 20px;
+    }
+
+    .From-paiement label {
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .From-paiement-group .iconCards > .cell6:nth-child(1) {
+        display: none;
+    }
+
+    .Paiement-level2 .From-paiement-group {
+        margin: 0 auto 20px;
+        width: 350px;
+    }
+
+    .Paiement-level2 .From-paiement-group .cell4:nth-child(1),
+    .Paiement-level2 .From-paiement-group .cell6 {
+        padding: 0 !important;
+        width: 100% !important;
+        margin: 0 0 15px;
+    }
+
+    .Paiement-level2 button.btnEnregistrer {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .Virer_argent_1 .ModalTwo .IBAN .cell8 {
+        float: left !important;
+        width: 66.6666% !important;
+        padding: 0 5px;
+    }
+
+    .Virer_argent_1 .ModalTwo .IBAN .cell4 {
+        width: 33.3333% !important;
+        float: left !important;
+        padding: 0 5px;
+    }
+
+    .ModeConnecteTwo {
+        display: block;
+    }
+
+    .FindTravelers {
+        display: none;
+    }
+
+    .topConnect {
+        padding: 30px 25px 35px;
+    }
+
+    .dashboardView .absSidebar {
+        padding: 15px;
+    }
+
+    .register-modal .myCell7 .facebook {
+        font-size: 13px;
+        padding: 17px 12px 17px 35px;
+        background-position: left center;
+        background-size: 32px auto;
+        width: 270px;
+        margin: 0 auto;
+    }
+
+    .register-modal .topM {
+        width: 275px;
+        margin: 15px auto 0;
+    }
+
+    .MonCompte .asideProfil {
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+    }
+
+    .MonCompte .ProfilContent {
+        margin: 0;
+    }
+
+    .MonCompte .questionItem .grid .cell6,
+    .MonCompte .questionItem .grid .cell4 {
+        margin: 0 0 15px;
+    }
+
+    .commentCaMarche .BlockItem.mapTrajet:after {
+        background-size: 65px auto;
+    }
+
+    .voyagesEnCours .btnSaved {
+        width: 310px;
+        font-size: 14px;
+    }
+
+    .voyagesEnCours .boxedList > [class^=cell] {
+        width: 50% !important;
+        float: left !important;
+    }
+
+    .absSidebar .infoProfile .topInfos .avatar {
+        width: 125px;
+        height: 125px;
+        margin: 0px;
+    }
+
+    .MsgExpediteurCount.answerByComment .grid .cell6:nth-child(1),
+    .Messagerie .ServiceTypeCont .CommissionItem + .grid .cell4 {
+        margin: 0 0 15px;
+    }
+
+    .ServiceTypeCont.hidden .DimensionsBlock .grid .cell3 {
+        float: left !important;
+        width: 23% !important;
+    }
+
+    .DimensionsBlock .optionItem {
+        margin: 0 auto;
+    }
+
+    .ServiceTypeCont.hidden .DimensionsBlock > label {
+        margin: 20px 25px 0 0;
+    }
+
+    .MesMessages .grid {
+        position: relative;
+    }
+
+    .MesMessages .grid .cell3 {
+        position: absolute;
+        top: 11px;
+        right: 0;
+    }
+
+    .MesMessages .grid .cell2 {
+        width: 175px;
+    }
+
+    .ProfilContHead h2 {
+        font-size: 24px;
+    }
+
+    .inscriptionTwo .ModalInscri .topM,
+    .inscriptionTwo .ModalInscri .facebook {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    /*
+}
+@media (max-width: 767px) {*/
+    body .mainContainer {
+        overflow: hidden;
+    }
+
+    .ParngBgGrey .container > .grid > .cell6:nth-child(1) {
+        border-right: 0;
+        border-bottom: 1px solid #dfdfdf;
+        padding: 0 0 40px;
+    }
+
+    .ParngBgGrey .container > .grid > .cell6:nth-child(1):after {
+        right: inherit;
+        top: inherit;
+        left: 40%;
+        bottom: -23px;
+        padding: 15px;
+        line-height: 18px;
+    }
+
+    .followingNetworks {
+        padding: 35px 15px 15px;
+    }
+
+    .followingNetworks .grid.expanded > .cell6 {
+        margin: 0 0 15px;
+    }
+
+    .Flow {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .box-view .cell4 {
+        margin: 0 0 15px;
+    }
+
+    .box-view .cell4:last-child {
+        margin: 0 0 15px;
+    }
+
+    .ModalEnregistrement .mTransort {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .mTransort h3 {
+        margin: 0 0 15px;
+    }
+
+    .ModalEnregistrement .bottomEnr .btnLink {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .ModalEnregistrement .bottomEnr .btnLink:nth-child(1) {
+        margin: 0 auto 15px;
+    }
+
+    .ModalEnregistrement .bottomEnr .blockOptions {
+        width: 276px;
+        margin: 0 auto 25px;
+    }
+
+    .PaiementsAmi_1 .box-view .cell4 {
+        border: 0;
+    }
+
+    .PaiementsAmi_1 .ModalTwo > .grid .cell8 {
+        padding: 0;
+        margin: 0 0 50px;
+    }
+
+    .PaiementsAmi_1 .ModalTwo .inputMail input {
+        padding: 17px 19px;
+    }
+
+    .PaiementsAmi_1 .ModalTwo .Flow.FlowMessenger {
+        width: 100% !important;
+    }
+
+    .PaiementsAmi_1 .ModalTwo .btnLink.yellowStyle {
+        width: 100%;
+    }
+
+    .PaiementsAmi_1 .ModalTwo,
+    .PaiementsAmi_1 .ModalOne {
+        padding: 28px 30px 40px;
+    }
+
+    .PaiementsAmi_1 .ModalTwo > .grid .cell8:after {
+        right: 50%;
+        top: inherit;
+        bottom: -35px;
+    }
+
+    .Virer_argent_1 .ModalOne,
+    .Virer_argent_1 .ModalTwo {
+        padding: 20px 25px 15px;
+    }
+
+    .Virer_argent_1 .ModalTwo .topM {
+        margin: 0 auto 0 0;
+        width: 300px;
+    }
+
+    .Virer_argent_1 .ModalTwo .IBAN input {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .StyleBlockOne .desc,
+    .StyleBlockTwo .desc,
+    .BGskewX .SubBGskewX {
+        left: 0;
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .Popin_CGU {
+        width: 100%;
+        height: 100%
+    }
+
+    /**GCU**/
+    .Popin_CGU_modal #modalBox {
+        height: 100%;
+    }
+
+    .Popin_CGU_box {
+        padding: 10px 20px 0 20px;
+        height: auto;
+    }
+
+    .SubSliderShowOne .BGskewX .SubBGskewX {
+        width: 320px;
+    }
+
+    .SubSliderShowOne .BGskewX .SubBGskewX p {
+        width: auto;
+    }
+
+    .Paiements .content-left .Paiement-level {
+        padding: 20px 10px 30px;
+    }
+
+    .animateList {
+        height: 42px;
+        min-width: 160px;
+        margin: 0;
+    }
+
+    .animateList ul li {
+        line-height: 42px;
+        height: 42px;
+    }
+
+    .animateList ul lispan.y {
+        line-height: 42px;
+    }
+
+    .notifGroup .notifTitle span.y, span.y {
+        line-height: 42px;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .HowItWorks .BigNav a {
+        background-position: center center;
+        height: 55px;
+    }
+
+    .HowItWorks .BigNav a span {
+        display: none;
+    }
+
+    .countryBlock .cell3,
+    .countryBlock .cell6 {
+        float: none !important;
+        width: 100% !important;
+    }
+
+    .puBBlockTwo .paragGroup {
+        padding: 30px 5px 30px 100px;
+        background-size: 100px auto;
+    }
+
+    .puBBlockTwo .paragGroup p {
+        font-size: 14px;
+    }
+
+    .puBBlockTwo .paragGroup p:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .puBBlockTwo {
+        margin: 25px auto 15px;
+    }
+
+    .puBBlockTwo .btn {
+        margin: 0 auto 20px;
+    }
+
+    .voyagesEnCours .boxedList .cell3:nth-child(3) {
+        width: 100% !important;
+        float: left !important;
+        margin: 0 0 15px;
+        text-align: center;
+    }
+
+    .btnSaved:hover {
+        background-color: #fff;
+        color: #979797;
+    }
+
+    .BlackStyleTwo:hover {
+        background-color: #fff;
+        color: #1a3350;
+    }
+
+    .questionItem {
+        margin: 0;
+    }
+
+    .MonCompte .ProfilContent .progressItem {
+        padding: 10px;
+    }
+
+    .formOne .cell6,
+    .formTwo .cell6,
+    .formFour .cell4,
+    .formThree > .cell6,
+    .formThree .cell6 {
+        margin: 0 0 15px;
+    }
+
+    .formFive {
+        margin: 165px 4px 30px !important;
+    }
+
+    .formFive .heightOne {
+        margin: 0 0 15px;
+    }
+
+    .progressItem .progressBarInfo2 .niveauOne {
+        left: 40%;
+    }
+
+    .progressItem .progressBarInfo2 .niveauTwo {
+        left: 73%;
+    }
+
+    .progressItem .progressBarInfo2 .percentage {
+        left: 0;
+    }
+
+    .CommentsItem .User {
+        float: none;
+        width: 100%;
+    }
+
+    .CommentsItem .UserImg {
+        float: left;
+    }
+
+    .CommentsItem .User:before,
+    .CommentsItem .User:after {
+        content: " ";
+        display: table;
+    }
+
+    .CommentsItem .User:after {
+        clear: both;
+    }
+
+    .CommentsItem .UserName {
+        margin: 10px 0 0 90px;
+        text-align: left;
+    }
+
+    .CommentsItem .starsGroup {
+        left: 90px;
+    }
+
+    .CommentsItem .UserComments {
+        margin: 0;
+    }
+
+    .CommentJwebiSmallBlock {
+        margin: 0 0 0 90px;
+    }
+
+    #messagorie .grid .msgDate {
+        font-size: 12px;
+        padding: 10px 0;
+        width: 75px;
+    }
+
+    .isIcon.delete {
+        background-size: 12px auto;
+    }
+
+    #messagorie .grid .excerpt {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .Parametres .customRadio {
+        padding: 0 !important;
+        margin: 0 0 15px;
+    }
+
+    .Parametres > .grid,
+    .Parametres .customRadio:nth-child(1) {
+        margin: 0 0 25px;
+    }
+
+    /* Comment ça Marche */
+    .ConfianceSecurite {
+        padding: 0 8px;
+    }
+
+    .tabs-content2 .secondeNav a {
+        font-size: 14px;
+    }
+
+    .tabs-content2 .secondeNav a {
+        width: 25% !important;
+        display: block;
+        float: left;
+        text-align: center;
+    }
+
+    .commentCaMarche .BlockItem {
+        margin: 0 0 150px 110px;
+    }
+
+    .commentCaMarche .BlockItem:after {
+        left: 0;
+        top: auto;
+        bottom: -92px;
+    }
+
+    .commentCaMarche .BlockItem.people:after,
+    .commentCaMarche .BlockItem.ConfiezColis:after,
+    .commentCaMarche .BlockItem.contactez:after {
+        top: auto;
+    }
+
+    .commentCaMarche .BlockItem {
+        width: auto;
+        margin: 0 20px 110px 60px;
+    }
+
+    .commentCaMarche .BlockItem:before {
+        left: -72px;
+        top: -2px;
+        width: 27px;
+        height: 26px;
+        background-size: 27px auto;
+    }
+
+    .commentCaMarche .BlockItem h4:before {
+        left: -33px;
+        font-size: 42px;
+    }
+
+    .commentCaMarche .BlockItem h4 {
+        font-size: 20px;
+    }
+
+    .commentCaMarche .BlockItem.timeLineEnd:before {
+        width: 33px;
+        height: 33px;
+        background-size: 33px auto;
+        left: -74px;
+    }
+
+    .commentCaMarche .timeLine {
+        height: 800px;
+    }
+
+    .HowItWorks .commentCaMarche .yellowStyleTwo {
+        line-height: 50px;
+    }
+
+    .HowItWorks .yellowStyleTwo {
+        width: 280px;
+        margin: 0 auto;
+        line-height: 25px;
+    }
+
+    .HowItWorks .commentCaMarche + .btn.yellowStyleTwo {
+        margin: 0 auto 20px;
+    }
+
+    .HowItWorks .yellowStyleTwo span {
+        display: block;
+        font-size: 14px;
+    }
+
+    .commentCaMarche .BlockItem:after {
+        background-size: 80px auto;
+        width: 95px;
+        height: 77px;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .commentCaMarche .BlockItem.people:after,
+    .commentCaMarche .BlockItem.ConfiezColis:after,
+    .commentCaMarche .BlockItem.contactez:after {
+        background-size: 60px auto;
+    }
+
+    .HowItWorks .BigNav {
+        margin: 0 auto;
+    }
+
+    .HowItWorks .BigNav a {
+        width: 32.3%;
+        padding: 10px 8px 8px 60px;
+        margin: 0 3px 0 0;
+    }
+
+    .HowItWorks .BigNav a:last-child {
+        margin: 0;
+    }
+
+    .FAQ {
+        padding: 0 15px;
+    }
+
+    .ConfianceSecurite .Notif-1 {
+        margin: 0 0 25px;
+        font-size: 12px;
+    }
+
+    .FAQ dd p {
+        font-size: 12px;
+    }
+
+    .FAQ dt {
+        font-size: 18px;
+        margin: 0 0 10px;
+    }
+
+    .ConfianceSecuriteTwo p,
+    .ConfianceSecurite p {
+        font-size: 12px;
+        margin: 0 0 15px;
+    }
+
+    .ConfianceSecurite h3 {
+        font-size: 14px;
+    }
+
+    .SocialBlock .SocialItem {
+        margin: 0 0 25px;
+    }
+
+    .SocialBlock .SocialItem h4 {
+        font-size: 16px;
+    }
+
+    .ConfianceSecuriteTwo .NoteJweber {
+        float: none;
+        margin: 0 0 20px;
+    }
+
+    .ConfianceSecuriteTwo .NoteJweber .starsGroup {
+        float: left;
+        margin: 0;
+    }
+
+    .ConfianceSecuriteTwo .commentGroup {
+        margin: 0;
+    }
+
+    .ConfianceSecuriteTwo {
+        padding: 20px 15px;
+        margin: 0;
+    }
+
+    .barreSubNav p {
+        font-size: 14px;
+    }
+
+    h1.cguTitle {
+        font-size: 20px;
+    }
+
+    .cgu p {
+        font-size: 14px;
+    }
+
+    .ModalEnregistrement .cell:nth-child(4),
+    .ModalEnregistrement .cell:nth-child(6) {
+        margin: 0 0 0 50%;
+        width: auto !important;
+    }
+
+    .ModalEnregistrement .mTransort .radioVoyage {
+        text-align: center;
+        padding: 0;
+        width: 315px;
+        margin: 0 auto;
+    }
+
+    .ModalEnregistrement .radioVoyage .optionItem:last-child {
+        margin: 0 !important;
+    }
+
+    .ModalEnregistrement .cell:nth-child(4) {
+        margin: 0;
+        width: 50% !important;
+    }
+
+    .ReportThisAdTwo .ModelItem {
+        padding: 30px 20px 20px;
+        width: 450px;
+    }
+
+    .ReportThisAdTwo .ModelContent h3 {
+        margin: 0 0 25px;
+        font-size: 20px;
+    }
+
+    .ReportThisAdTwo .ModelContent p {
+        font-size: 14px;
+        margin: 0 0 15px;
+    }
+
+    .ReportThisAdTwo .ModelContent textarea {
+        height: 100px;
+    }
+
+    .ModelContent .ModelItem {
+        width: auto;
+        max-width: 500px;
+        left: 0;
+    }
+
+    .Paiement-level h2 {
+        font-size: 22px;
+        margin: 0 0 25px;
+    }
+
+    .Paiement-level h3 {
+        font-size: 18px;
+        margin: 0 0 25px;
+    }
+
+    .BackToChoice {
+        display: block;
+        text-align: center;
+        margin: 0 0 15px;
+    }
+
+    .Paiement-level h2.Paiement-title span {
+        background-size: 23px auto;
+        padding: 0 0 0 35px;
+    }
+
+    .Paiement-level3 p:nth-of-type(1) span {
+        display: block;
+        background-size: 30px auto;
+        padding: 0 0 0 38px;
+        font-size: 15px;
+    }
+
+    .Paiement-level3 p:nth-of-type(2) {
+        font-size: 12px;
+        margin: 0 0 30px;
+    }
+
+    .ReportThisUserBlock .ModelItem {
+        width: 400px;
+        padding: 30px 25px 25px;
+    }
+
+    #content.boxValid {
+        padding: 35px 0px;
+    }
+
+    .msgIncri {
+        text-align: justify;
+    }
+
+    .CommunityItemTitle {
+        padding: 140px 20px 20px;
+    }
+
+    .CommunityItemTitle h5 {
+        font-size: 16px;
+    }
+
+    .CommunityItemTitle p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .MonCompte .tabs .Parametres {
+        padding: 0;
+    }
+
+    .commentCaMarche .BlockItem.securePayment:after {
+        background-image: url('../img/howitworkicon.png');
+        background-size: 75px auto;
+    }
+
+    .PriceExample input {
+        font-size: 12px;
+    }
+
+    .PriceExample:after {
+        right: 0;
+        top: 15px;
+        font-size: 16px;
+    }
+
+    .Paiement-level1 .DescPaymentMethod {
+        width: 100% !important;
+    }
+
+    .questionItem .formThree select {
+        width: 87%;
+    }
+
+    .questionItem .subexpanded .badgetNotif {
+        right: 3px;
+    }
+
+    .ServiceTypeCont.hidden .DimensionsBlock > label {
+        display: block;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .ServiceTypeCont .DimensionsBlock > label {
+        display: block;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .ServiceTypeCont .DimensionsBlock .grid .cell3 {
+        float: left !important;
+        width: 20% !important;
+    }
+
+    .DimensionsBlock .customRadio label {
+        font-size: 12px;
+    }
+
+    .boxValid .validation {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .boxValid .validation .actionsRow {
+        width: auto;
+        position: static;
+        right: 12px;
+        top: 20px;
+        margin: 0;
+    }
+
+    .boxValid .validation .mainControl {
+        width: 100%;
+    }
+
+    .emptySearch .customCheckbox label {
+        display: inline;
+    }
+}
+
+@media (max-width: 700px) {
+    .pays {
+        padding-left: 0px;
+    }
+
+    .mesVoyages .bgDashBlocks {
+        padding: 4px 0px 4px 0px;
+    }
+
+    .dateV {
+        min-width: 99px;
+        display: block;
+    }
+
+}
+
+@media (max-width: 460px) {
+    .NoteTransaction .ModelContent .ModelItem {
+        padding: 20px;
+    }
+
+    .NoteTransaction .ModelContent h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+    }
+
+    .NoteTransaction .StarsGroup .text {
+        font-size: 16px;
+        margin: 10px 0 0;
+        text-align: center;
+    }
+    .NoteTransaction .ModelContent .stars .star{
+        background-size: 25px auto;
+    }
+    .NoteTransaction .ModelContent p {
+        font-size: 15px;
+    }
+    .NoteTransaction  .ModelContent textarea{
+        padding: 10px;
+        height: 100px;
+        margin: 0 0 10px;
+    }
+
+    .DimensionsBlock .optionItem.Petit {
+    . mesVoyages . blocksDash background-size: 40 px auto;
+    }
+
+    .DimensionsBlock .optionItem.Moyen {
+
+        background-size: 40px auto;
+    }
+
+    .DimensionsBlock .optionItem.Grand {
+
+        background-size: 38px auto;
+    }
+
+    .DimensionsBlock .optionItem.TresGrand {
+
+        background-size: 40px auto;
+    }
+
+    .BGskewX .SubBGskewX {
+        width: 280px;
+    }
+
+    .BGskewX .SubBGskewX p {
+        width: auto;
+    }
+
+    .TheNextDepartures h3 {
+        width: 300px;
+        padding: 8px 0 8px 60px;
+        font-size: 18px;
+    }
+
+    .CommentJwebiSmallBlock:before {
+        background-size: 44px auto;
+        left: -15px;
+    }
+
+    .CommentJwebiSmallBlock {
+        margin: 0 0 0 18px;
+    }
+
+    .CommentJwebiSmallBlock:after {
+        right: 10px;
+        bottom: 25px;
+    }
+
+    .HowItWorks h3 {
+        font-size: 20px;
+        background-size: 25px auto;
+    }
+
+    #sPages .followUs h3 {
+        padding: 45px 45px 45px 110px;
+    }
+
+    .followUs ul li a {
+        margin: 30px 5px 15px;
+    }
+
+    .formFive {
+        margin: 190px 4px 30px !important;
+    }
+
+    .commentCaMarche .BlockItem:before {
+        top: 10px;
+    }
+
+    .commentCaMarche .BlockItem.voyageur:before {
+        top: 0;
+    }
+
+    .tabs-content2 .secondeNav a:nth-child(1) {
+        width: 35%;
+    }
+
+    .tabs-content2 .secondeNav a:nth-child(2) {
+        width: 35%;
+    }
+
+    .tabs-content2 .secondeNav a:nth-child(3),
+    .tabs-content2 .secondeNav a:nth-child(4) {
+        width: 15%;
+        padding: 10px 6px;
+    }
+
+    .tabs-content2 .secondeNav a {
+        padding: 6px 6px;
+    }
+
+    .tabs-content2 .secondeNav a.active-tab-menu:after {
+        width: 100%;
+    }
+
+    .paddH {
+        padding: 0 10px 15px;
+    }
+
+    .ConfianceSecurite h3 {
+        font-size: 14px;
+    }
+
+    .Paiement-level1 .box {
+        width: 250px;
+    }
+
+    .colisEnv {
+        right: 0;
+        left: inherit;
+    }
+
+    h1.cguTitle {
+        font-size: 18px;
+    }
+
+    .cgu p {
+        font-size: 12px;
+    }
+
+    .absSidebar .infoProfile .topInfos .stars {
+        padding: 0;
+    }
+
+    .ReportThisAdTwo .ModelItem {
+        width: 100%;
+    }
+
+    .questionItem .formFive {
+        margin: 25px 4px 30px !important;
+    }
+
+    .Virer_argent_1 .ModalOne .btnLink.yellowStyle {
+        width: 100%;
+    }
+
+    .Virer_argent_1 .ModalTwo .topM {
+        width: 180px;
+    }
+
+    .ModalConnect .facebook {
+        padding: 20px 20px 20px 60px;
+        font-size: 14px;
+    }
+
+    .topConnect h2 [
+        font-size:
+
+22px
+
+!important;
+]
+    .CommunityItemTitle .Nb {
+        top: -65px;
+        font-size: 35px;
+    }
+
+    #messagorie .grid {
+        margin: 0 0 15px;
+    }
+
+    .userData .btnLink {
+        margin-top: 20px;
+    }
+
+    .Paiement-level h2 {
+        font-size: 18px;
+    }
+
+    .Depo_Argent p {
+        font-size: 16px;
+    }
+
+    .Paiement-level1 .box.SelectPaymentMethod {
+        width: 300px;
+    }
+
+    .Paiement-level1 .SelectPaymentMethod .cell6 {
+        float: none !important;
+        width: 100% !important;
+    }
+
+    .Paiement-level1 .SelectPaymentMethod .cell6 button {
+        width: 100%;
+    }
+
+    .Paiement-level1 .SelectPaymentMethod .cell6:nth-child(1) {
+        margin: 0 0 25px;
+    }
+
+    .ConnexionTwo {
+        height: 100%;
+    }
+
+    .ConnexionTwo .ModalConnect {
+        width: 100%;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .infoMobile {
+        top: 8px;
+        right: 12px;
+    }
+
+    .darkBg .boxesView .mobileContact {
+        float: right !important;
+    }
+
+    .darkBg .boxesView .mobileContact {
+        float: right !important;
+    }
+
+    .darkBg .userContactItmes .contactItem {
+        padding: 0;
+        margin: 0 8px 0 0;
+        display: block;
+        float: left;
+    }
+
+    .darkBg .userContactItmes .contactItem.tel {
+        width: 14px;
+        height: 24px;
+        background-size: 14px auto;
+        margin: -2px 8px 0 0;
+    }
+
+    .darkBg .userContactItmes .contactItem.carte {
+        width: 26px;
+        height: 18px;
+    }
+
+    .darkBg .userContactItmes .contactItem.mail {
+        width: 24px;
+        height: 18px;
+    }
+
+    .darkBg .userContactItmes .contactItem.matin {
+        width: 24px;
+        height: 18px;
+    }
+
+    .darkBg .userContactItmes .contactItem.soir {
+        width: 17px;
+        height: 18px;
+        margin: 0;
+    }
+
+    .darkBg .userData .btnLink {
+        margin-top: 50px;
+    }
+
+    .pagination {
+        margin: 0 0 50px;
+    }
+
+    .pagination li {
+        padding: 5px 15px;
+    }
+
+    .ModalEnregistrement .blueBack {
+        padding: 25px 15px;
+    }
+
+    .ModalEnregistrement .customRadio label {
+        margin: 0 3px 0 0;
+    }
+
+    .ModalEnregistrement .inlineOptions.radioVoyage .optionItem {
+        background-size: 40px auto;
+        padding: 40px 7px 0px;
+    }
+
+    .ModalEnregistrement .inlineOptions.radioVoyage .optionItem.trainBG {
+        background-size: 35px auto;
+    }
+
+    #modalBox h2.enrVoyage {
+        padding: 40px 0 30px;
+        font-size: 20px;
+    }
+
+    .Messagerie .ServiceTypeHeader {
+        height: auto;
+    }
+
+    .ModelContent .CloseModel {
+        right: 15px;
+        top: 15px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .ModelContent .BlackStyle {
+        min-height: 40px;
+        line-height: 40px;
+    }
+
+    .Paiement-level2 button.btnEnregistrer,
+    .Paiement-level2 .From-paiement-group {
+        width: 100%;
+    }
+
+    .ReportThisUserBlock .ModelItem {
+        width: 375px;
+    }
+
+    .bottomConnect.whiteBack {
+        font-size: 24px;
+    }
+
+    .register-modal .myCell7 .facebook,
+    .register-modal .topM {
+        width: 100%;
+    }
+
+    .CloseModelBtn {
+        width: 18px;
+        height: 18px;
+        background-size: 18px auto;
+    }
+
+    .ou:after {
+        border-right: 110px solid #979797;
+    }
+
+    .ou:before {
+        border-left: 110px solid #979797;
+    }
+
+    .commentCaMarche .BlockItem:after {
+        /*top: 160px;*/
+    }
+
+    .Messagerie .section.hidden {
+        overflow: auto;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .ModalEnregistrement .mTransort .radioVoyage {
+        width: 100%;
+    }
+
+    .ModalEnregistrement .bottomEnr {
+        padding: 15px;
+    }
+
+    .ReportThisAdTwo .ModelItem {
+        padding: 25px 15px 15px;
+    }
+
+    .ReportThisAdTwo .ModelContent p {
+        font-size: 12px;
+    }
+
+    .ReportThisUserBlock .ModelItem {
+        width: 315px;
+    }
+
+    .ReportThisUserBlock .ModelContent h3 {
+        margin: 0 0 15px;
+    }
+
+    .PaiementsAmi_1 h2 span {
+        background-size: 35px auto;
+        padding: 17px 0 17px 45px;
+    }
+
+    .PaiementsAmi_1 .ModalTwo,
+    .PaiementsAmi_1 .ModalOne {
+        padding: 28px 14px 40px;
+    }
+
+    .PaiementsAmi_1 h2 {
+        font-size: 18px !important;
+    }
+
+    .PaiementsAmi_1 .ModalOne > p {
+        font-size: 14px;
+        margin: 0 0 15px;
+    }
+
+    .PaiementsAmi_1 .box-view-item p:before {
+        font-size: 30px;
+    }
+
+    .PaiementsAmi_1 .box-view-item p {
+        padding: 30px 15px 0;
+        font-size: 12px;
+    }
+
+    .PaiementsAmi_1 .box-view .cell4 {
+        margin: 0 0 25px;
+    }
+
+    .Popin_CGU {
+        padding: 15px;
+    }
+
+    .Popin_CGU h1.cguTitle {
+        margin: 30px 15px 25px;
+    }
+
+    .collapsibleGroup {
+        padding: 15px 30px;
+    }
+
+    .SubSliderShowOne .BGskewX .SubBGskewX {
+        width: 280px;
+    }
+
+    .inscriptionTwo .ModalInscri .facebook {
+        padding: 17px 12px 17px 30px;
+        font-size: 12px;
+        background-size: 28px auto;
+    }
+
+    .inscriptionTwo .ModalInscri .topM,
+    .inscriptionTwo .ModalInscri .facebook {
+        width: auto;
+    }
+
+    .ConnexionTwo .bottomConnect h2 {
+        font-size: 16px;
+    }
+
+    .ConnexionTwo .bottomConnect span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .notifGroup .notifTitle {
+        font-size: 25px;
+    }
+
+    .notifGroup p {
+        padding: 0 25px;
+        font-size: 15px;
+    }
+
+    .MonCompte .ProfilContent {
+        padding: 20px 10px;
+    }
+
+    .progressItem .progressBarInfo2 .niveauOne {
+        left: 30%;
+    }
+
+    .progressItem .progressBarInfo2 .niveauTwo {
+        left: 67%;
+    }
+
+    .tabs-content2 .secondeNav a:nth-child(3),
+    .tabs-content2 .secondeNav a:nth-child(4) {
+        height: 62px;
+    }
+
+    .ReportThisUserBlock .ModelItem {
+        width: 290px;
+    }
+
+    .ConnexionTwo .bottomConnect h2 {
+        font-size: 14px;
+    }
+
+    .ConnexionTwo .bottomConnect span {
+        font-size: 12px;
+    }
+
+    .ConnexionTwo {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

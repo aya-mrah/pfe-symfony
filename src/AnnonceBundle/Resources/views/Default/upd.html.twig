@@ -1,0 +1,174 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href=" {{ asset('trajet/fonts/material-design-iconic-font/css/material-design-iconic-font.css') }}">
+    <!-- DATE-PICKER -->
+    <link rel="stylesheet" href=" {{ asset('trajet/vendor/date-picker/css/datepicker.min.css') }}">
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href=" {{ asset('trajet/css/style.css') }}">
+    <link rel="stylesheet" href=" {{ asset('trajet/css/2.css') }}">
+
+  <body>
+    <br><br>
+    <div class="wrapper">
+     
+           
+              {{ form_start(form,{'attr': {'class': ''}}) }}
+              <div class="form-header">
+            
+              </div>
+              <div id="wizard">
+                <!-- SECTION 1 -->
+                  <h4></h4>
+                  <section>
+                    {% for msg in app.session.flashBag.get('success') %}
+                     <div class="alert alert-success">
+                     {{ msg }}
+                     </div>
+                      {% endfor %}
+                      {% for msg in app.session.flashBag.get('error') %}
+                         <div class="alert alert-warning">
+                          {{ msg }}
+                      </div>{% endfor %}
+                   
+                    <h2> <i class="fas fa-map-marked-alt"  style="font-size:40px">&nbsp;</i>Votre Itinéraire</h2><br>
+                     
+                    
+                      <div class="form-row">
+                       <label for="">
+                      Date Début
+                        </label>
+                        <div class="form-holder">
+
+                           {{ form_widget(form.dateDebut,{'attr': {'class': ''}}) 
+                                          }}
+                              {{ form_errors(form.dateDebut) }}
+
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                          Date Fin
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.dateFin,{'attr': {'class': ''}}) 
+                                   }}
+                            {{ form_errors(form.dateFin) }}
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                          Pay Départ
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.paysDepart,{'attr': {'class': ' ','placeholder':'Exemple:Paris','onFocus':'geolocate()'},'id':'start'}) }}
+                            {{ form_errors(form.paysDepart) }}
+                        </div>
+                      </div>  
+                      <div class="form-row" style="margin-bottom: 3.4vh">
+                        <label for="">
+                          Pays Destination:
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.paysDestination,{'attr': {'class': ' ','placeholder':'Exemple:Marseille','onFocus':'geolocate()'},'id':'start'}) }}
+                                 {{ form_errors(form.paysDestination) }}
+                        </div>
+                      </div>
+                      </section>  
+                        <h4></h4>
+                  <section>
+                      <div class="form-row" style="margin-bottom: 50px;">
+                        <label for="">
+                          Ville Etape:
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.villeEtape,{'attr': {'class': 'form-control','placeholder':'Seyne sur mer','onFocus':'geolocate()'},'id':'start'}) }}
+                              {{ form_errors(form.villeEtape) }}
+                       </div>
+                      </div>  
+                       <div class="form-row">
+                        <label for="">
+                          Détails
+                        </label>
+                        <div class="form-holder">
+                            {{ form_widget(form.details,{'attr': {'class': 'form-control','placeholder':'Exemple:...'}}) }}
+                            {{ form_errors(form.details) }}
+                        </div>
+                         </div>
+               
+                  </section>
+
+                  <!-- SECTION 3 -->
+                  <h4></h4>
+                  <section>
+                    <h1><i class=" fas fa-box-open"  style="font-size:40px"></i>&nbsp;Détails du Trajet</h1><br>
+                      <div class="form-row">
+                        <label for="">
+                          Titre:
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.titre,{'attr': {'class': 'form-control ','placeholder':'Exemple:...','onFocus':'geolocate()'},'id':'start'}) }}
+                             {{ form_errors(form.titre) }}
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                          Poids a Transporté:
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.poidsAtransporter,{'attr': {'class': 'form-control ','placeholder':'Exemple:5'}}) }}
+                           {{ form_errors(form.poidsAtransporter) }}
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                          Prix (Kg):
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.prixKg,{'attr': {'class': 'form-control ','placeholder':'Exemple:4'}}) }}
+                                 {{ form_errors(form.prixKg) }}
+                        </div>
+                      </div> 
+                   </section>
+
+                  <!-- SECTION 3 -->
+                  <h4></h4>
+                  <section>     
+                      <div class="form-row" >
+                        <label for="">
+                          Type:
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.type,{'attr': {'class': 'form-control ','placeholder':''}}) }}
+                                {{ form_errors(form.type) }}
+                
+                        </div>
+                      </div>  
+                       <div class="form-row" style="margin-bottom: 38px">
+                        <label for="">
+                          Mode:
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.mode,{'attr': {'class': 'form-control ','placeholder':''}}) }}
+                                {{ form_errors(form.mode) }}
+                                <br>
+                <button type="Submit" width="100px" name="Modifier" value="Modifier">Modifier</button>
+                        </div>
+  
+                  </section>
+              </div>
+              
+{{ form_end(form) }}
+          
+    </div>
+
+   <script src="{{ asset('trajet/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('trajet/js/jquery.steps.js') }}"></script>
+    <script src="{{ asset('trajet/vendor/date-picker/js/datepicker.js') }}"></script>
+    <script src="{{ asset('trajet/vendor/date-picker/js/datepicker.en.js') }}"></script>
+    <script src="{{ asset('trajet/js/main.js') }}"></script>
+</body>
+</html>
+<br><br><br><br>
+{% endblock  %}

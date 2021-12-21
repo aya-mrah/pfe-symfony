@@ -1,0 +1,56 @@
+h2{
+    color: #fc3c3c;
+}
+.custom-tabs .nav-pills .nav-link.active{
+  color:#e8b306;
+}
+.home-feature .one-col { background: #333333;}
+.home-feature .one-col, .home-feature .two-col, .home-feature .three-col{
+
+
+  border-bottom: 10px solid #fff; }
+.home-feature .two-col {
+    background: #3E3D39;
+}.home-feature .three-col {
+    background:  #333333;
+}
+.owl-carousel.home-slider .slider-item .slider-text{
+    color:#000;
+  } 
+.owl-carousel.home-slider .slider-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: calc(100vh - 117px);
+    min-height: 150px;
+}
+.recherche {
+
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
+input{
+  border-radius: 5%;
+    padding: 2px;
+}
+.recherche li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+  font-size: 35px;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1050px;
+  height:100px;
+  background-color:#ffffff73; 
+  padding-right: 1075px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}

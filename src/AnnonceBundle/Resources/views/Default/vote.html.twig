@@ -1,0 +1,169 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+
+	<link rel="stylesheet" href="{{ asset('trajet/css/vote.scss') }}">
+  <link rel="stylesheet" href=" {{ asset('trajet/css/4.css') }}">
+  <br><br><br>
+
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<center>
+    <div class="col">
+     
+<div class="card-body" style="color:black;background-color:white;width:750px;">
+    
+
+	  <i class="far fa-clock" style="font-size:20px"> {{ Tra.dateDebut|date('Y/m/d')}}</i>
+
+                                           {% if Tra.mode =="Aérienne" %}
+                                                                <img src="{{ asset('assets/images/img/Falcon-icon.png') }}" style="margin-left:200px;" height=60 width=60>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            {% elseif Tra.mode =="Routier" %}
+                                                                <img src="{{ asset('assets/images/img/car-blue-icon.png') }}"style="margin-left:200px;" height=60 width=60">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            {% else %}
+                                                                <img src="{{ asset('assets/images/img/destroyer-icon.png') }}"style="margin-left:200px;" height=60 width=60">&nbsp;&nbsp;&nbsp;&nbsp;
+                                           {% endif %}  <strong> De: {{ Tra.paysDepart  }}</strong>
+     <i class="fas fa-arrow-right"> </i><strong> A :{{ Tra.paysDestination}}</strong>
+    
+     
+    
+      <div >
+<center><table>
+ <tr> <td class="col-md-8">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <div class='container'>
+    <div class='list-card'>
+     
+    
+        <div class='list-bottom'>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;">Prix(£/KG): </span>
+            <span>{{ Tra.prixKg}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;">Poids(KG):</i></span>
+            <span>{{ Tra.poidsAtransporter}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;">Mode:</span>
+            <span>{{ Tra.Mode}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;">Type:</span>
+            <span>{{ Tra.Type}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;">Titre:</span>
+            <span>{{ Tra.titre}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</link>
+
+	
+ 
+</td>
+ <td class="col-md-2">
+       <img src="{{ asset('uploads/images/' ~ Tra.idannonceur.path) }}" class="rounded-circle"  width="90px"><br> 
+      <strong><center>{{ Tra.idannonceur.nom}}</center></strong>
+</td></tr>
+</table></center></div>
+
+      <div class="text-center">
+
+<a href="{{ path('vote',{'note': '20', 'id' : Tra.idannonceur.id, 'idt':Tra.id }) }}"><img src="{{ asset('assets/images/img/star1.png') }}" style="width:20px;" id='_1' onclick="valider()" onmouseover="rate(1)" onmouseout="Clean()"/></a>
+<a href="{{ path('vote',{'note': '40', 'id' : Tra.idannonceur.id, 'idt':Tra.id}) }}">
+<img src="{{ asset('assets/images/img/star1.png') }}" style="width:20px;"  id='_2' onclick="valider()" onmouseover="rate(2)" onmouseout="Clean()"/></a>
+<a href="{{ path('vote',{'note': '60', 'id' : Tra.idannonceur.id, 'idt':Tra.id}) }}">
+<img src="{{ asset('assets/images/img/star1.png') }}" style="width:20px;"  id='_3' onclick="valider()" onmouseover="rate(3)" onmouseout="Clean()"/></a>
+<a href="{{ path('vote',{'note': '80', 'id' : Tra.idannonceur.id, 'idt':Tra.id}) }}">
+<img src="{{ asset('assets/images/img/star1.png') }}" style="width:20px;" id='_4' onclick="valider()" onmouseover="rate(4)" onmouseout="Clean()"/></a>
+<a href="{{ path('vote',{'note': '100', 'id' : Tra.idannonceur.id, 'idt':Tra.id}) }}">
+<img src="{{ asset('assets/images/img/star1.png') }}" style="width:20px;"  id='_5' onclick="valider()" onmouseover="rate(5)" onmouseout="Clean()"/></a>
+(<input class="text-center" style=" border:none; width:30px;" name="resultVote" id="HiddenVote"  value="0" />%) &nbsp;<i class="fa fa-refresh  fa-spin" style="font-size:15px;" onclick="zero();"  id="btnreset"></i>
+<input type="hidden" name="resultVote" id="HiddenVote" value="0" />
+
+
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      
+    <form method="POST" action ="{{ path('signalerTarjet', {'id':Tra.id}) }}">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <strong style="color:black;">&nbsp;&nbsp;&nbsp;<i  style="font-size:40px;" class="fab fa-fort-awesome-alt"></i>&nbsp;Signaler cette publication?!</strong>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+
+          <big>Raison:</big><br>
+          <input type="text" style="width:400px" name="raison" placeholder="Donner ta raison s'il vous plaît" required>
+        </div>
+        <div class="modal-footer">
+
+          <input class"btn" style="margin-left: 400px;margin-right: 300px;margin-bottom: 15px;background-color:#e5b60d; border:0px;color:white;" type="Submit" name="Envoyer" value="Envoyer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</form>
+    <i class="fas fa-thumbs-down"  data-toggle="modal" data-target="#myModal" style="color:blue;font-size:17px; margin-left:400px;"></i>
+    <script >
+
+
+var done = false
+var pic = new Array();
+pic[0] = new Image();
+pic[0]. src="{{ asset('assets/images/img/star1.png') }}";
+pic[1] = new Image();
+pic[1].src="{{ asset('assets/images/img/star2.png') }}";
+function rate(level) {
+    if (done) { return false; }
+    for (i = 1; i < 6; i++) {
+        document.getElementById('_' + i).src = (level < i) ? pic[0].src : pic[1].src;
+        document.getElementById('HiddenVote').value = level*20;
+  
+    }
+}
+ 
+function zero() {
+    for (i = 1; i < 6; i++) {
+        document.getElementById('_' + i).src = pic[0].src;
+        done = false;
+        document.getElementById('HiddenVote').value = "0";
+    }
+}
+ 
+function Clean() {
+    if (done) { return false; }
+    zero();
+}
+ 
+function valider() {
+    done = true;
+}
+</script>
+<div class="col-md-6 text-center">
+<div class="item" style="position: relative; overflow: hidden;">
+
+</div>
+</div>
+</div>
+</div>
+</div>                                           
+                                     
+</center>
+</script>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/4.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/4.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+{% endblock %}

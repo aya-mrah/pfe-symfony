@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block main %} 
+<style >
+body{
+ color: #3c4044;
+ background-color:#d3d3d3; 
+}
+a {
+    color: #000000;
+}
+
+
+</style>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}" />
+        <title>{% trans from 'FOSMessageBundle' %}messenger{% endtrans %}</title>
+    </head>
+
+    <body>
+     <table>
+     <tr>
+     <td >
+        <ul><br><br>
+            <span><i class="fas fa-inbox">&nbsp;</i>
+                <a href="{{ url('fos_message_inbox') }}">{% trans from 'FOSMessageBundle' %}Boîte de réception{% endtrans %}</a></span>
+            <br>
+            <span><i class="fab fa-telegram-plane"></i><a href="{{ url('fos_message_sent') }}">{% trans from 'FOSMessageBundle' %}&nbsp;&nbsp;&nbsp;Envoyés{% endtrans %}</a></span>
+            <br>
+            <span><i class="fas fa-trash-alt"></i><a href="{{ url('fos_message_deleted') }}">{% trans from 'FOSMessageBundle' %}&nbsp;&nbsp;&nbsp;Supprimés{% endtrans %}</a></span>
+        </ul>
+        </td>
+        <td>
+        
+        {% block fos_message_content %}{% endblock %}
+           
+             <a class="fas fa-plus-circle" href="{{ url('fos_message_thread_new' )}}" style="color:#e5b60d;font-size:40px; margin-left:770px; height:50px;"></a>
+        
+        </td>
+    </tr>
+</table>
+    </body>
+</html>{% endblock %}

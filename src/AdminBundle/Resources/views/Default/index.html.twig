@@ -1,0 +1,173 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% block title %}<title>SmartPasserelle|Admin</title>{% endblock %}
+	{% block stylesheet %}	
+	 <link href="{{ asset('css2/css/bootstrap.min.css')}}" rel="stylesheet">
+	 <link href="{{ asset('css2/css/font-awesome.min.css')}}" rel="stylesheet">
+	 <link href="{{ asset('css2/css/datepicker3.css')}}" rel="stylesheet">
+	 <link href="{{ asset('css2/css/styles.css')}}" rel="stylesheet">
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+{% endblock %}
+<script type="text/javascript">
+function image(img) {
+    var src = img.src;
+    window.open(src);
+}
+</script>
+</head>
+<body>
+	{% block nav %}
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="/"><span style="color:white">Smart</span><span style="color:#ffc800">Passerelle</span>Admin</a>	
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+{% endblock %}
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="{{ asset('uploads/images/' ~ app.user.path) }}" class="img-responsive" alt="" onclick="image(this)">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name">{{app.user.username}}</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>En Ligne</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<ul class="nav menu">
+			<li  {% if app.request.attributes.get('_route') == "Admin" %} class="active" {% endif %}><a href="{{ path('Admin')}}"><em class="fas fa-tachometer-alt">&nbsp;</em>Tableau de bord</a></li>
+			<li  {% if app.request.attributes.get('_route') == "/AdminUsers" %} class="active" {% endif %} ><a href="{{ path('/AdminUsers')}}"><em class="fas fa-users">&nbsp;</em>Utilisateurs</a></li>
+			<li {% if app.request.attributes.get('_route') == "/AdminTrajet" %} class="active" {% endif %}><a href="{{ path('/AdminTrajet')}}"><em class="fas fa-road">&nbsp;</em>Trajets</a></li>
+			<li {% if app.request.attributes.get('_route') == "/AdminColis" %} class="active" {% endif %}><a href="{{ path('/AdminColis')}}"><em class="fas fa-boxes">&nbsp;</em>Colis</a></li>
+			<li {% if app.request.attributes.get('_route') == "/AdminMessage" %} class="active" {% endif %}><a href="{{ path('/AdminMessage')}}"><em class="far fa-envelope">&nbsp;</em>Message</a></li>
+			<li {% if app.request.attributes.get('_route') == "/AdminSignaler" %} class="active" {% endif %}><a href="{{ path('/AdminSignaler')}}"><em class="far fa-thumbs-down">&nbsp;</em>Signaler</a></li>
+			<li {% if app.request.attributes.get('_route') == "/AdminTransaction" %} class="active" {% endif %}><a href="{{ path('/AdminTransaction') }}"><em class="fas fa-credit-card">&nbsp;</em>Transaction</a></li>
+			<li><a href="{{ path('fos_user_security_logout') }}"><em class="fa fa-power-off">&nbsp;</em> Dexconnexion</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Tableau de bord</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Tableau de bord</h1>
+			</div>
+		</div><!--/.row-->
+		{% block job %}
+		<div class="panel panel-container">
+			<div class="row">
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-teal panel-widget border-right">
+						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
+							<div class="large">120</div>
+							<div class="text-muted">Transaction</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding"><em class="fas fa-box-open color-orange" style="font-size:26px"></em>
+							<div class="large">{{ nb_colis }}</div>
+							<div class="text-muted">Colis</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding border-right">
+					<div class="panel panel-red panel-widget ">
+						<div class="row no-padding"><em class="fas fa-road color-red" style="font-size:26px"></em>
+							<div class="large">{{ nb_trajets }}</div>
+							<div class="text-muted">Trajets</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-orange panel-widget border-right">
+						<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
+							<div class="large">{{ nb_users }}</div>
+							<div class="text-muted">Utilisateurs</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.row-->
+		</div>
+	
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Vote</h4>
+						<div class="easypiechart" id="easypiechart-blue" data-percent="{{p_vote|round}}" ><span class="percent">{{p_vote|round}}%</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Message</h4>
+						<div class="easypiechart" id="easypiechart-orange" data-percent="{{p_msg|round}}" ><span class="percent">{{p_msg|round}}%</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Favoris</h4>
+						<div class="easypiechart" id="easypiechart-teal" data-percent="{{p_Fav|round}}" ><span class="percent">{{p_Fav|round}}%</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Signaler</h4>
+						<div class="easypiechart" id="easypiechart-red" data-percent="{{p_sig|round}}" ><span class="percent">{{p_sig|round}}%</span></div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+		
+			{% endblock %}
+			<div class="col-sm-12">
+				<p class="back-link">Create by <a href="https://www.youtube.com">AMA Business</a></p>
+			</div>
+		</div><!--/.row-->
+	</div>	<!--/.main-->
+	
+	<script src="{{ asset('css2/js/jquery-1.11.1.min.js')}}"></script>
+	<script src="{{ asset('css2/js/bootstrap.min.js')}}"></script>
+	<script src="{{ asset('css2/js/chart.min.js')}}"></script>
+	<script src="{{ asset('css2/js/chart-data.js')}}"></script>
+	<script src="{{ asset('css2/js/easypiechart.js')}}"></script>
+	<script src="{{ asset('css2/js/easypiechart-data.js')}}"></script>
+	<script src="{{ asset('css2/js/bootstrap-datepicker.js')}}"></script>
+	<script src="{{ asset('css2/js/custom.js')}}"></script>
+	
+		
+</body>
+</html>

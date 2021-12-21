@@ -1,0 +1,76 @@
+.container .list-card iframe {
+  width: 240px;
+  height: 180px;
+ 
+  border: 0;
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+}
+
+.list-details {
+  float: none;
+}
+.list-name {
+  font-size: 20px;
+  display: inline-block;
+}
+.list-landmark,
+.list-location {
+  font-size: 12px;
+  opacity: 0.5;
+  margin: 2px 0;
+}
+.list-rooms {
+  font-size: 12px;
+}
+.list-price {
+  font-size: 20px;
+  margin-top: 16px;
+}
+.list-bottom {
+  display: inline-block;
+  overflow: auto;
+  margin-top: 26px;
+}
+.list-bottom .list-bottom-section {
+    width: 160px;
+    box-sizing: border-box;
+    float: left;
+    font-size: 13px;
+    padding: -12px 20px;
+  border-left: 1px solid #e5e5e5;
+}
+.list-bottom .list-bottom-section span:last-of-type {
+  opacity: 0.5;
+}
+.list-bottom .list-bottom-section:first-of-type {
+  padding-left: 0;
+  border-left: 0;
+}
+.list-bottom .list-bottom-section span {
+  display: block;
+}
+.list-callback,
+.list-shortlist {
+  float: right;
+}
+.list-shortlist {
+  margin-right: 15px;
+}
+element.style {
+    color: black;
+    background-color: white;
+    width: 950px;
+    height: 277px;
+}
+     
+
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+    margin-top: -20px;
+  font-size: 15px;
+}

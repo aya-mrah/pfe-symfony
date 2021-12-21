@@ -1,0 +1,198 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+ <link rel="stylesheet" href=" {{ asset('trajet/css/vote.css') }}">
+    <link rel="stylesheet" href=" {{ asset('trajet/css/1.css') }}">
+  <br><br><br>
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-3" style="color:black;height:230px;">
+          <form Method="POST" Action="{{ path('rech_trajet') }}">
+  
+      
+           <input type="submit"  name="search" value="Rechercher" class="btn btn-danger btn-block" style=" color:white;" style="font-size:40px;"></a>
+      <div class="panel panel-default" style="background-color:white; height:184px;">
+        <div class="panel-heading">
+          <h3 class="panel-title"><p class="text-center" style="font-size:18px"><i class="fas fa-location-arrow"style="font-size:14px" ></i> Point De Départ</p></h3>
+          <span class="pull-right clickable"></span>
+        </div>
+      <div class="panel-body text-center"> <input type="text" name="paysDepart" style=" border: 0.5px solid #f9be3e"></p></p></div>
+      <div class="panel-heading" >
+           <h3 class="panel-title"><p class="text-center" style="font-size:18px"><i class="fas fas fa-map-marker"style="font-size:14px" ></i>  Point De Arrivée</p></h3>
+          <span class="pull-right clickable"></span>
+          
+      </div>
+      <div class="panel-body"><p class="text-center"><input type="text" name="paysDestination"  style=" border: 0.5px solid #f9be3e"></p></div><br>
+      </div>
+            
+          
+ 
+
+        </form>
+      </div>
+    <div class="col-9 ">
+        {% for Tra in Trajet %}
+          {% if Trajet is not empty %}
+     
+     <div class="card w-100">
+      <div class = 'col-lg-12'>
+        <div class="card-body" style="color:black;background-color:white; height: 297px;width:950px;">
+        <i class="far fa-clock" style="font-size:20px"> {{ Tra.datePublication|date('d/m/Y')}}<i  style="font-size:20px"></i>
+      {% if Tra.mode =="Aérienne" %}
+        <img src="{{ asset('assets/images/img/Falcon-icon.png') }}"  height="30" width="20" >
+         {% elseif Tra.mode =="Routier" %}
+        <img src="{{ asset('assets/images/img/car-blue-icon.png') }}" height="30" width="20">
+         {% else %}
+        <img src="{{ asset('assets/images/img/destroyer-icon.png') }}"  height="30" width="20">
+      {% endif %}
+      <strong style="margin-left:200px;"> De: {{ Tra.paysDepart  }}</strong> <i class="fas fa-arrow-right"> </i><strong> A :{{ Tra.paysDestination}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></i>
+      {% if app.request.attributes.get('_route') == "affi" or ( app.request.attributes.get('_route') == "rech_trajet") or ( app.request.attributes.get('_route') == "mestrajet") %}
+        
+      <a data-toggle="tooltip"   title="Plus d'information!" class="fas fa-plus" style="color:#d6ab13;font-size:17px;margin-left:100px;" href="{{ path('voteTarjet',{'id':Tra.id }) }}" > Plus d'information</a>
+ 
+      
+   
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <div class='container'>
+      <div class='list-card'>
+       <iframe class="col-md-6 text-center" style="position: relative;margin-left:10px;height:160px; width:300px; overflow: hidden;"
+       width="100%"
+       height="250%"
+       frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/directions?origin={{ Tra.paysDepart }}&destination={{ Tra.paysDestination  }}&key=AIzaSyAktdnmCXhrY38dpfCFTBidPuXG27YFmqw&mode=driving&avoid=tolls|highways" allowfullscreen>
+       </iframe>
+     <div class='list-details'> 
+    <div class='list-name'>Date debut : {{ Tra.dateDebut|date('d/m/Y')}}  <i class="fas fa-arrow-right"> </i>Date Fin :{{ Tra.dateFin|date('d/m/Y')}}</div>
+    <div class='list-bottom'>
+  <div class='list-bottom-section'>
+            <span>Nom Annonceur: </span>
+            <span>{{ Tra.idannonceur.nom}} {{ Tra.idannonceur.prenom}}</span>
+  </div>
+  <div class='list-bottom-section'>
+            <span> Télèphone:</i></span>
+            <span>{{ Tra.idannonceur.telephone}}</span>
+  </div>
+  <div class='list-bottom-section'>
+            <span>mail:</span>
+            <span>{{ Tra.idannonceur.email}}</span>
+  </div>
+  </div>
+  </div>
+ </div>
+ </div>
+</link>
+  {% if app.request.attributes.get('_route') == "affi" %}
+   {% set x= 0 %}
+      {% set op= 0 %}
+    {% for vote in vote %}
+
+  {% if vote.idtrajet.id == Tra.id %} 
+         {% set x = x + 1  %}
+          {% set op = vote.id %}
+  {% endif %}
+    {% endfor %}
+    {% for vote in vote %}
+  {% if vote.idtrajet.id == Tra.id  and vote.id == op %} 
+   <table>
+    <tr>
+      <td>
+<div class="container" >
+  <div class="row">
+    <div  style="margin-left: 515px;margin-top: -61px;">
+      <div class="progress" data-percentage="{{ vote.Moyenne|round }}">
+        <span class="progress-left">
+          <span class="progress-bar"></span>
+        </span>
+        <span class="progress-right">
+          <span class="progress-bar"></span>
+        </span>
+        <div class="progress-value">
+          <div>
+           {{ vote.Moyenne|round }}%<br>
+            <span>vote</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+{% endif %}
+  {% endfor %}
+</td><td>
+</td></tr>
+</table>
+     {% endif %}
+   {% endif %}
+
+  {% if app.request.attributes.get('_route') == "affi" %}
+      <a style="background-color:#d6ab13;border-radius:13px; margin-bottom:5px; color:white; font-size:12px; border: none;margin-right:680px;" href="{{ path('send_notification', { 'id' : Tra.idannonceur.id, 'idd' : Tra.id, 'type': 1 }) }}" class="btn btn-danger" >Profiter</a>
+     {% endif %}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      {% if app.request.attributes.get('_route') == "affi" or ( app.request.attributes.get('_route') == "rech_trajet") %}
+<i class="fas fa-envelope" style="color:#cc5819;font-size:17px"></i>&nbsp;&nbsp;
+{% if fav is not empty %}
+        {% set break = 0 %}
+        {% set breaked = 0 %}
+        {% set breaking = 0 %}  
+         {% for fav in fav %}
+          {% set breaked = breaked + 1  %}
+           {% if fav.idtrajet is not empty %}    
+            {% if fav.idtrajet.id == Tra.id and fav.idannonceur.id == app.user.id %}
+             {% set break = 1 %}
+             <a class="fa fa-heart" style="color:red;font-size:17px" href={{ path('supfav',{'id':fav.id, 'page':1 }) }} ></a> 
+            {% elseif break == 0 and comp == breaked  %}
+             <a class="far fa-heart" style="color:red;font-size:17px" href={{ path('favt',{'id':Tra.id }) }} ></a>
+            {% endif %}
+          {% elseif break == 0 and breaking == 0 and comp == breaked %}
+          {% set breaking = breaking + 1  %}
+           <a class="far fa-heart" style="color:red;font-size:17px" href={{ path('favt',{'id':Tra.id }) }} ></a>
+        {% endif %}  
+      {% endfor %}
+    {% else %}
+      <a class="far fa-heart" style="color:red;font-size:17px" href={{ path('favt',{'id':Tra.id }) }} ></a>
+  {% endif %} 
+&nbsp;&nbsp;
+
+<i class="fas fa-thumbs-down" data-toggle="collapse" data-target="#demo" style="color:blue;font-size:17px;" ></i>
+  <div id="demo" class="collapse">
+  <form method="POST" action ="{{ path('signalerTarjet', {'id':Tra.id}) }}">
+<center>
+  <br>
+
+   <strong style="color:black;">&nbsp;&nbsp;&nbsp;<i  style="font-size:40px;" class="fab fa-fort-awesome-alt"></i>&nbsp;Signaler cette publication?!</strong><br>
+          <h4 class="modal-title"></h4>
+   
+
+          <big>Raison:</big><br>
+          <input type="text" style="width:400px" name="raison" placeholder="Donner ta raison s'il vous plaît" required>
+     
+
+          <input class"btn" style="margin-left: 400px;margin-right: 300px;margin-bottom: 15px;background-color:#e5b60d; border:0px;color:white;" type="Submit" name="Envoyer" value="Envoyer">
+      </center>
+
+</div>
+{% else %}
+      {% if app.request.attributes.get('_route') == "recherche" or ( app.request.attributes.get('_route') == "mestrajet") %}
+          <a  class="fa fa-trash" style="color:blue;font-size:17px;margin-left:780px;" href={{ path('supprimer', {'id':Tra.id}) }} ></a>
+
+     <a class="fa fa-edit" style="color:blue;font-size:17px" href={{ path('updat', {'id':Tra.id}) }} ></a>
+   {% endif %}
+  {% endif %}
+     <br>
+    </div>
+  </div>
+ </div>
+</head>
+<body>
+
+<div class="container">
+ <br>
+</div>
+{% endif %}
+{% endfor %}
+  </div>
+    </div>
+      </div>
+<script>
+$('.collapse').collapse(){
+};
+</script>
+{% endblock %}
+  

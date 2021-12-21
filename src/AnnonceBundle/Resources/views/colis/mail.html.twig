@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+  <br><br><br>
+    <form method="POST" action ="{{ path('mailpayy',{ 'id' : noti.id })  }}">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+<center>
+          <big>Mail Paypal:</big><br>
+          <input type="email" style="width:400px" name="mailpay" placeholder="Donner votre mail paypal s'il vous plaît" required>
+        </div>
+        <div class="modal-footer">
+
+          <input class="btn btn-warning" style="margin-right:630px; border:0px;color:white;" type="Submit" name="Envoyer" value="Envoyer">
+        
+         
+        </div></center>
+      </div>
+      
+    </div>
+  </div>
+</form>  {% endblock %}

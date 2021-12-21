@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Trajets list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datepublication</th>
+                <th>Datedebut</th>
+                <th>Datefin</th>
+                <th>Villeetape</th>
+                <th>Paysdepart</th>
+                <th>Paysdestination</th>
+                <th>Titre</th>
+                <th>Type</th>
+                <th>Mode</th>
+                <th>Poidsatransporter</th>
+                <th>Prixkg</th>
+                <th>Details</th>
+                <th>Nomreceiver</th>
+                <th>Telereceiver</th>
+                <th>Mailreceiver</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for trajet in trajets %}
+            <tr>
+                <td><a href="{{ path('trajet_show', { 'id': trajet.id }) }}">{{ trajet.id }}</a></td>
+                <td>{% if trajet.datePublication %}{{ trajet.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if trajet.dateDebut %}{{ trajet.dateDebut|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if trajet.dateFin %}{{ trajet.dateFin|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ trajet.villeEtape }}</td>
+                <td>{{ trajet.paysDepart }}</td>
+                <td>{{ trajet.paysDestination }}</td>
+                <td>{{ trajet.titre }}</td>
+                <td>{{ trajet.type }}</td>
+                <td>{{ trajet.mode }}</td>
+                <td>{{ trajet.poidsAtransporter }}</td>
+                <td>{{ trajet.prixKg }}</td>
+                <td>{{ trajet.details }}</td>
+                <td>{{ trajet.nomreceiver }}</td>
+                <td>{{ trajet.telereceiver }}</td>
+                <td>{{ trajet.mailreceiver }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('trajet_show', { 'id': trajet.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

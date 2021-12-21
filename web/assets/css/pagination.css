@@ -1,0 +1,6 @@
+.pagination ul {
+    list-style:none;
+  }
+  .pagination li {
+    display:inline-block;
+  }

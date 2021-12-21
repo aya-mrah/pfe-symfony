@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}SmartPasserelle{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
+    <link rel="stylesheet" href=" {{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href=" {{ asset('css/jquery.timepicker.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('fonts/ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts/
+    <!DOCTYPE html>fontawesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href=" {{ asset('fonts/flaticon/font/flaticon.css') }}">
+     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
+   <link rel="stylesheet" href="{{ asset('fonts/fontawesome/css/font-awesome.min.css') }}">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('reg/css/opensans-font.css') }}">
+   <link rel="stylesheet" type="text/css" href="{{asset('reg/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css') }}">
+   <link rel="stylesheet" href=" {{ asset('trajet/css/11.css') }}">
+  {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('Logo.ico') }}" />
+        <link rel="shortcut icon" href="{{asset('Logo.ico')}}">
+    </head>
+    <body onload="myFunction()" style="margin:0;">
+    {% block body %}
+  <body>
+   <div id="loader"></div>
+   <header>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" 
+      style="background-color:#3235369e !important;height:75px">
+        <div class="container">
+         {% if is_granted('IS_AUTHENTICATED_REMEMBERED') and is_granted('ROLE_ADMIN') %}
+          
+        <a class="navbar-brand" href="{{ path('homepage')}}" >
+                <img style="width:5%;margin-right:-8px;margin-bottom:6px;font-size:2px;border-radius:65%;
+        linear-gradient(black, black);" src="{{ asset('img/Logo.jpg') }}">
+          <span style="color:#fff;font-size:22px;">mart</span><span style="color:#ffc800;font-size:22px; ">Passerelle</span>  
+        </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="col-md-6 col-sm-6 col-7 text-right">
+             
+                </li>
+              
+              <p class="mb-0">
+
+                <a href="{{ path('Admin')}}" class="cta-btn">Espace Admin</a>&nbsp;&nbsp;
+                   <a href="{{ path('fos_user_security_logout') }}" class="cta-btn">Déconnexion</a>&nbsp;&nbsp;
+              </p>
+           
+            </div>
+           
+            </ul>
+          </div>
+          {% elseif is_granted('IS_AUTHENTICATED_REMEMBERED')  %}
+
+               <a class="navbar-brand" href="/" >
+                <img style="width:5%;margin-right:-8px;margin-bottom:6px;font-size:2px;border-radius:65%;
+        linear-gradient(black, black);" src="{{ asset('img/Logo.jpg') }}">
+          <span style="color:#fff;font-size:22px;">mart</span><span style="color:#ffc800;font-size:22px; ">Passerelle</span>  
+        </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" >
+          </button>
+          <div  class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trajets</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="{{ path('Create_Trajet_Route')}}">Ajouter Trajet</a>
+                  <a class="dropdown-item" href="{{ path('affi')}}">Liste Trajet</a>
+                </div>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Colis</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <a class="dropdown-item" href="{{ path('affichage')}}">Ajouter Colis</a>
+                  <a class="dropdown-item" href="{{ path('hagep')}}">Liste Colis</a>
+                </div>
+              </li>&nbsp;&nbsp;
+             
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i><sup><span class="badge badge-danger">  
+                  {% set x= 0 %}
+                  {%  for notif in notif  %}
+                  {% if notif.idDes == app.user and notif.isdeleted == '0' %}
+                  {% if mgilet_notification_unseen_count(app.user) !=0 %}{% set x = x + 1  %}
+                     
+                
+                       {% endif %} {% endif %}{% endfor %} {{ x }}</span></sup></a>
+                  
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <div class="scrollbar scrollbar-danger">
+                  <div class="force-overflow"> 
+                      
+                  {%  for notif in notif  %}
+                    {% if notif.idDes == app.user and notif.isdeleted == '0' %}
+                  {% if notif.idcoli is not empty and notif.subject == 'Hello world !' %}
+                  <p class="text-center"><span style="text-decoration: underline;">{{ notif.idSrc.username }}</span> a demander de profite votre colis</p>
+                  <p class="text-center"><a href="{{ path('confirm_yes',{ 'id' : notif.id ,'idd' : notif.idcoli.id }) }}" class="btn"style="background-color:#ffc800; color:white;font-size:10px">confirm</a>&nbsp;&nbsp;<a href="{{ path('confirm_not',{ 'id' : notif.id }) }}" class="btn" style="background-color:#ffc800;color:white;font-size:10px">Annuler</a><br><a href="{{ path('detail',{ 'id' : notif.idSrc.id ,'idd' :notif.id  }) }}" style="color:#8ca2ad"><b>plus détails!</b></a></p>
+
+                 <hr> 
+                 {% elseif notif.idcoli is not empty and notif.subject == 'paiement' and notif.idSrc == notif.idDes %}
+                  
+                  <p class="text-center"><span style="text-decoration: underline;">{{ notif.idDes.username }}</span> Entrer votre mail paypal pour étre payer <span style="color:red">{{ notif.idcoli.idannonceur.username}}</span></p>
+                  <p class="text-center"><a href="{{ path('paypalmail',{ 'id' : notif.id ,'idd' : notif.idSrc.id }) }}"  class="btn"style="background-color:#ffc800; color:white;font-size:10px">Entrer mail</a>  
+                  <hr>
+
+               {% elseif notif.idcoli is not empty and notif.subject == 'system'  %}
+
+                 <p class="text-center"><span style="text-decoration: underline;">{{ notif.idDes.username }}</span> Votre colis est était Arrivée par <span style="color:red">{{ notif.idSrc.username}}</span></p>
+                 <p class="text-center"><a href="{{ path('payroute',{ 'id' : notif.idcoli.id ,'idss' : notif.idSrc.id }) }}"  onClick="affiche()" class="btn"style="background-color:#ffc800; color:white;font-size:10px">Payer</a>&nbsp;&nbsp;<br><a href="#" style="color:#8ca2ad"><b>plus détails!</b></a></p>
+                 <hr> 
+                
+               {% elseif notif.idtrajet is not empty  %}
+                <p class="text-center"><span style="text-decoration: underline;">{{ notif.idSrc.username }}</span> souhaite profite votre trajet</p>
+                <p class="text-center"><a href="#" class="btn"style="background-color:#ffc800; color:white;font-size:10px">Details</a>&nbsp;<a href="{{ path('confirm_not',{ 'id' : notif.id }) }}" class="btn" style="background-color:#ffc800;color:white;font-size:10px">Annuler</a><br></p>
+                  {% endif %}
+
+                {% endif %}
+
+                {% endfor %}
+                </div>
+             </div>
+           </div>
+              </li>
+             
+              <li class="nav-item">
+
+                <a class="nav-link" href="{{ url('fos_message_inbox') }}"><i class="fas fa-envelope"></i>
+                      <sup><span class="badge badge-danger">{% if fos_message_nb_unread() !=0 %}{{ fos_message_nb_unread() }} {% endif %}</span></sup>
+                   </a>
+                    
+              </li>
+              {% set count= 0 %}
+              {% for fav in fav %}
+
+               {% if fav.idannonceur == app.user %} 
+              {% set count = count + 1 %}
+                {% endif %}
+              {% endfor %}
+
+              {% set countT= 0 %}
+              {% for fav in fav %}
+                {% if fav.idtrajet is not empty and fav.idannonceur == app.user %}
+
+              {% set countT = countT + 1 %}
+                {% endif %}
+              {% endfor %} 
+
+               {% set countC= 0 %}
+              {% for fav in fav %}
+                {% if fav.idcoli is not empty and fav.idannonceur == app.user %}
+
+              {% set countC = countC + 1 %}
+                {% endif %}
+              {% endfor %} 
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-heart"></i><sup><span class="badge badge-danger">{{ count }} </span></sup></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="{{ path('showTraFav')}}" ><span class="badge badge-danger">{{ countT }}</span> Liste Favoris Trajets</a>
+                  <a class="dropdown-item" href="{{ path('affcolfav')}}"><span class="badge badge-danger">{{ countC }}</span> Liste Favoris Colis</a>
+                </div>
+
+              </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="{{ asset('uploads/images/' ~ app.user.path) }}" style="border-radius:50%" width="30" height="30">&nbsp;{{ app.user.username }}&nbsp;&nbsp;&nbsp;</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                  <a class="dropdown-item" href="{{ path('fos_user_profile_show') }}">Profile</a>
+                  <a class="dropdown-item" href="{{ path('mestrajet') }}">Mes Trajets</a>
+                  <a class="dropdown-item" href="{{ path('mescolis') }}">Mes Colis</a>
+                  <a class="dropdown-item" href="{{ path('transporteur') }}">Colis à Transporter</a>
+                  <a class="dropdown-item" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                </div>
+              </li>
+       
+</span>
+               {% else %}
+          <a class="navbar-brand" href="/" >
+     <img style="width:5%;margin-right:-8px;margin-bottom:6px;font-size:2px;border-radius:65%;
+        linear-gradient(black, black);" src="{{ asset('img/Logo.jpg') }}">
+          <span style="color:#fff;font-size:22px;">mart</span><span style="color:#ffc800;font-size:22px; ">Passerelle</span></a>
+         
+  
+       
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"  >
+         </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+                <a ></a>
+              </li>
+               <li class="nav-item">
+                <a style="background-color:#32312c3b"  href="{{ path('fos_user_security_login')}}" class="cta-btn">Connexion</a>&nbsp;&nbsp;
+              </li>
+              <li class="nav-item">
+                <a style="background-color:#32312c3b" href="{{ path('fos_user_registration_register')}}" class="cta-btn">Inscription</a>
+              </li>
+              
+            </ul>
+          </div>
+      
+      </nav>
+    </header>
+        {% endif %}
+        </div>
+
+      </nav>
+
+    </header>
+    
+    <!-- END header -->
+ </body>
+</html>
+
+        {% endblock %}
+        {% block main %}
+
+        {% endblock %}   
+        <br> 
+  <div class="footer" style="background:#323536c7; !important; padding:30px color:white;">
+  <p><center> &copy;2019 Design & Developpement Par AMA BUSINESS</center></p>
+</div>  </footer>
+        {% block javascripts %}
+    <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('js/jquery.timepicker.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+   <script src="{{ asset('reg/js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ asset('reg/js/jquery.steps.js') }}"></script>
+  <script src="{{ asset('reg/js/main.js') }}"></script>
+ <script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+   
+  {% endblock %}
+
+    </body>
+</html>

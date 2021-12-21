@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<link rel="stylesheet" href=" {{ asset('coli/css/6.css') }}">
+  <br><br><br>
+   <div class="container-fluid">
+  <div class="row">
+   <div class="col-3" >
+
+   
+    {% for msg in app.session.flashBag.get('success') %}
+                     <div class="alert alert-success">
+                     {{ msg }}
+                     </div>
+                      {% endfor %}
+                      {% for msg in app.session.flashBag.get('error') %}
+                         <div class="alert alert-warning">
+                         <b style="color:red"> {{ msg }}</b>
+                      </div>
+                      {% endfor %}
+    </div>
+
+
+    <div class="col-9 ">
+      
+       
+      {% for col in col %}
+    
+        {% for noti in noti %} 
+        {% if col.id == noti.idcoli.id and col.etat == 'Accepter' and noti.isdeleted == 1 %}
+     <div class="card w-100">
+      <div class = 'col-lg-12'>
+
+
+
+    <div class="card-body" style="color:black;background-color:white; height: 289px;width:950px;">
+    <form method="POST" action="{{ path('CodeColi',{'id':col.id ,'idd': col.idannonceur.id }) }}">
+      <i class="far fa-clock" style="font-size:20px"> {{ col.dateDebut|date('Y/m/d')}}<i  style="font-size:20px"></i>
+
+      {% if col.etat =="Colis Arriver" %}
+                                                                <img src="{{ asset('assets/images/img/niveauMaxi2@2x.png') }}"  height="30" width="20">
+                                                            {% elseif col.etat =="encours" %}
+                                                                <img src="{{ asset('assets/images/img/icon66@2x.png') }}" height="30" width="20">
+                                                            {% else %}
+                                                                <img src="{{ asset('assets/images/img/niveauMaxi1@2x.png') }}"height="30" width="20">
+                                           {% endif %} 
+
+
+      <strong style="margin-left:200px;"> De: {{ col.paysDepart  }}</strong> <i class="fas fa-arrow-right"> </i><strong> A :{{ col.paysDestination}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></i>
+
+      <input type="password" placeholder="Entrée code colis" name="codelivraison"> 
+      <input type="submit" value="valider" class="btn btn-warning" style="color:white;border-radius:3px; margin-bottom:5px; color:white; font-size:12px; border: none;">
+    
+      </form>
+      {% if app.request.attributes.get('_route') == "hagep" %}
+        
+        
+         <a data-toggle="tooltip"   title="Plus d'information!" class="fas fa-plus" style="color:#d6ab13;font-size:17px;margin-left:100px;" href="{{ path('donner',{'id': col.id }) }}" > Plus d'information</a>
+     {% endif %}
+      {% if app.request.attributes.get('_route') == "mescolis" %}
+       <i class="fa fa-key" style="font-size:20px">Code livraison:&nbsp;&nbsp;<span style="color:green;">{{ col.codelivraison}}</span> </i>
+       {% endif %}
+   
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <div class='container'>
+    <div class='list-card'>
+     
+     <iframe class="col-md-6 text-center" style="position: relative;margin-left:10px;height:160px; width:300px; overflow: hidden;"
+       width="100%"
+       height="250%"
+       frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/directions?origin={{ col.paysDepart }}&destination={{ col.paysDestination }}&key=AIzaSyAktdnmCXhrY38dpfCFTBidPuXG27YFmqw&mode=driving&avoid=tolls|highways" allowfullscreen>
+
+</iframe>
+      <div class='list-details'>
+        <div class='list-name'>Date debut : {{ col.dateDebut|date('d/m/Y')}}  <i class="fas fa-arrow-right"> </i> Date Fin :{{ col.dateFin|date('d/m/Y')}}</div>
+        
+      
+        <div class='list-bottom'>
+          <div class='list-bottom-section'>
+            <span>Nom Annonceur: </span>
+            <span>{{ col.idannonceur.nom}} {{ col.idannonceur.prenom}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span> Télèphone:</i></span>
+            <span>{{ col.idannonceur.telephone}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span>mail:</span>
+            <span>{{ col.idannonceur.email}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</link>
+
+<a data-toggle="tooltip"   title="Plus d'information!" class="fas fa-plus" style="color:#d6ab13;font-size:17px;margin-left:700px;" href="{{ path('donner',{'id': col.id }) }}" > Plus d'information</a>
+  
+     
+       {% if app.request.attributes.get('_route') == "hagep" %}
+       <a href="{{ path('send_notification', { 'id' : col.idannonceur.id, 'idd' : col.id, 'type': 2 }) }}" style="background-color:#d6ab13;border-radius:13px; margin-bottom:5px; color:white; font-size:12px; border: none;margin-right:680px;" class="btn btn-danger">Profiter</a>
+     {% endif %}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      {% if ( app.request.attributes.get('_route') == "hagep") or ( app.request.attributes.get('_route') == "coli_rech") %}
+     
+ <i class="fas fa-envelope" style="color:#cc5819;font-size:17px"></i>&nbsp;&nbsp;
+      {% if fav is not empty %}
+        {% set break = 0 %}
+        {% set breaked = 0 %}
+        {% set breaking = 0 %}  
+         {% for fav in fav %}
+          {% set breaked = breaked + 1  %}
+           {% if fav.idcoli is not empty %}  
+             {% if fav.idcoli.id == col.id and fav.idannonceur.id == app.user.id %}
+              {% set break = 1 %}
+                <a class="fa fa-heart" data-toggle="tooltip" title="favorise colis!"  style="color:red;font-size:17px" href={{ path('supfavcoli', {'id':fav.id, 'page':2 }) }} ></a>
+             {% elseif break == 0 and comp == breaked  %}
+                <a class="far fa-heart" data-toggle="tooltip" title="favorise colis!"  style="color:red;font-size:17px" href={{ path('favtcoli', {'id':col.id}) }} ></a>  
+             {% endif %}
+           {% elseif break == 0 and breaking == 0 and comp == breaked %}
+            {% set breaking = breaking + 1  %}
+
+             <a class="far fa-heart" data-toggle="tooltip" title="favorise colis!"  style="color:red;font-size:17px" href={{ path('favtcoli', {'id':col.id}) }} ></a>  
+          {% endif %}
+        {% endfor %}
+     {% else %}
+      <a class="far fa-heart" data-toggle="tooltip" title="favorise colis!"  style="color:red;font-size:17px" href={{ path('favtcoli', {'id':col.id}) }} ></a>  
+     {% endif %}
+       &nbsp;&nbsp;
+
+  <i class="fas fa-thumbs-down" data-toggle="collapse" data-target="#demo" style="color:blue;font-size:17px;" ></i>
+  <div id="demo" class="collapse">
+  <form method="POST" action ="{{ path('signalerColi', {'id':col.id}) }}"><br>
+   <center>
+
+          <strong style="color:black;">&nbsp;&nbsp;&nbsp;<i  style="font-size:40px;" class="fab fa-fort-awesome-alt"></i>&nbsp;Signaler cette publication?!</strong><br>
+          <h4 class="modal-title"></h4>
+   
+
+          <big>Raison:</big><br>
+          <input type="text" style="width:400px" name="raison" placeholder="Donner ta raison s'il vous plaît" required>
+     
+
+          <input class"btn" style="margin-left: 400px;margin-right: 300px;margin-bottom: 15px;background-color:#e5b60d; border:0px;color:white;" type="Submit" name="Envoyer" value="Envoyer">
+      </center>
+</form>
+</div>
+      {% else %}
+  
+     {% endif %}
+     <br>
+
+    </div></div>
+
+  </div>
+</head>
+<body>
+
+<div class="container">
+ <br>
+</div>
+{% endif %}
+{% endfor %}
+
+{% endfor %}
+  </div>
+    </div>
+</div>
+<script>
+$('.collapse').collapse(){
+};
+
+</script>
+{% endblock %}
+  

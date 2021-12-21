@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Trajet</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ trajet.id }}</td>
+            </tr>
+            <tr>
+                <th>Datepublication</th>
+                <td>{% if trajet.datePublication %}{{ trajet.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Datedebut</th>
+                <td>{% if trajet.dateDebut %}{{ trajet.dateDebut|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Datefin</th>
+                <td>{% if trajet.dateFin %}{{ trajet.dateFin|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Villeetape</th>
+                <td>{{ trajet.villeEtape }}</td>
+            </tr>
+            <tr>
+                <th>Paysdepart</th>
+                <td>{{ trajet.paysDepart }}</td>
+            </tr>
+            <tr>
+                <th>Paysdestination</th>
+                <td>{{ trajet.paysDestination }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ trajet.titre }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ trajet.type }}</td>
+            </tr>
+            <tr>
+                <th>Mode</th>
+                <td>{{ trajet.mode }}</td>
+            </tr>
+            <tr>
+                <th>Poidsatransporter</th>
+                <td>{{ trajet.poidsAtransporter }}</td>
+            </tr>
+            <tr>
+                <th>Prixkg</th>
+                <td>{{ trajet.prixKg }}</td>
+            </tr>
+            <tr>
+                <th>Details</th>
+                <td>{{ trajet.details }}</td>
+            </tr>
+            <tr>
+                <th>Nomreceiver</th>
+                <td>{{ trajet.nomreceiver }}</td>
+            </tr>
+            <tr>
+                <th>Telereceiver</th>
+                <td>{{ trajet.telereceiver }}</td>
+            </tr>
+            <tr>
+                <th>Mailreceiver</th>
+                <td>{{ trajet.mailreceiver }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('trajet_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

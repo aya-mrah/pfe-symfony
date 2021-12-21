@@ -1,0 +1,386 @@
+@charset "utf-8";
+
+input, textarea, select, button, .btn {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+input:focus, textarea:focus, select:focus, button:focus, .btn:focus {
+    outline: none;
+}
+
+/* placeholder style */
+::-webkit-input-placeholder     { color:#bfbfbf;}
+:-moz-placeholder               { color:#bfbfbf; opacity:  1; /* Mozilla Firefox 4 to 18 */ }
+::-moz-placeholder              { color:#bfbfbf; opacity:  1; /* Mozilla Firefox 19+ */}
+:-ms-input-placeholder          { color:#bfbfbf; /* Internet Explorer 10+ */}
+
+.full{width: 100%;}
+
+/* --- Form --- */
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;font-size:100%}
+form{}
+fieldset{border:none;} 
+legend{}
+
+.formBlock{}
+/* --- form Field --- */
+.formField{margin-bottom:10px;}
+.formField.last, .formField.no-offset{margin-bottom:0px;}
+.mediumFields .formField{margin-bottom:12px; }
+.minFields .formField{margin-bottom:4px; }
+/* --- label --- */
+.formField > label{display:block; font-size: 16px; color:#4b5160;line-height: 20px;padding: 17px 0px;}
+.rightLabels .formField > label{text-align: right;}
+.formField > label.required:after{content:'*';color:#00b6fa; padding: 10px 5px;  font-size: 24px;}
+.formField > label.notRequired:after{content: none;}
+.formField > label.suf:after{content:':';}
+.formField > label + .formControl{font-size: 18px; color: #5570ae; }
+.actionsRow{ margin-top: 30px;}
+
+/* horizontal Form */
+.horizontalForm .formField {/* overflow: hidden; */}
+.formField:before,.formField:after {content:" ";display: table;}.formField:after {clear: both;}
+
+/* horizontal Form :: label */
+.horizontalForm .formField > label, .formField.horizontalForm  > label{float:left; width:140px; }
+.horizontalForm .formField > label + .formControl, .formField.horizontalForm  > label + .formControl{margin-left:140px; padding-left:8px; }
+
+.smallLabel .formField > label, .formField.smallLabel > label{width:80px;}
+.smallLabel .formField > label + .formControl ,.formField.smallLabel > label + .formControl{margin-left: 80px;}
+
+.mediumLabel .formField > label, .formField.mediumLabel > label{width:120px;}
+.mediumLabel .formField > label + .formControl ,.formField.mediumLabel > label + .formControl{margin-left:120px;}
+
+.largeLabel .formField > label, .formField.largeLabel > label{width:170px;}
+.largeLabel .formField > label + .formControl, .formField.largeLabel > label + .formControl{margin-left:170px;}
+
+/* Form Control */
+.mainControl,
+.formControl input[type=text],.formControl input[type=email], .formControl input[type=password], .formControl input[type=tel], .formControl input[type="search"],
+.formControl textarea, .formControl input[type=date]{font-size: 15px; color:#1a3350; border:1px solid #bfbfbf;border-radius: 4px; padding: 3px 12px; box-shadow:0 0; 
+    height: 54px; box-sizing:border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;-webkit-appearance: none;-moz-appearance: none; appearance: none;    width: 100%;
+background-color: #fcfcfc;}
+.hasIcon{background-repeat: no-repeat;background-position: 6% center;padding: 3px 48px 3px}
+
+.mainControl.error,
+.formControl input[type=text],.formControl input[type=email], .formControl input[type=password], .formControl input[type=tel], .formControl input[type="search"],
+.formControl textarea, .formControl input[type=date]{}
+
+.formControl .mainControl[readonly], .formControl input[readonly], .formControl textarea[readonly]{ border: none; padding: 0; color: #5570ae;}
+
+.formControlSelect{  margin-bottom: 15px;} /* ## */
+.formField textarea { resize:none; } /* Redimensionnement : none|horizontal|vertical|both|inherit */
+.formField textarea.noResize { resize:none; } /* désactive le redimensionnement */
+select{ font-size: 16px; border: 1px solid #808080; border-radius: 3px; padding: 12px 12px; width:100%; height: 54px; }
+select{text-indent: 0.01px; text-overflow: ""; -webkit-appearance: none;-moz-appearance:none;appearance:none; padding-right: 32px; box-sizing:border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;    background: url("../img/select.png") no-repeat right center;}
+select.lightStyle{border: none;}
+
+.selectGrey{background: url("../404-not-found.html") no-repeat right center;
+    border: 1px solid #adadad;
+    border-radius: 2px;
+    color: #777;
+    min-height: 28px;
+    line-height: 28px;
+    font-size: 12px}
+
+.selectGrey2{background: url("../404-not-found.html") no-repeat right center;
+ border: 1px solid #adadad;
+    border-radius: 2px;
+    color: #777;
+    min-height: 28px;
+    line-height: 28px;
+    font-size: 12px}
+
+/* ################################################### */
+/* Spin Buttons modified */
+
+input[type=time], input[type=number]{ position: relative; }
+input[type=time]::-webkit-outer-spin-button, 
+input[type=time]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none; -moz-appearance: textfield;
+    cursor:pointer;
+    background: url(../404-not-found.html) no-repeat right center;
+    display: inline-block; width:20px; height: 100%; margin: 1px;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+input[type=time]::-webkit-inner-spin-button:hover,
+input[type=time].mod::-webkit-inner-spin-button:active,
+input[type=number]::-webkit-inner-spin-button:hover,
+input[type=number].mod::-webkit-inner-spin-button:active{
+    opacity: 1;
+}
+
+input[type=time], input[type=number]{ position: relative; }
+input[type=time]::-moz-outer-spin-button, 
+input[type=time]::-moz-inner-spin-button,
+input[type=number]::-moz-outer-spin-button, 
+input[type=number]::-moz-inner-spin-button {
+    -moz-appearance: none; -moz-appearance: textfield;
+    cursor:pointer;
+    background: url(../404-not-found.html) no-repeat right center;
+    display: inline-block; width:20px; height: 100%; margin: 1px;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+input[type=time]::-moz-inner-spin-button:hover,
+input[type=time].mod::-moz-inner-spin-button:active,
+input[type=number]::-moz-inner-spin-button:hover,
+input[type=number].mod::-moz-inner-spin-button:active{
+    opacity: 1;
+}
+
+
+/* MS hacks */
+select::-ms-expand {display: none;}
+
+.borderless .formControl .mainControl, .borderless .formControl input,.borderless .formControl textarea, .borderless .formControl select, .borderless{/* border:none!important; */}
+.isValid { background: url("../404-not-found.html") no-repeat scroll 98% center; box-shadow:0 0; padding-right: 39px !important;}
+.isInvalid {background: url("../404-not-found.html") no-repeat scroll 98% center; box-shadow:0 0; border-color: #fd7a7a!important; padding-right: 39px !important;}
+
+
+
+/* Options */
+.inlineOptions{overflow:hidden;padding:2px 0;}
+.inlineOptions .optionItem{float: left;}
+.inlineOptions label{float: left;width: auto;margin: 0 10px 0 0;line-height: 22px;}
+.inlineOptions input{float:left;}
+
+.rtl .inlineOptions{ float:right; }
+.rtl .inlineOptions label{float: right;margin: 0 4px 0 10px;}
+.rtl .inlineOptions input{float:right;}
+
+.blockOptions{overflow:hidden;/*margin-top: 4px;*/}
+.blockOptions .optionItem{margin: 0px 0 5px; }
+.blockOptions label{float: none; display:block; width: auto;margin: 0 10px 0 0px; line-height: 20px;}
+.blockOptions input{float:left;}
+.blockOptions input[type="checkbox"]:checked  + label{ }
+
+.rtl .blockOptions{ float:right; }
+.rtl .blockOptions input{float:right;}
+.rtl .blockOptions label{margin: 0 0 0 10px;}
+
+.infoTxt{font-size: 16px; color:#b5b5b5;}
+/* message Box */
+.errorContainer, .messagesContainer{ margin-top: 7px;}
+.messageBox{font-size:15px; line-height:16px; color:#b5b5b5; display: block;}
+.messageBox.block{display: block;}
+.messageBox.block + .messageBox.block{ margin-top: 2px; }
+.messageBox.errorMsg{color:#e54242;}
+.messageBox.warningMsg{color:#e79e7e;}
+.messageBox.successMsg{color:#33a263;}
+
+.absoluteMsg .formControl{position: relative;}
+.absoluteMsg .messageBox{position: absolute;top: 0;right: -190px;width: 180px;line-height: 20px;}
+
+/* btn Link */
+.btnLink{display: block;vertical-align: bottom;text-decoration: none; background-color: #0f233b; border:none; cursor: pointer; line-height:20px; min-height: 54px; color:#fff; font-size: 16px; padding:17px 12px; border-radius: 4px; -webkit-border-radius: 4px;
+ -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none;width: 100%;
+    text-align: center;
+
+-webkit-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+border: 1px solid #0f233b;
+}
+.btnLink:hover{
+    background-color: #fff;
+    color: #0f233b;
+}
+
+/* Buttons */
+.btn{  
+    background-color: #0f233b;
+    color: #fff;
+    border:none; 
+    cursor: pointer; 
+    min-height: 54px; 
+    font-size: 16px; 
+    padding:0 24px; 
+    border-radius: 4px;
+    -webkit-border-radius: 4px; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    -ms-appearance: none; 
+    -o-appearance: none; 
+    appearance: none; 
+    width: 100%;
+}
+
+/* Colors */
+.yellowStyle, .btnLinkYellow{
+    background-color: #ffca00;
+    color: #0f233b;
+    border: 1px solid #ffca00;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.yellowStyle:hover {
+    background-color: #E1B300;
+    color: #0f233b;
+    border: 1px solid #E1B300;
+}
+.yellowStyleTwo {
+    background-color: #ffcb00;
+    color: #fff;
+    border: 1px solid #ffca00;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.yellowStyleTwo:hover {
+    background-color: #fff;
+    color: #ffcb00;
+    border: 1px solid #ffcb00;
+}
+.BlackStyle{
+    background-color: #0f233a;
+    color: #fff;
+    border: 1px solid #0f233a;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.BlackStyle:hover {
+    background-color: #fff;
+    color: #0f233a;
+}
+.BlackStyleTwo {
+    background-color: #fff;
+    color: #0f233a;
+    border: 1px solid #1a3350;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.BlackStyleTwo:hover {
+    background-color: #1a3350;
+    color: #fff;
+}
+.btnSaved {
+    background-color: #fff;
+    color: #0f233a;
+    border: 1px solid #979797;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    min-height: auto;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+    width: 310px;
+    margin: 0 auto;
+}
+.btnSaved:hover {
+    background-color: #979797;
+    color: #fff;
+}
+.rgba{    background-color: rgba(255, 255, 255, 0.7) !important;}
+.HightRgba{    background-color: rgba(255, 255, 255, 0.3);}
+.btnGrey{background-color: #777;color:#fff;font-size: 10px}
+
+.btnGreyTwo {
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    padding: 0;
+    display: block;
+    min-height: auto;
+    text-align: center;
+    background-color: #fff;
+    color: #8c8c8c;
+    text-decoration: none;
+    border: 1px solid #E2E2E2;
+    
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btnGreyTwo:hover {
+    background-color: #8c8c8c;
+    color: #fff;
+}
+
+.btnSecond{border:1px solid #AFAFAF;line-height:17px;color:#FFF;border-radius: 5px;font-size: 10px;text-transform: uppercase;padding:0 2px;}
+.btn.short{line-height: 24px;}
+
+.btn.small{min-width: 80px;}
+.btn.medium{min-width: 141px;}
+.btn.large{min-width: 250px;}
+.btn.full{min-width: 100%; padding: 0 16px;}
+
+/* custom Radio & checkbox */
+.customRadio input[type=radio], .customCheckbox  input[type=checkbox], .customCheckboxpink  input[type=checkbox] {display: none;}
+.customRadio label, .customCheckbox label, .customCheckboxpink label{position:relative; padding-left: 26px!important;color: #8C8C8C;font-size: 14px;
+} 
+.customRadio label{background: url("../img/not-checked.png")no-repeat left center; padding: 3px;}
+.customCheckboxpink label{background: url("../404-not-found.html")no-repeat left center; padding: 3px;}
+
+.customCheckbox label{background: url("../img/not-checked.png")no-repeat left 20%;}
+.customRadio label:before, .customCheckbox label:before, .customCheckboxpink label:before{content: "";text-align: center;display: inline-block;width: 22px;height: 20px;padding-right: 7px;position:absolute; left:0; top: 0;background-position: 0px 25px;}
+.customRadio label:before {border-radius: 8px;}
+.customCheckbox label:before, .customCheckboxpink label:before  {border-radius: 0px;}
+.customRadio  input[type=radio]:checked + label {background: url("../img/Checked.png")no-repeat left center;}
+.customCheckbox input[type=checkbox]:checked + label{
+    background: url("../img/Checked.png")no-repeat left 20%;;
+}
+.customCheckbox input[type=radio]:checked + label{
+    background: url("../img/Checked.png")no-repeat left 20%;;
+}
+.customCheckboxpink input[type=checkbox]:checked + label{background: url("../404-not-found.html")no-repeat left center;}
+
+.customRadio  input[type=radio]:checked + label:before {content: "";color: #f3f3f3;font-size: 16px; }
+.customCheckbox input[type=checkbox]:checked + label:before, .customCheckboxpink input[type=checkbox]:checked + label:before {content: "";background-position: 0px 0px;}
+
+/* TABLET */ 
+@media only screen and (max-width : 1024px) { 
+	.btn{font-size: 14px; padding:0 18px; }
+}
+
+/* TABLET PORTRAIT portrait  */
+@media only screen and (max-width : 768px) and (orientation : portrait) , screen and (max-width : 640px) {
+	.footerBar { font-size: 10px; }
+	.formField{margin-bottom:14px; }
+	.formField > label{font-size: 12px; line-height: 32px;}
+	.formField > label + .formControl{font-size: 15px; line-height: 26px;}
+	.formControl .mainControl,.formControl input[type=text] ,.formControl input[type=email], .formControl input[type=tel], .formControl input[type=password], .formControl textarea{ font-size: 13px; }
+	.borderless .formControl .mainControl, .borderless .formControl input,.borderless .formControl textarea, .borderless .formControl select{ border: 1px solid #5571ae!important;}
+	.absoluteMsg .messageBox{position: static; width: auto;}
+	.messageBox{font-size:12px;}
+	.btn {width: 100%; box-sizing: border-box; font-size: 16px; line-height: 46px; padding:0 16px;}
+	#ngdialog1 #step1 input.btn{width:41%}
+	.infoTxt{font-size: 12px;}
+	
+	input#promotionCode{height: 33px !important;}
+	
+	#ngdialog3 input#email{font-size:13.5px;}
+
+	.mainControl, 
+	.formControl input[type=text], 
+	.formControl input[type=email], 
+	.formControl input[type=password], 
+	.formControl input[type=tel], 
+	.formControl input[type="search"], 
+	.formControl textarea, 
+	.formControl input[type=date]{ line-height: 34px; min-height: 34px;}
+}
+	.mainControl,
+	.formControl input[type=time]{line-height: 30px; line-height: 30px}
+
+/* MOBILE */ 
+@media only screen and (max-width : 640px) {
+    
+}

@@ -1,0 +1,21 @@
+ select.form-control:not([size]):not([multiple]) {
+    height: calc(1.55rem + 1px);
+   }
+   label{
+   margin-top:-0.6rem;
+ }
+ .form-control {
+    height: 31px;
+  }
+   form {
+    padding-top: 25px;}
+    h1, h2, h3, h4, h5 {
+    color: #ffc107c2;
+
+}
+label {
+    margin-top: -1.5rem;
+}
+    h1, h2, h3, h4, h5 {
+    color: #ffc107c2;
+}

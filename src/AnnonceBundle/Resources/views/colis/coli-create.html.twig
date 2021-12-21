@@ -1,0 +1,232 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+  <!-- MATERIAL DESIGN ICONIC FONT -->
+ <link rel="stylesheet" href=" {{ asset('trajet/fonts/material-design-iconic-font/css/material-design-iconic-font.css') }}">
+     <!-- DATE-PICKER -->
+<link rel="stylesheet" href=" {{ asset('trajet/vendor/date-picker/css/datepicker.min.css') }}">
+<link rel="stylesheet" href=" {{ asset('trajet/css/style.css') }}">
+<link rel="stylesheet" href=" {{ asset('coli/css/3.css') }}">
+<br>
+  <body>
+      <div class="main-content">
+           
+    <div class="wrapper">
+      
+              {{ form_start(form,{'attr': {'class': ''}}) }}
+              <div class="form-header">
+              </div><br>
+              <div id="wizard">
+                <!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                     {% for msg in app.session.flashBag.get('success') %}
+                     <div class="alert alert-success">
+                     {{ msg }}
+                     </div>
+                      {% endfor %}
+                      {% for msg in app.session.flashBag.get('error') %}
+                         <div class="alert alert-warning">
+                          {{ msg }}
+                      </div>
+                      {% endfor %}
+                     <h2><i class="fas fa-male"  style="font-size:40px">&nbsp;</i>CoordonnéesDe votre Receiver</h2><br>
+                      <div class="form-row" style="margin-bottom: 26px;">
+                        <label for="">
+                        Nom Receiver
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.nomreceiver,{'attr': {'class': 'form-control ','placeholder':'Nom Receiver'}}) }}
+                                {{ form_errors(form.nomreceiver) }}
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                        Prénom Receiver
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.prenomreceiver,{'attr': {'class': 'form-control','placeholder':'prenomreceiver'}}) }}
+                             {{ form_errors(form.prenomreceiver) }}
+                
+                        </div>
+                      </div>  
+                      </section>
+                      <h4></h4>
+             <section>
+                      <div class="form-row">
+                        <label for="">
+                        Cin Receiver
+                        </label>
+                        <div class="form-holder">
+                            {{ form_widget(form.cinreceiver,{'attr': {'class': 'form-control','placeholder':'....'}}) }}
+                            {{ form_errors(form.cinreceiver) }}
+                        </div>
+                         </div>
+                         <div class="form-row">
+                        <label for="">
+                        Mail Receiver
+                        </label>
+                        <div class="form-holder">
+                            {{ form_widget(form.emailreceiver,{'attr': {'class': 'form-control','placeholder':'Exanple@exemple.com'}}) }}
+                            {{ form_errors(form.emailreceiver) }}
+                        </div>
+                         </div>
+                         <div class="form-row">
+                        <label for="">
+                        Télèphone Receiver
+                        </label>
+                        <div class="form-holder">
+                            {{ form_widget(form.telreceiver,{'attr': {'class': 'form-control','placeholder':'+00334545541'}}) }}
+                            {{ form_errors(form.telreceiver) }}
+                        </div>
+                         </div>
+                  </section>
+                  
+              <!-- SECTION 2 -->
+                  <h4></h4>
+             <section>
+                    <h2> <i class="fas fa-map-marked-alt"  style="font-size:40px">&nbsp;</i>Votre Itinéraire</h2><br>
+                    
+                      <div class="form-row">
+                       <label for="">
+                      Date Début
+                        </label>
+                        <div class="form-holder">
+
+                           {{ form_widget(form.dateDebut,{'attr': {'class': ''}}) 
+                                          }}
+                              {{ form_errors(form.dateDebut) }}
+
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                          Date Fin
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.dateFin,{'attr': {'class': ''}}) 
+                                   }}
+                            {{ form_errors(form.dateFin) }}
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                          Pay Départ
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.paysDepart,{'attr': {'class': ' ','placeholder':'Exemple:Paris','onFocus':'geolocate()'},'id':'start'}) }}
+                            {{ form_errors(form.paysDepart) }}
+                        </div>
+                      </div>  
+                      <div class="form-row" style="margin-bottom: 3.4vh">
+                        <label for="">
+                          Pays Destination:
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.paysDestination,{'attr': {'class': ' ','placeholder':'Exemple:Marseille','onFocus':'geolocate()'},'id':'start'}) }}
+                          {{ form_errors(form.paysDestination) }}
+                        </div>
+                      </div>  
+                       
+               </section>
+          <!-- SECTION 3 -->
+                 <h4></h4>
+              <section>
+                    <h2> <i class="fas fa-box-open"  style="font-size:40px">&nbsp;</i>Détails du colis</h2><br>
+                    
+                      <div class="form-row"><br>
+                       <label for="">
+                        Titre De Votre Annonce
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.titre,{'attr': {'class': 'form-control ','placeholder':'Exemple:...','onFocus':'geolocate()'},'id':'start'}) }}
+                             {{ form_errors(form.titre) }}
+                        </div>
+                      </div>  
+                      <div class="form-row">
+                        <label for="">
+                        Type Colis
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.type,{'attr': {'class': 'form-control ','placeholder':''}}) }}
+                           {{ form_errors(form.type) }}
+                        </div>
+                      </div> 
+                   
+
+                    </section>
+                     <h4></h4>
+                    <section>
+                      <div class="form-row">
+                        <label for="">
+                        Dimention Colis
+                        </label>
+                        <div class="form-holder">
+                           {{ form_widget(form.dimensionColi,{'attr': {'class': 'form-control ','placeholder':'Exemple:4'}}) }}
+                                 {{ form_errors(form.dimensionColi) }}
+                        </div>
+                      </div>  
+                      <div class="form-row" >
+                        <label for="">
+                        Poids Colis(kg)
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.poidsColis,{'attr': {'class': 'form-control ','placeholder':'Exemple:5'}}) }}
+                                {{ form_errors(form.poidsColis) }}
+                
+                        </div>
+                      </div>  
+                      <div class="form-row" >
+                        <label for="">
+                        Prix Colis
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.prixColis,{'attr': {'class': 'form-control ','placeholder':'Exemple:5'}}) }}
+                           {{ form_errors(form.prixColis) }}
+                
+                        </div>
+                      </div>  
+               </section>
+                     <h4></h4>
+               <section>
+                    <h2> <i class="fas fa-code-branch"  style="font-size:40px">&nbsp;</i>Information Sur Votre Colis</h2><br>
+                    <div class="form-row" >
+                        <label for="">
+                        Description
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.description,{'attr': {'class': 'form-control ','placeholder':'Exemple:5'}}) }}
+                           {{ form_errors(form.description) }}
+                
+                        </div>
+                      </div>  
+
+                    
+                        
+                   <div class="form-row" >
+                        <label for="">
+                        Image Colis
+                        </label>
+                        <div class="form-holder">
+                          {{ form_widget(form.path,{'attr': {'class': 'form-control'}}) }}
+                          {{ form_errors(form.path) }}
+                <br>
+                  <button type="Submit" width="100px" name="créer" value="créer">Créer</button>
+                        </div>
+                       
+             </section>
+              </div>
+              
+{{ form_end(form) }}
+
+          
+    </div>
+
+   <script src="{{ asset('trajet/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('trajet/js/jquery.steps.js') }}"></script>
+    <script src="{{ asset('trajet/vendor/date-picker/js/datepicker.js') }}"></script>
+    <script src="{{ asset('trajet/vendor/date-picker/js/datepicker.en.js') }}"></script>
+    <script src="{{ asset('trajet/js/main.js') }}"></script>
+</body>
+</html>
+<br><br><br><br>
+{% endblock  %}

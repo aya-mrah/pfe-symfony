@@ -1,0 +1,29 @@
+{% extends 'AdminBundle:Default:index.html.twig' %}
+{% block job %}
+<table class="table" style="
+    font-size: unset;">
+  <thead style="background-color:#ffc800">
+    <tr>
+      <th scope="col">Photo</th>
+      <th scope="col">Envoyer par</th>
+      <th scope="col">Message</th>
+      <th scope="col">Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for mesg in mesg %}
+    <tr>
+      <th scope="row">
+        <img src="{{ asset('uploads/images/' ~ mesg.sender.path) }}" width="35" height="35" style="border-radius:50%" onclick="image(this)"></th>
+
+      <td><a href="#" style="color:blue">{{ mesg.sender.username }}</a></td>
+      <td>{{ mesg.body }}</td>
+      <td>{{ mesg.createdAt|date('y/m/d') }}</td>
+      <td><div class="pull-right action-buttons"><a href="" class="trash">
+        <em class="fa fa-trash" style="color:red"></em></a></div></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

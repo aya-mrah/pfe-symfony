@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+{% block main%}
+<link rel="stylesheet" href=" {{ asset('trajet/css/8.css') }}">
+<br><br><br>
+<center>
+{% if rech  %}
+{% for rech in rech %}
+	 <div class="card-body" style="color:black;background-color:white;width:750px;">
+      <i class="far fa-clock" style="font-size:20px"> {{ rech.dateDebut|date('Y/m/d')}}</i>
+ {% if rech.mode =="Aérienne" %}
+                                                                <img src="{{ asset('assets/images/img/Falcon-icon.png') }}" style="margin-left:200px;" height=60 width=60>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            {% elseif rech.mode =="Routier" %}
+                                                                <img src="{{ asset('assets/images/img/car-blue-icon.png') }}"style="margin-left:200px;" height="60" width="60">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            {% else %}
+                                                                <img src="{{ asset('assets/images/img/destroyer-icon.png') }}"style="margin-left:200px;" height="60" width="60">&nbsp;&nbsp;&nbsp;&nbsp;
+                                           {% endif %} <strong> De: {{ rech.paysDepart  }}</strong>
+     <i class="fas fa-arrow-right"> </i><strong> A :{{ rech.paysDestination}}</strong>
+      <hr>
+
+      
+<div class="col-md-6 text-center">
+<div class="item" style="position: relative; overflow: hidden;">
+<iframe
+       width="100%"
+       height="250%"
+       frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/directions?origin={{ rech.paysDepart }}&destination={{ rech.paysDestination }}&key=AIzaSyAktdnmCXhrY38dpfCFTBidPuXG27YFmqw&mode=driving&avoid=tolls|highways" allowfullscreen>
+         
+</iframe>
+</div>
+ </div>
+     <br>
+
+      <i class="fas fa-user-circle" style="color:blue;font-size:25px"></i>
+      <strong>Nom Annonceur: {{ rech.idannonceur.nom}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;<br><hr>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <i class="fas fa-phone-volume" style="color:green;font-size:20px"></i>
+      <i>Telephone : {{ rech.idannonceur.telephone }}</i>&nbsp;&nbsp;&nbsp;&nbsp;
+      <i class="fas fa-at" style="color:blue;font-size:20px"></i>
+      Email: {{ rech.idannonceur.email }}</i>&nbsp;&nbsp;&nbsp;<i>
+      
+    
+    
+  </div>
+
+ <br>
+
+{% endfor %}
+</div>
+</div>
+{% else %}
+  <img src="{{ asset('400.png') }}" width="856" height="500">
+{% endif %}
+     </center>
+    
+{% endblock %}	
+
+
+
+    

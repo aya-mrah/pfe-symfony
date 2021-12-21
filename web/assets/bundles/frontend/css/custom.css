@@ -1,0 +1,161 @@
+#map {
+    min-height: 250px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.achnor-btn {
+    display: block;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.Parametres .ParametresForm input[type="password"] {
+    background-color: #fcfcfc;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    width: 100%;
+    color: #0f233b;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.customRadio input[type=checkbox]:checked + label {
+    background: url("../../../img/Checked.png") no-repeat left center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.MonCompte .alertMessages {
+    max-width: 1140px;
+    margin: 10px auto;
+}
+
+.btn-offer {
+    cursor: pointer;
+}
+
+.CloseModelBtnCGU {
+    background-image: url('../../../img/close2%402x.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px auto;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 9;
+}
+.socialBlock p:before{
+    background-image: url('../../../img/True3%402x.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px auto;
+}
+.socialBlock p {
+    color: #8fbd43;
+    max-width: 280px;
+    /* width: 100%; */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    line-height: 55px;
+    margin: 0 auto 14px;
+    font-size: 16px;
+}
+.profile-link{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.share-profile-mail .ModalTwo {
+    background-color: #f7f7f7;
+    padding: 42px 50px 30px;
+}
+.share-profile-mail .ModalTwo h3 {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Roboto-Light';
+    color: #1a3350;
+    margin: 0 0 20px;
+}
+.share-profile-mail .ModalTwo p {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Roboto-Light';
+    color: #1a3350;
+    margin: 0 0 13px;
+}
+.jwebiLink {
+    text-decoration: none;
+    color: #1a3350;
+}
+.center{
+    text-align: center;
+}
+
+.userDeparts .userImg img{
+    height: auto;
+    width: 100%;
+}
+
+.ModalEnregistrement {
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.ConnexionTwo {
+    background-color: #353535;
+    padding: 80px 0;
+    height: auto;
+}
+
+.backHome {
+    position: relative;
+    right: 15px;
+    top: 15px;
+    float: right;
+    background-image: url(../../../img/close2%402x.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px auto;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+div[name="option_buy"] {
+    display: none;
+}
+.emptySearch .CommissionBlock .error {
+    font-size: 13px;
+    color: #C82655;
+}
+
+.WebSiteLink input[type="text"], .ServiceTypeCont textarea {
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    background-color: #fcfcfc;
+    padding: 15px;
+    font-size: 16px;
+    color: #1a3350;
+    border-radius: 3px;
+}
+
+.WebSiteLink input[type="text"] {
+    margin: 0 0 25px;
+}
+.On{
+    font-weight: bolder;
+}

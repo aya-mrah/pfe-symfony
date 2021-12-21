@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<link rel="stylesheet" href=" {{ asset('coli/css/1.css') }}">
+
+ {% for col in col %}
+  
+<br><br><br><br><br><br><br><br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>
+ 
+  <style class="cp-pen-styles">
+
+section:hover .slider-image {
+  background:  url("{{ asset('uploads/images/' ~ col.idannonceur.path) }}");
+  background-size: cover;
+  background-position: center;
+  left: 10%;
+    width: 50%;
+}
+
+.slider-image {
+  background: url("{{ asset('uploads/images/' ~ col.path) }}");
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  left: 1%;
+  transition: 1s left ease-in-out,1s background ease-in-out;
+  width: 50%;
+}
+
+</style>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Port+Lligat+Slab'>
+<head>
+
+
+  <body>
+    
+<section> 
+<div class="slider-2">
+  <h2 style="font-size:27px;margin-left: 240px;">Information Receiver</h2>
+  <p>
+     <br>
+    <i class="fas fa-phone-volume" style="color:red;font-size:20px;    margin-left: 240px;"></i>
+      <i style="font-size:15px;margin-left: 240px;"> {{ col.telreceiver}}</i>&nbsp;&nbsp;<br>
+      <i class="fas fa-at" style="color:red;font-size:20px;    margin-left: 240px;"></i>
+      <i style="font-size:15px; margin-left: 240px;"> 
+      {{ col.emailreceiver }}</i>&nbsp;<i></p>
+</div>    
+<div class="slider-image">
+  
+</div>
+
+<div class="slider-1">
+  <h2 style="font-size:28px;">Information Colis</h2>
+
+    <p> 
+<i class="far fa-clock" style="font-size:20px;"></i><i style="font-size:15px; "> {{ col.dateDebut|date('Y/m/d')}}<i  style="font-size:20px"></i>
+      <i style="margin-left:50px;"> De:{{ col.paysDepart  }}</strong> <i class="fas fa-arrow-right"> </i></i> A :{{ col.paysDestination}}&nbsp;&nbsp;</strong></i>
+     
+ <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <div class='container'>
+    <div class='list-card'>
+     
+    
+        <div class='list-bottom'>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;"><b class="fas fa fa-balance-scale" style="font-size:17px;color:red;font-size:15px">(KG)</b>&nbsp;&nbsp;</span>
+            <span  style="color:black">{{ col.prixColis }}</span><span></span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;"><b class="fas fa fa-clone" style="font-size:18px;color:red;font-size:15px">&nbsp;&nbsp;</b></i></span>
+            <span  style="color:black">{{ col.dimensionColi }}</span><span></span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;"><b class="fas fa-info" style="color:red;font-size:15px">&nbsp;&nbsp;</b></span>
+            <span  style="color:black">{{ col.description}}</span><span></span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;"></span>
+            <span  style="color:black"></span><span></span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;"><b class="far fa-object-ungroup"  style="font-size:17px;color:red;font-size:15px"></b></span>
+            <span  style="color:black">{{ col.Type}}</span><span></span>
+          </div>
+            <div class='list-bottom-section'>
+            <span style="color:#f4c516;"><b class="fas fa fa-eur" style="font-size:17px;color:red;font-size:15px">&nbsp;&nbsp;(kg/£):</b></span>
+            <span  style="color:black">{{ col.prixColis}}</span><span></span>
+          </div>
+          <div class='list-bottom-section'>
+            <span style="color:#f4c516;"><i style="font-size:16px;color:red;font-size:15px">Titre:</i></span>
+            <span style="color:black;">{{ col.titre}}</span><span>.</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+     <i class="fas fa-thumbs-down"  data-toggle="modal" data-target="#myModal" style="color:blue;font-size:20px;   margin-left: 399px;"></i>
+  </div>
+
+</link> 
+
+    </p>
+   
+</div>  
+</section>
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      
+    <form method="POST" action ="{{ path('signalerColi', {'id':col.id}) }}">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <strong style="color:black;">&nbsp;&nbsp;&nbsp;<i  style="font-size:40px;" class="fab fa-fort-awesome-alt"></i>&nbsp;Signaler cette publication?!</strong>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+
+          <big>Raison:</big><br>
+          <input type="text" style="width:400px" name="raison" placeholder="Donner ta raison s'il vous plaît" required>
+        </div>
+        <div class="modal-footer">
+
+          <input class"btn" style="margin-left: 400px;margin-right: 300px;margin-bottom: 15px;background-color:#e5b60d; border:0px;color:white;" type="Submit" name="Envoyer" value="Envoyer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</form>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+{% endfor %}
+</body></html>{% endblock %}
+  

@@ -1,0 +1,111 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: "@AnnonceBundle/Resources/config/services.yml" }
+    - { resource: "@AdminBundle/Resources/config/services.yml" }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: fr
+    images_directory: '%kernel.project_dir%/web/uploads/images'
+framework:
+    templating:
+            engines: ['twig']
+    #esi: ~
+    translator: { fallbacks: ['%locale%'] }
+    #translator: ~
+    secret: '%secret%'
+    router:
+        resource: '%kernel.project_dir%/app/config/routing.yml'
+        strict_requirements: ~
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    #serializer: { enable_annotations: true }
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    session:
+        # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+    fragments: ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+
+# Twig Configuration
+twig:
+    form_themes: ['bootstrap_4_layout.html.twig']
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver: pdo_mysql
+        host: '%database_host%'
+        port: '%database_port%'
+        dbname: '%database_name%'
+        user: '%database_user%'
+        password: '%database_password%'
+        charset: UTF8
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #path: '%database_path%'
+
+    orm:
+        auto_generate_proxy_classes: false
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer: 
+    transport: smtp 
+    host: smtp.gmail.com 
+    username: '%mailer_user%' 
+    password: '%mailer_password%' 
+    port: 465 
+    disable_delivery: false 
+    encryption: ssl 
+    auth_mode: login 
+    spool: { type: memory } 
+    stream_options: 
+        ssl: 
+            allow_self_signed: true 
+            verify_peer: false
+
+sensio_framework_extra:
+   router:
+        annotations: false
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    service:                               # this lines
+        mailer: fos_user.mailer.twig_swift # this lines
+    from_email:
+        address: monadresse@gmail.com
+        sender_name: SmartPasserelle
+               
+    registration:
+        form:
+            type: AppBundle\Form\RegistrationType
+fos_message:
+    db_driver: orm
+    thread_class: AppBundle\Entity\Thread
+    message_class: AppBundle\Entity\Message
+
+beelab_paypal:
+    username: lwess.zed.19-facilitator_api1.gmail.com
+    password: A4C28U4PAZWADAQF
+    signature: AKPT7Qq25dG1xHK3J5OtR2IKf.3YA1zNtthfPFStJ7tFD36xSbf0gNHi
+    return_route: returnroute
+    cancel_route: cancelroute
+    test_mode: "%kernel.debug%"
+  

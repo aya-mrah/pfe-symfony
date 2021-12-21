@@ -1,0 +1,157 @@
+{% extends 'AdminBundle:Default:index.html.twig' %}
+{% block job %}
+	<div class="panel panel-default chat">
+					<div class="panel-heading" style="background-color:#ffc800">
+						Users
+						<span class="pull-right clickable panel-toggle panel-button-tab-left">
+							<em class="fa fa-toggle-up"></em></span>
+					</div>
+					<div class="panel-body">
+						<ul>
+							{% for user in user %}
+							<li class="right clearfix"><span >
+								<img src="{{ asset('uploads/images/' ~ user.path) }}" alt="User Avatar" class="img-circle" width="60" height="60" class=" pull-right">
+								</span>
+								<div class="chat-body clearfix">
+									<div class="header"><strong class="pull-left primary-font">
+									{{ user.username}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<small class="text-muted">{{ user.lastLogin|date('Y/m/d') }}</small>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="{{ path('/AdminTrajetFind',{'id':user.id}) }}">Liste Trajet de {{user.username}}</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a href="{{ path('/AdminColisFind',{'id':user.id}) }}">Liste Colis de {{user.username}}</a></div>
+                                     <br>
+                                     <i class="fas fa-info-circle" style="font-size:26px;color:blue"></i>
+                                     <table class="table">
+                                     	 <tbody>
+                                     	 	<tr>
+                                     	 		<td><b>Nom:</b>&nbsp;{{ user.nom}}</td>
+                                     	 		<td><b>Prenom:</b>&nbsp;{{ user.prenom}}</td>
+                                     	 		<td><b>Adresse:</b>&nbsp;{{ user.adresse}}</td>
+                                     	 		<td><b>Profession:</b>&nbsp;{{ user.profession}}</td>
+                                     	 	</tr>
+                                     	 	<tr>
+                                     	 		<td><b>Tel:</b>&nbsp;{{ user.telephone}}</td>
+                                     	 		<td><b>cin:</b>&nbsp;{{ user.cin }}</td>
+                                     	 		<td><b>Date naissance:</b>&nbsp;{{ user.datenaissance|date('Y/m/d') }}</td>
+                                     	 		<td><b>Sexe:</b>&nbsp;{{ user.sexe}}</td>
+                                     	 	</tr>
+                                     	 </tbody>
+                                     </table>
+                                     <br>
+								</div>
+							</li>
+							{% endfor %}
+
+						</ul>
+					</div>
+					
+				</div>
+				{% if app.request.attributes.get('_route') == "/AdminTrajetFind" %}
+				<div class="panel panel-default chat">
+					<div class="panel-heading" style="background-color:#ffc800">
+						Trajet({{nb_tra}})
+						<span class="pull-right clickable panel-toggle panel-button-tab-left">
+							<em class="fa fa-toggle-up"></em></span>
+					</div>
+					<div class="panel-body">
+						<ul>
+							{% for trajet in trajet %}
+							<li class="right clearfix"><span >
+								<img src="{{ asset('uploads/images/' ~ trajet.idannonceur.path) }}" alt="User Avatar" class="img-circle" width="35" height="35" class=" pull-right">
+								</span>
+								<div class="chat-body clearfix">
+									<div class="header"><strong class="pull-left primary-font">
+									{{ trajet.idannonceur.username}}</strong> <small class="text-muted">{{ trajet.datePublication|date('Y/m/d') }}</small></div><br>
+									<strong> De: {{ trajet.paysDepart  }}</strong>
+                                    <i class="fas fa-arrow-right"> 
+                                     </i><strong> A :{{ trajet.paysDestination}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                     <i class="fas fa-calendar-alt"></i>
+                                     <b>Date Debut:</b>&nbsp;{{ trajet.dateDebut|date('d/m/Y')}}&nbsp;&nbsp;&nbsp;
+                                     <b>Date Fin :</b>&nbsp;{{ trajet.dateFin|date('d/m/Y')}}
+                                     <br><br>
+                                     <i class="fas fa-info-circle" style="font-size:26px;color:blue"></i>
+                                     <table class="table">
+                                     	 <tbody>
+                                     	 	<tr>
+                                     	 		<td><b>Titre:</b>&nbsp;{{ trajet.titre}}</td>
+                                     	 		<td><b>Type:</b>&nbsp;{{ trajet.type}}</td>
+                                     	 		<td><b>Mode:</b>&nbsp;{{ trajet.mode}}</td>
+                                     	 	</tr>
+                                     	 	<tr>
+                                     	 		<td><b>Poids a transporter:</b>&nbsp;{{ trajet.poidsAtransporter}}</td>
+                                     	 		<td><b>prix(Kg):</b>&nbsp;{{ trajet.prixKg}}</td>
+                                     	 		<td><b>details:</b>&nbsp;{{ trajet.details}}</td>
+                                     	 	</tr>
+                                     	 </tbody>
+                                     </table>
+                                     <br>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+					
+				</div>	
+				
+{% elseif app.request.attributes.get('_route') == "/AdminColisFind" %}
+	<div class="panel panel-default chat">
+					<div class="panel-heading" style="background-color:#ffc800">
+						Colis({{nb_col}})
+						<span class="pull-right clickable panel-toggle panel-button-tab-left">
+							<em class="fa fa-toggle-up"></em></span>
+					</div>
+					<div class="panel-body">
+						<ul>
+							{% for coli in coli %}
+							<li class="right clearfix"><span >
+								<img src="{{ asset('uploads/images/' ~ coli.idannonceur.path) }}" alt="User Avatar" class="img-circle" width="35" height="35" class=" pull-right">
+								</span>
+								<div class="chat-body clearfix">
+									<div class="header"><strong class="pull-left primary-font">
+									{{ coli.idannonceur.username}}</strong> <small class="text-muted">{{ coli.datePublication|date('Y/m/d') }}</small></div><br>
+									<strong> De: {{ coli.paysDepart  }}</strong>
+                                    <i class="fas fa-arrow-right"> 
+                                     </i><strong> A :{{ coli.paysDestination}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                     <i class="fas fa-calendar-alt"></i>
+                                     <b>Date Debut:</b>&nbsp;{{ coli.dateDebut|date('d/m/Y')}}&nbsp;&nbsp;&nbsp;
+                                     <b>Date Fin :</b>&nbsp;{{ coli.dateFin|date('d/m/Y')}}
+                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                     <b>Photo:</b>
+                                      <img src="{{ asset('uploads/images/' ~ coli.path) }}" alt="Colis" class="img-circle" width="35" height="35" onclick="image(this)">
+                                     <br><br>
+                                     <i class="fas fa-info-circle" style="font-size:26px;color:blue"></i>
+                                    
+                                     <table class="table">
+                                     	 <tbody>
+                                     	 	<tr>
+                                     	 		<td><b>Titre:</b>&nbsp;{{ coli.titre}}</td>
+                                     	 		<td><b>Type:</b>&nbsp;{{ coli.type}}</td>
+                                     	 		<td><b>Description:</b>&nbsp;{{ coli.description}}</td>
+                                     	 		<td><b>Code livraison:</b>&nbsp;{{ coli.codelivraison}}</td>
+
+                                     	 	</tr>
+                                     	 	<tr>
+                                     	 		<td><b>Dimention colis:</b>&nbsp;{{ coli.dimensionColi}}</td>
+                                     	 		<td><b>Poids colis:</b>&nbsp;{{ coli.poidsColis}}</td>
+                                     	 		<td><b>Prix colis:</b>&nbsp;{{ coli.prixColis}}</td>
+                                     	 		<td><b>Etat:</b>&nbsp;{{ coli.etat}}</td>
+                                     	 	</tr>
+                                     	 	<tr>
+                                     	 		<td><b>Nom Receiver:</b>&nbsp;{{ coli.nomreceiver}}&nbsp;{{ coli.prenomreceiver}} </td>
+                                     	 		<td><b>CIN Receiver:</b>&nbsp;{{ coli.cinreceiver}}</td>
+                                     	 		<td><b>Email Receiver:</b>&nbsp;{{ coli.emailreceiver}}</td>
+                                     	 		<td><b>Tel Receiver:</b>&nbsp;{{ coli.telreceiver}}</td>
+                                     	 	</tr>
+                                     	 </tbody>
+                                     </table>
+                                     <br>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+					
+				</div>
+{% endif %}
+{% endblock %}

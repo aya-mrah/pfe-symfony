@@ -1,0 +1,328 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main %}
+
+<style>
+.recherche {
+
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
+input{
+  border-radius: 5%;
+    padding: 2px;
+}
+.recherche li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+  font-size: 35px;
+}
+</style>
+    <br><br>
+     <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('img/PiggyBee-user3.jpg');">
+        
+        <div class="container">
+          <div class="row slider-text align-items-center">
+            <div class="col-md-7 col-sm-12 element-animate">
+              <h1>Transfert Des Colis Entre Particuliers</h1>
+              <p>..</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-item" style="background-image: url('img/package-1080x723.jpg');">
+        <div class="container">
+          <div class="row slider-text align-items-center">
+            <div class="col-md-7 col-sm-12 element-animate">
+              <h1>Transfert Des Colis Entre Particuliers</h1>
+              <p>..</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </section>
+    <!-- END slider -->
+
+
+    <section class="container home-feature mb-5">
+      <div class="row">
+        <div class="col-md-4 p-0 one-col element-animate">
+          <div class="col-inner p-xl-5 p-lg-5 p-md-4 p-sm-4 p-4">
+            <span ></span>
+            <h2><strong><big>Livraison rapide et sécurisé</big></strong></h2>
+            <p>Avec <big>SmartPasserelle</big> vous permettront de recevoir des colis ,bagages,lettres rapidement par des voyageurs de notre site,cela vos permettent de gagner votre temps.<br>Rejoinez_nous le plus tot possible.</p>
+          </div>
+          <a href="#" class="btn-more">Plus D'information</a>
+        </div>
+        <div class="col-md-4 p-0 two-col element-animate">
+          <div class="col-inner p-xl-5 p-lg-5 p-md-4 p-sm-4 p-4">
+            <span ></span>
+            <h2><strong><big>Meilleur prix garanti</big></strong></h2>
+            <p>Notre site offre des bas prix à ces clients.<br><big>SmartPasserelle </big>vous permettront de ganger votre argent.</p>
+          </div>
+          <a href="#" class="btn-more">Plus D'information</a>
+        </div>
+        <div class="col-md-4 p-0 three-col element-animate">
+          <div class="col-inner p-xl-5 p-lg-5 p-md-4 p-sm-4 p-4">
+            <span ></span>
+            <h2><strong><big>Service personnalisé</big></strong></h2>
+            <p>Votre satisfaction est notre objectifs.<br><big>SmartPasserelle </big>vous permettront d'obtenir une souplesse des services personnalisés et vous  répond rigoureusement à vos exigences en temps réel n'hésitezà nous joindre.</p></p>
+          </div>
+          <a href="#" class="btn-more">Plus D'information</a>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+      <div>  <form>
+<center>
+<h1><strong><big>Recherche</big></strong></h1>
+</center>
+<ul class="recherche">
+  <li> DE&nbsp;&nbsp;<input type="typetext" placeholder="Pay Départ"></li>
+   <li>À&nbsp;&nbsp;<input type="typetext"  placeholder="Pay Départ"></li>
+  <input class="btn btn-success btn-lg" style=" border-radius: 80%; width :240px;padding : 15px;font-size:23px"type="Submit" value="Rechercher" >
+</ul>
+</form></div>
+    <!-- END section -->
+
+    <section class="section custom-tabs">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-4 border-right element-animate">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><span>01</span> Services Personnalisé</a>
+              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>02</span> Meilleur prix garanti</a>
+              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span>03</span> Livraison rapide</a>
+              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span>04</span> Bagague Sécurisé </a>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-7 element-animate">
+            
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <span class="fas fa-assistive-listening-systems" style="font-size:60px;color:#007bff;text-shadow:2px 2px 4px #000000;"></span>
+                <h2 class="text-primary">Services Personnalisé</h2>
+                <p class="lead">.</p><p>Votre satisfaction est notre objectifs.<br><big>SmartPasserelle </big>vous permettront d'obtenir une souplesse des services personnalisés et vous  répond rigoureusement à vos exigences en temps réel n'hésitezà nous joindre.</p>
+                <p><a href="#" class="btn btn-primary">Détail</a></p>
+              </div>
+              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <span class='fas fa-donate' style='font-size:48px;color:#007bff'></span>
+                <h2 class="text-primary">Meilleur prix garanti</h2>
+                <p class="lead">.</p><p>Notre site offre des bas prix à ces clients.<br><big>SmartPasserelle </big>vous permettront de ganger votre argent.</p>
+                <p><a href="#" class="btn btn-primary">Détail</a></p>
+              </div>
+              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <span class="fas fa-clock" style="font-size:60px;color:#007bff;text-shadow:2px 2px 4px #000000;" ></span>
+                <h2 class="text-primary">Livraison rapide</h2>
+                <p class="lead">.</p><p>Avec <big>SmartPasserelle</big> vous permettront de recevoir des colis ,bagages,lettres rapidement par des voyageurs de notre site,cela vos permettent de gagner votre temps.<br>Rejoinez_nous le plus tot possible.</p>
+                <p><a href="#" class="btn btn-primary">Détail</a></p>
+              </div>
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                <span class='fas fa-box-open' style='font-size:48px;color:#007bff'></span>
+                <h2 class="text-primary">Bagague Sécurisé </h2>
+                <p class="lead">.</p><p>votre bagague ,colis,lettres vont être envoyé par des particuliéres de confiance.</p>
+                <p><a href="#" class="btn btn-primary">Détail</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+
+          <section class="section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center mb-5">
+            <h2 class="text-uppercase heading border-bottom mb-4">Tops Trajets</h2>
+          </div>
+        </div>
+        <div class="row element-animate">
+          <div class="major-caousel js-carousel-1 owl-carousel">
+            {% for Tra in Trajet %}
+            <div>
+              <div class="media d-block media-custom text-center">
+                <img src="{{ asset('img/Capture.png') }}" alt="Image Placeholder" class="img-fluid">
+                <div class="media-body">
+                   <h3 class="mt-0 text-black"> {{ Tra.paysDepart }}</h3>
+                   <i class="mt-0 text-black glyphicon glyphicon-sort"></i>
+                   <h3 class="mt-0 text-black"> {{ Tra.paysDestination }}</h3>
+                    <p class="clearfix">
+                    <a href="#" class="float-left">Détails</a>
+                    <a href="#" class="float-right meta-chat"><span class="glyphicon glyphicon-heart"></span> 8</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+             {% endfor %}
+          </div>
+          <!-- END slider -->
+        </div>
+      </div>
+    </section>
+    <section class="section bg-light b">
+      <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center mb-5">
+            <h2 class="text-uppercase heading border-bottom mb-4"><big>COLIS</big></h2>
+          </div>
+        </div>
+
+        <div class="row element-animate">
+          <div class="">
+            <div>
+              <div style="background: #d9e0e2;"class="media d-block media-custom text-left">
+               
+                <div class="">
+                  <h3 class="mt-0 text-black"><a href="#" class="text-black">&nbsp;&nbsp;Trajet :{{ Tra.titre}} &nbsp;&nbsp;</a></h3>
+
+              <div class="col-xs-6 text-left">   
+                    <center>
+                <p class="text-black"><img src="{{ asset('img/Capture.png') }}" height="100" width="90" style="border-radius: 60%;">{{ Tra.paysDepart }}==>{{ Tra.paysDestination }} </p></center>
+   
+                </div>
+              </div>
+            </div>
+            <div>
+          </div>
+          <!-- END slider -->
+        </div>
+      </div>
+
+
+          <!-- END slider -->
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <!-- END cta-link -->
+
+    <footer class="site-footer" ;role="contentinfo" style="
+    background: #007bff ;padding:5px">
+      <div class="container">
+        <div class="row mb-5 element-animate">
+          <div class="col-md-3 mb-5">
+            <h3><i class="glyphicon glyphicon-zoom-in"></i>&nbsp;Services &amp; Actualité</h3>
+            <ul class="footer-link list-unstyled">
+              <li><i class="glyphicon glyphicon-screenshot"></i>&nbsp;Trouver un voyageur pour envoyer votre Bagague ou colis</li>
+              <li><i class="glyphicon glyphicon-comment"></i>&nbsp;Contacter le transporteur</li>
+              <li><i class="glyphicon glyphicon-lock"></i>&nbsp;Transport securisé</li>
+              <li><i class="glyphicon glyphicon-plane"></i>&nbsp;Transport rapide</li>
+              <li><a href="#">News &amp; Press Releases</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+            <h3><i class="glyphicon glyphicon-eye-close"></i>&nbsp;Sécuriter</h3>
+            <ul class="footer-link list-unstyled">
+              <li><i class="glyphicon glyphicon-remove-sign"></i>&nbsp;Votre informations personnelles sont sécurisées</li>
+              <li><a href="#"><i class="glyphicon glyphicon-piggy-bank">&nbsp;</i>Votre transaction de paiement sont sécurisé</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+            <h3>
+            <i class="glyphicon glyphicon-home"></i>&nbsp;A Propot</h3>
+            <ul class="footer-link list-unstyled">
+              <li><a href="#"><i class="glyphicon glyphicon-search"></i>&nbsp;Info sur Smartpasserelle</a></li>
+              <li><a href="#"><i class="glyphicon glyphicon-pencil"></i>&nbsp;Feedback</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-5">
+
+            <h3><i class="glyphicon glyphicon-user"></i>&nbsp;Localisation &amp; Contact</h3>
+            <p class="mb-5">Tunis,Bardo</p>
+
+            <h4 class="text-uppercase mb-3 h6 text-white"><i class="glyphicon glyphicon-envelope">&nbsp;&nbsp;</i>Email</h5>
+            <p class="mb-5"><a href="Email:contact@ama-business.com">&nbsp;contact@ama-business.com</a></p>
+            
+            <h4 class="text-uppercase mb-3 h6 text-white"> <i class="glyphicon glyphicon-earphone">&nbsp;</i>&nbsp;Télèphone</h5>
+            <p>52200614</p>
+
+          </div>
+        </div>
+
+        <div class="row pt-md-3 element-animate">
+          <div class="col-md-12">
+            <hr class="border-t">
+          </div>
+          <div class="col-md-6 col-sm-12 copyright">
+            <p>&copy; 2019 Design &amp; Developpement Par AMA BUSINESS</p>
+          </div>
+          <div class="col-md-6 col-sm-12 text-md-right text-sm-left">
+            <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>
+            <a href="#" class="p-2"><span class="fa fa-twitter"></span></a>
+            <a href="#" class="p-2"><span class="fa fa-instagram"></span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END footer -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalAppointment" tabindex="-1" role="dialog" aria-labelledby="modalAppointmentLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAppointmentLabel">Appointment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="form-group">
+                <label for="appointment_name" class="text-black">Full Name</label>
+                <input type="text" class="form-control" id="appointment_name">
+              </div>
+              <div class="form-group">
+                <label for="appointment_email" class="text-black">Email</label>
+                <input type="text" class="form-control" id="appointment_email">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_date" class="text-black">Date</label>
+                    <input type="text" class="form-control" id="appointment_date">
+                  </div>    
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="appointment_time" class="text-black">Time</label>
+                    <input type="text" class="form-control" id="appointment_time">
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="form-group">
+                <label for="appointment_message" class="text-black">Message</label>
+                <textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+
+/* masquer les calendriers */
+
+.calendar {
+	display:none;
+}
+.calendar_1 {
+    display:none;
+}
+
+/* Modifier les styles des boutons */
+
+.calendar_button {
+    background:none;
+    border:none;
+}
+.calendar_button_1 {
+    background:none;
+    border:none;
+}

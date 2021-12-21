@@ -1,0 +1,46 @@
+
+{% extends 'base.html.twig' %}
+ {% block title %}Details{% endblock %}
+{% block main %}
+<link rel="stylesheet" href=" {{ asset('coli/css/4.css') }}">
+  <br><br><br>
+<body style="background-color:#efefef">
+<div class="container">
+<div class = "row">
+    <div class = "col-md-6" style="margin-left:300px;background-color:#f2bb09">
+        <div class="card-base">
+<div class="card-icon"><a href="#" title="Widgets" id="widgetCardIcon" ><img src="{{ asset('uploads/images/' ~ per.path) }}" class="imagecard" ></a>
+<div class="card-data widgetCardData">
+<h2 class="box-title" style="color: #3e3c38">{{ per.username }}</h2>
+<p class="card-block text-center">
+<p style="font-size:12;color:black"><b>{{per.nom}}&nbsp;{{ per.prenom}}</b> a demander de profiter votre annonce </p>
+<span class="border-top my-3"></span>
+  <hr>
+  <p  style="font-size:12;color:black"><i class="fas fa-map-marked-alt" style="font-size:17px;"></i>&nbsp;{{ per.adresse }}&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-briefcase"></i>&nbsp;{{ per.profession}}</p>
+  <hr>
+      <p  style="font-size:12;color:black"><i class="fas fa-at" style="font-size:17px;color:black"></i>&nbsp;{{ per.email}}&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-mobile-alt" style="font-size:17px;color:black">&nbsp;</i>{{ per.telephone }}</p>
+<a href="{{ path('homepage')}}" title="Style Builder" class="btn btn-warning" style="background: #ffc800 color: #ffc800;"> <i class="fa fa-paper-plane" aria-hidden="true"></i>  Retour </a></div>
+</div>
+<div class="space"></div>
+</div>
+    </div>
+</div>
+	
+</div>
+  <br><br>
+  </body>
+
+<script type="text/javascript">
+function affiche(){
+  alert("This option not finished yet");
+  window.open("http://www.youtube.com");
+}
+</script>
+
+{% endblock %}
+
+
+
+
+
+

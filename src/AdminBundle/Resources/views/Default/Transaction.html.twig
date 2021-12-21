@@ -1,0 +1,81 @@
+{% extends 'AdminBundle:Default:index.html.twig' %}
+{% block job %}
+<table class="table" style="
+    font-size: unset;">
+  <thead style="background-color:#ffc800" >
+    <tr>
+      <th scope="col">Photo</th>
+      <th scope="col">Payer par</th>
+      <th scope="col">Montant(£)</th>
+      <th scope="col">Nom de Transporteur</th>
+      <th scope="col">Montant(£)</th>
+      <th scope="col">Date</th>
+      <th scope="col">Pay</th>
+      <th scope="col">payer</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    
+        {% for tran in tran %}
+          {% if tran.status == 1 and tran.IsOk == 0 %}
+          {% for adpay in adpay %}
+          
+        <tr>
+      <th scope="row">
+        <img src="{{ asset('uploads/images/' ~ tran.idColi.idannonceur.path) }}" width="35" height="35" style="border-radius:50%" onclick="image(this)"></th>
+
+    
+      <td>{{ tran.idColi.idannonceur.nom }}</td>
+      <td>{{ (tran.idColi.PrixColis) +5}}</td>
+      <td>
+        {% if adpay.idcoli == tran.idColi %}
+          {{ adpay.iduser.nom }}
+        {% else %}
+           {{ tran.idsrc.nom }}
+        {% endif %}</td>
+      <td>{{  tran.idColi.PrixColis}}</a></td>
+      <td>{{ tran.start|date('Y/m/d')}}</td>
+      <td>{% if tran.status == 1 %}
+        OUI
+      {% else %}
+        Paiement Annuler
+      {% endif %}
+      </td>
+      <td>
+  {% if adpay.idcoli == tran.idColi %}
+       
+
+   <!--https://www.paypal.com/cgi-bin/webscr -->
+  <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="{{ adpay.mail }}">
+<input type="hidden" name="lc" value="FR">
+<input type="hidden" name="item_name" value="Votre paiement">
+<input type="hidden" name="amount" value="{{ tran.idColi.PrixColis }}">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypal.com/fr_FR/FR/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+{% else %}
+<span >pas encors</span>
+{% endif %}
+</td>
+<td>
+  {% if adpay.idcoli == tran.idColi and tran.status == 1 %}
+  <a href="{{ path('ConfirmPay',{'id':adpay.id, 'idd':tran.id})}}">Supprimer</a></td>
+{% endif %}
+</tr>
+
+  {% endfor %} 
+  {% endif %} 
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+ <link rel="stylesheet" href=" {{ asset('coli/css/5.css') }}">
+  <br><br><br>
+   <div class="container-fluid">
+  <div class="row">
+   <div class="col-3"  height:230px;">
+   
+   
+    {% for msg in app.session.flashBag.get('success') %}
+                     <div class="alert alert-success">
+                     {{ msg }}
+                     </div>
+                      {% endfor %}
+                      {% for msg in app.session.flashBag.get('error') %}
+                         <div class="alert alert-warning">
+                         <b style="color:red"> {{ msg }}</b>
+                      </div>
+                      {% endfor %}
+    </div>
+    <div class="col-9 ">
+      {% for fav in fav %}
+            {% if fav.idcoli is not empty %} 
+     <div class="card w-100">
+      <div class = 'col-lg-12'>
+    <div class="card-body" style="color:black;background-color:white; height: 279px;width:950px;">
+   
+      <i class="far fa-clock" style="font-size:20px"> {{ fav.idcoli.dateDebut|date('Y/m/d')}}<i  style="font-size:20px"></i>
+
+      {% if fav.idcoli.etat =="Colis Arriver" %}
+                                                                <img src="{{ asset('assets/images/img/niveauMaxi2@2x.png') }}"  height="30" width="20">
+                                                            {% elseif fav.idcoli.etat =="encours" %}
+                                                                <img src="{{ asset('assets/images/img/icon66@2x.png') }}" height="30" width="20">
+                                                            {% else %}
+                                                                <img src="{{ asset('assets/images/img/niveauMaxi1@2x.png') }}"height="30" width="20">
+                                           {% endif %} 
+
+
+      <strong style="margin-left:200px;"> De: {{ fav.idcoli.paysDepart  }}</strong> <i class="fas fa-arrow-right"> </i><strong> A :{{ fav.idcoli.paysDestination}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></i> 
+         <a data-toggle="tooltip"   title="Plus d'information!" class="fas fa-plus" style="color:#d6ab13;font-size:17px;margin-left:100px;" href="{{ path('donner',{'id': fav.idcoli.id }) }}" > Plus d'information</a>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <div class='container'>
+    <div class='list-card'>
+     
+     <iframe class="col-md-6 text-center" style="position: relative;margin-left:10px;height:160px; width:300px; overflow: hidden;"
+       width="100%"
+       height="250%"
+       frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/directions?origin={{ fav.idcoli.paysDepart }}&destination={{ fav.idcoli.paysDestination }}&key=AIzaSyAktdnmCXhrY38dpfCFTBidPuXG27YFmqw&mode=driving&avoid=tolls|highways" allowfullscreen>
+
+</iframe>
+      <div class='list-details'>
+        <div class='list-name'>Date debut : {{ fav.idcoli.dateDebut|date('d/m/Y')}}  <i class="fas fa-arrow-right"> </i> Date Fin :{{ fav.idcoli.dateFin|date('d/m/Y')}}</div>
+        <div class='list-bottom'>
+          <div class='list-bottom-section'>
+            <span>Nom Annonceur: </span>
+            <span>{{ fav.idcoli.idannonceur.nom}} {{ fav.idcoli.idannonceur.prenom}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span> Télèphone:</i></span>
+            <span>{{ fav.idcoli.idannonceur.telephone}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span>mail:</span>
+            <span>{{ fav.idcoli.idannonceur.email}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</link>
+
+
+       <a href="{{ path('send_notification', { 'id' : fav.idcoli.idannonceur.id, 'idd' : fav.idcoli.id, 'type': 2 }) }}" style="background-color:#d6ab13;border-radius:13px; margin-bottom:5px; color:white; font-size:12px; border: none;margin-right:680px;" class="btn btn-danger">Profiter</a>
+       <a  class="fa fa-trash" data-toggle="tooltip" title="Supprimer Favoris!" class="glyphicon glyphicon-trash" style="color:blue;font-size:17px" href={{ path('supfavcoli', {'id':fav.id, 'page': 1}) }} ></a>
+
+    </div></div>
+
+  </div>
+</head>
+<body>
+
+<div class="container">
+ <br>
+</div>
+{% endif %}
+{% endfor %}
+  </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+   <link rel="stylesheet" href=" {{ asset('trajet/css/6.css') }}">
+   <link rel="stylesheet" href=" {{ asset('trajet/css/vote.css') }}">
+
+  <br><br><br>
+   <div class="container-fluid">
+  <div class="row">
+ <div class="col-3" style="color:black;height:230px;">
+    
+   </div>
+
+
+
+    <div class="col-9 ">
+        
+      {% if fav is not empty %}
+      {% for fav in fav %}
+      {% if fav.idtrajet is not empty %} 
+     <div class="card w-100">
+      <div class = 'col-lg-12'>
+
+
+
+    <div class="card-body" style="color:black;background-color:white; height: 299px;width:950px;">
+   
+      <i class="far fa-clock" style="font-size:20px"> {{ fav.idtrajet.datePublication|date('d/m/Y')}}<i  style="font-size:20px"></i>
+{% if fav.idtrajet.mode =="Aérienne" %}
+                                                                <img src="{{ asset('assets/images/img/Falcon-icon.png') }}"  height="30" width="20" >
+                                                            {% elseif fav.idtrajet.mode =="Routier" %}
+                                                                <img src="{{ asset('assets/images/img/car-blue-icon.png') }}" height="30" width="20">
+                                                            {% else %}
+                                                                <img src="{{ asset('assets/images/img/destroyer-icon.png') }}"  height="30" width="20">
+                                           {% endif %}
+      
+
+
+      <strong style="margin-left:200px;"> De: {{ fav.idtrajet.paysDepart  }}</strong> <i class="fas fa-arrow-right"> </i><strong> A :{{ fav.idtrajet.paysDestination}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></i>
+      {% if app.request.attributes.get('_route') == "showTraFav" or ( app.request.attributes.get('_route') == "rech_trajet") or ( app.request.attributes.get('_route') == "mestrajet") %}
+        
+        
+         <a data-toggle="tooltip"   title="Plus d'information!" class="fas fa-plus" style="color:#d6ab13;font-size:17px;margin-left:100px;" href="{{ path('voteTarjet',{'id':fav.idtrajet.id }) }}" > Plus d'information</a>
+ 
+      
+   
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <div class='container'>
+    <div class='list-card'>
+     
+     <iframe class="col-md-6 text-center" style="position: relative;margin-left:10px;height:160px; width:300px; overflow: hidden;"
+       width="100%"
+       height="250%"
+       frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/directions?origin={{ fav.idtrajet.paysDepart }}&destination={{ fav.idtrajet.paysDestination  }}&key=AIzaSyAktdnmCXhrY38dpfCFTBidPuXG27YFmqw&mode=driving&avoid=tolls|highways" allowfullscreen>
+</iframe>
+
+
+      <div class='list-details'> 
+
+        <div class='list-name'>Date debut : {{ fav.idtrajet.dateDebut|date('d/m/Y')}}  <i class="fas fa-arrow-right"> </i>Date Fin :{{ fav.idtrajet.dateFin|date('d/m/Y')}}</div>
+        
+      
+        <div class='list-bottom'>
+          <div class='list-bottom-section'>
+            <span>Nom Annonceur: </span>
+            <span>{{ fav.idtrajet.idannonceur.nom}} {{ fav.idtrajet.idannonceur.prenom}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span> Télèphone:</i></span>
+            <span>{{ fav.idtrajet.idannonceur.telephone}}</span>
+          </div>
+          <div class='list-bottom-section'>
+            <span>mail:</span>
+            <span>{{ fav.idtrajet.idannonceur.email}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</link>
+  {% if app.request.attributes.get('_route') == "showTraFav" %}
+   {% set x= 0 %}
+      {% set op= 0 %}
+      {% for vote in vote %}
+
+        {% if vote.idtrajet.id == fav.idtrajet.id %} 
+         {% set x = x + 1  %}
+          {% set op = vote.id %}
+         {% endif %}
+       {% endfor %}
+          {% for vote in vote %}
+       
+      
+        {% if vote.idtrajet.id == fav.idtrajet.id  and vote.id == op %} 
+          <table><tr><td>
+<div class="container" >
+  <div class="row">
+    <div  style="margin-left: 515px;margin-top: -61px;">
+      <div class="progress" data-percentage="{{ vote.Moyenne|round }}">
+        <span class="progress-left">
+          <span class="progress-bar"></span>
+        </span>
+        <span class="progress-right">
+          <span class="progress-bar"></span>
+        </span>
+        <div class="progress-value">
+          <div>
+           {{ vote.Moyenne|round }}%<br>
+            <span>vote</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+{% endif %}
+  {% endfor %}
+</td><td>
+</td></tr></table>
+     {% endif %}{% endif %}
+
+  
+     
+       {% if app.request.attributes.get('_route') == "showTraFav" %}
+      <a style="background-color:#d6ab13;border-radius:13px; margin-bottom:5px; color:white; font-size:12px; border: none;margin-right:680px;" href="{{ path('send_notification', { 'id' : fav.idtrajet.idannonceur.id, 'idd' : fav.idtrajet.id, 'type': 1 }) }}" class="btn btn-danger" >Profiter</a>
+     {% endif %}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      {% if app.request.attributes.get('_route') == "showTraFav" or ( app.request.attributes.get('_route') == "rech_trajet") %}
+     
+ <i class="fas fa-envelope" style="color:#cc5819;font-size:17px"></i>&nbsp;&nbsp;
+ <a class="fa fa-heart" style="color:red;font-size:17px" href={{ path('supfav',{'id':fav.id, 'page':1 }) }} ></a> 
+ {% if fav is not empty %}
+        {% set break = 0 %}
+        {% set breaked = 0 %}
+        {% set breaking = 0 %}  
+         {% for fav in fav %}
+          {% set breaked = breaked + 1  %}
+           {% if fav.idtrajet is not empty %}    
+            {% if fav.idtrajet.id == fav.idtrajet.id and fav.idannonceur.id == app.user.id %}
+             {% set break = 1 %}
+             <a class="fa fa-heart" style="color:red;font-size:17px" href={{ path('supfav',{'id':fav.id, 'page':1 }) }} ></a> 
+            {% elseif break == 0 and comp == breaked  %}
+             <a class="far fa-heart" style="color:red;font-size:17px" href={{ path('favt',{'id':fav.idtrajet.id }) }} ></a>
+            {% endif %}
+          {% elseif break == 0 and breaking == 0 and comp == breaked %}
+           {% set breaking = breaking + 1  %}
+           <a class="far fa-heart" style="color:red;font-size:17px" href={{ path('favt',{'id':fav.idtrajet.id }) }} ></a>
+          {% endif %}  
+        {% endfor %}
+    {% else %}
+      <a class="far fa-heart" style="color:red;font-size:17px" href={{ path('favt',{'id':fav.idtrajet.id }) }} ></a>
+    {% endif %} 
+
+{% else %}
+     
+         {% endif %}
+     <br>
+
+    </div></div>
+
+  </div>
+</head>
+<body>
+
+<div class="container">
+ <br>
+</div>{% endif %}{% endfor %}{% endif %}
+
+  </div>
+    </div>
+</div>
+<script>
+$('.collapse').collapse(){
+};
+
+</script>
+{% endblock %}
+  

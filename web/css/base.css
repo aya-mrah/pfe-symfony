@@ -1,0 +1,25 @@
+<style type="text/css">
+           
+.navbar-dark .navbar-brand {
+  color: rgb(249, 222, 19);
+} 
+.bg-dark {
+ background-color: #2262a2!important;
+font-family:  Helvetica,serif;
+}
+.bg2-dark {
+background-color: #2262a2!important;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+color: white;
+text-align: center;
+}
+         
+header .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: hsla(0, 100%, 90%, 0.3);
+}            
+</style> 

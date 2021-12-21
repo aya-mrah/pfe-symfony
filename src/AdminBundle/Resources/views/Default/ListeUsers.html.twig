@@ -1,0 +1,49 @@
+{% extends 'AdminBundle:Default:index.html.twig' %}
+{% block job %}
+<table class="table" style="
+    font-size: unset;"
+
+}>
+  <thead style="background-color:#ffc800">
+    <tr>
+      <th scope="col">Photo</th>
+      <th scope="col">Pseudo</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Adresse</th>
+      <th scope="col">Télephone</th>
+      <th scope="col">CIN</th>
+      <th scope="col">Date Naissance</th>
+      <th scope="col">Profession</th>
+      <th scope="col">Sexe</th>
+      <th scope="col">Last Login</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for user in user %}
+    <tr>
+      <th scope="row"><img src="{{ asset('uploads/images/' ~ user.path) }}" width="35" height="35" style="border-radius:50%" onclick="image(this)"></th>
+
+      <td>{{ user.username }}</td>
+      <td>{{ user.nom }}</td>
+      <td>{{ user.prenom }}</td>
+      <td>{{ user.adresse }}</td>
+      <td>{{ user.telephone }}</td>
+      <td>{{ user.cin }}</td>
+      <td>{{ user.datenaissance|date('y/m/d') }}</td>
+      <td>{{ user.profession }}</td>
+      <td>{{ user.sexe }}</td>
+      <td>{{ user.lastLogin|date('y/m/d') }}</td>
+      <td><div class="pull-right action-buttons">
+        <a href="{{ path('/AdminUsersDetails',{'id': user.id })}}" class="trash">
+          <i class="fas fa-eye" style="color:#30a5ff;"></i></a>&nbsp;
+         <a href="{{ path('/Admin/users/sup',{'id': user.id })}}" class="trash">
+        <em class="fas fa-ban" style="color:#767777;" title="Block User"></em></a>
+      </div></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
